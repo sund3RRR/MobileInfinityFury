@@ -1,0 +1,100 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5525868936204461490
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5525868936204461489}
+  - component: {fileID: 5525868936204461488}
+  - component: {fileID: 5463958996675648298}
+  m_Layer: 0
+  m_Name: SceneController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5525868936204461489
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5525868936204461490}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.36388063, y: 0.78309715, z: -193.73242}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5525868936204461488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5525868936204461490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b6b0e7cefd20784a82498d55420b8c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Ship: {fileID: 6975293082513199670, guid: 87e805d2c9fde874f88dc039bd3ba3c7, type: 3}
+  Exp: {fileID: 5641196741899517333, guid: d72e2ea7dd85ca34e89ce6212d134965, type: 3}
+  SmallPiece: {fileID: 4643625952460041582, guid: 4ce369efe75831f4e91e3ab58f3e61a9,
+    type: 3}
+  BigPiece: {fileID: 9196359447399987183, guid: bd32d877939c6f047bfae02bba6d5b77,
+    type: 3}
+  Bonus: {fileID: 5256613885783963227, guid: da3de9f956a8b6d449f252de8190f9d7, type: 3}
+--- !u!114 &5463958996675648298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5525868936204461490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f9428f92e9e12e4da39c73fc200d240, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Asteroid_01: {fileID: 4881670352401834273, guid: e7a92de4dd43b324a929490bd3854fca,
+    type: 3}
+  Asteroid_02: {fileID: 2103081033496041414, guid: 5b7ea4de4a9c9f540915b48a54624ade,
+    type: 3}
+  Asteroid_03: {fileID: 7047169971850061212, guid: e38bea68d20bf0c4ba704b51eb52ed13,
+    type: 3}
+  Asteroid_04: {fileID: 1931821304426025731, guid: a45fc8ea9bc35bf439f1887e1d70994f,
+    type: 3}
+  Asteroid_05: {fileID: 3919890815798181448, guid: e57398717c168b3408a6393afe2ee9ac,
+    type: 3}
+  Asteroid_06: {fileID: 4674441794852506985, guid: 2efc13882fe044c4480e194fdea2e7b3,
+    type: 3}
+  Asteroid_07: {fileID: 7098665515902967993, guid: 4b98294cd5669c8469c8d75769127514,
+    type: 3}
+  Asteroid_08: {fileID: 6701560490524252031, guid: 5aeb3d3e2dca0a2478d88edb1a196a19,
+    type: 3}
+  Asteroid_09: {fileID: 1774456502986636446, guid: 03229d86629a8604893cfee8b47151f9,
+    type: 3}
+  Asteroid_10: {fileID: 8480023413054521413, guid: 7a30650f19f160f44894d7db21530239,
+    type: 3}
+  Asteroid_11: {fileID: 792481457427382616, guid: 81ea2df9cd17b3249b0aec203f622e5a,
+    type: 3}
+  Asteroid_12: {fileID: 4625487313254492575, guid: e492851e56aca004ea048ae1d159fd41,
+    type: 3}
+  Asteroid_13: {fileID: 6374389964421628403, guid: f43cb99ed4697b54885ad8c4e8aeed21,
+    type: 3}
+  Asteroid_14: {fileID: 1062231737421898986, guid: 3f4923c0c549be44ea7da06a16efac73,
+    type: 3}
+  Asteroid_15: {fileID: 1545431052441299108, guid: da2766e50ffeaa94fad3f14a87954700,
+    type: 3}
+  Ship: {fileID: 6975293082513199670, guid: 87e805d2c9fde874f88dc039bd3ba3c7, type: 3}
+  Zond: {fileID: 1716708780654274650, guid: 08c21b2c64177fa48b514627ced5ab78, type: 3}
+  Sputnik: {fileID: 5580365154156776641, guid: a9517ade2b4d06447b8b37cf162764c9, type: 3}
+  GoldAsteroid: {fileID: 2272843868538938751, guid: 10bba4a4fa232b24988eb2eede42fd79,
+    type: 3}
