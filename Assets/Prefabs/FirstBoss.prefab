@@ -104,6 +104,8 @@ MonoBehaviour:
   hitTime: 2.5
   HealthPoints: 500
   BaseHealthPoints: 500
+  LeftBorderTimeBtwShots: 0.5
+  RightBorderTimeBtwShots: 1.5
   Bar: {fileID: 9101432529821193934, guid: 4eb532ccf8217624fa56f65eb13d963e, type: 3}
   speed: 0.5
   BulletBoss: {fileID: 3669956873490001447, guid: 9679163176bbc5548b9ad30d7c138dd8,

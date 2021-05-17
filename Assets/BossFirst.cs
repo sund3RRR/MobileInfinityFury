@@ -12,6 +12,8 @@ public class BossFirst : MonoBehaviour
     private GameObject HealthBar;
     public int HealthPoints;
     public int BaseHealthPoints;
+    public float LeftBorderTimeBtwShots;
+    public float RightBorderTimeBtwShots;
     public GameObject Bar;
     public float speed;
     public GameObject BulletBoss;
@@ -75,7 +77,7 @@ public class BossFirst : MonoBehaviour
     {
         while(true)
         {
-            yield return new WaitForSeconds(Random.Range(0.5f, 1.5f));
+            yield return new WaitForSeconds(Random.Range(LeftBorderTimeBtwShots, RightBorderTimeBtwShots));
             Instantiate(BulletBoss, BulletPoint.position, BulletBoss.transform.rotation);            
         }
     }
