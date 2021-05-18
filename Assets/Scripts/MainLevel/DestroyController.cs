@@ -125,6 +125,7 @@ public class DestroyController : MonoBehaviour
         {
             float RandomScale = Random.Range(0.5f, 0.8f);
             ZondExplosionVFX.transform.localScale = new Vector3(RandomScale, RandomScale, RandomScale);
+            EffectPos.position = new Vector2(EffectPos.position.x, EffectPos.position.y + 0.2f);
             Instantiate(ZondExplosionVFX, EffectPos.position, Quaternion.identity);
             yield return new WaitForSeconds(0.2f);
         }
@@ -133,6 +134,7 @@ public class DestroyController : MonoBehaviour
         Destroy(NewZondExplosionVFX, 2);
 
         Destroy(Boss.gameObject);
+        CurrentScene.SpawnBossFromDC();
     }
     public static void DestroyZond(GameObject Zond)
     {

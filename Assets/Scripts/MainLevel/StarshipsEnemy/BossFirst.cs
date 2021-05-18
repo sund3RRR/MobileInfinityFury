@@ -24,6 +24,7 @@ public class BossFirst : MonoBehaviour
 
     private Coroutine MyCoroutine;
 
+
     void Awake()
     {
         GameObject Canvas = GameObject.FindGameObjectWithTag("Canvas");
@@ -53,14 +54,18 @@ public class BossFirst : MonoBehaviour
         }
         if (MyCoroutine == null && HealthPoints <= 0) 
             MyCoroutine = StartCoroutine(DestroyController.DestroyBoss(gameObject));
+        if (HealthPoints <= 0)
+            speed -= 0.1f;
     }
 
     IEnumerator Movement()
     {
+        speed -= 1;
         MovePosition = new Vector2(0, 4.5f);
         ForcePosition = (MovePosition - (Vector2)transform.position).normalized;
 
         yield return new WaitWhile(() => transform.position.y > 4.5f);
+        speed += 1;
         StartCoroutine(Shoot(BulletPoint1));
         StartCoroutine(Shoot(BulletPoint2));
         StartCoroutine(Shoot(BulletPoint3));

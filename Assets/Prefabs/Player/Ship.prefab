@@ -115,7 +115,12 @@ MonoBehaviour:
   range: 4
   UpgradeVFX: {fileID: 675814567206901401, guid: ccfef72174293d944b759a49ace74b03,
     type: 3}
-  SightPosition: {x: 0, y: 0}
+  IsDroneWeapon: 1
+  Drone: {fileID: 6726011702954700034, guid: 88f3b737dded98c44ab6899623b77dde, type: 3}
+  DroneCount: 7
+  MinRadius: 0.8
+  RadiusStep: 0.5
+  TimeBtwDroneSpawn: 3
   bulletPoint: {fileID: 6975293084317684701}
   bullet: {fileID: 3970292410016663219, guid: a9ca5b65738ac3549a3785bdecbc6112, type: 3}
   rocket: {fileID: 4362986002164723471, guid: 6fc684607a4e7674da9358380d909252, type: 3}

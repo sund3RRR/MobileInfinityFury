@@ -152,8 +152,6 @@ public class FatStarshipEnemy : MonoBehaviour
             if (Target)
             {
                 yield return new WaitForSeconds(TimeBtwBulletShots);
-
-                AS.Play();
                 
                 bullet.GetComponent<BulletEnemy>().Parent = gameObject;
                 bullet.GetComponent<SpriteRenderer>().sprite = BulletSp1;
@@ -181,15 +179,7 @@ public class FatStarshipEnemy : MonoBehaviour
         FindPlayer = true;
         while (true)
         {
-            Target1 = GameObject.FindGameObjectWithTag("PlayerGreen");
             Target = GameObject.FindGameObjectWithTag("PlayerBlue");
-
-            if (Target1 && Target && (transform.position - Target1.transform.position).sqrMagnitude < (transform.position - Target.transform.position).sqrMagnitude)
-                Target = Target1;
-            else if (Target1 && Target && (transform.position - Target1.transform.position).sqrMagnitude > (transform.position - Target.transform.position).sqrMagnitude)
-                Target = Target;
-            else if (Target1)
-                Target = Target1;
             if (Target)
             {
                 FindPlayer = false;

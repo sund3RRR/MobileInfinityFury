@@ -248,15 +248,7 @@ public class SlimEnemyController : MonoBehaviour
         {
             FindTargetBool = true;
 
-            Target1 = GameObject.FindGameObjectWithTag("PlayerGreen");
             Target = GameObject.FindGameObjectWithTag("PlayerBlue");
-
-            if (Target1 && Target && (transform.position - Target1.transform.position).sqrMagnitude < (transform.position - Target.transform.position).sqrMagnitude)
-                Target = Target1;
-            else if (Target1 && Target && (transform.position - Target1.transform.position).sqrMagnitude > (transform.position - Target.transform.position).sqrMagnitude)
-                Target = Target;
-            else if (Target1)
-                Target = Target1;
 
             if (Target)
             {

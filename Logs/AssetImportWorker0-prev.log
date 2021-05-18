@@ -15,11 +15,11 @@ D:/UnityProjects/MobileInfinityFury
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-51291
+53927
 Successfully changed project path to: D:/UnityProjects/MobileInfinityFury
 D:/UnityProjects/MobileInfinityFury
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 103.17 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 101.18 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.2f1 (8fd9074bf66c)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.2f1/Editor/Data/Resources/UnitySubsystems
@@ -38,31 +38,31 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.2f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.2f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.2f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56348
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56544
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.2f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001592 seconds.
+Registered in 0.001698 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 101.03 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 110.70 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.447 seconds
+- Completed reload, in  1.606 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.001498 seconds.
+Registered in 0.001375 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 103.89 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 114.68 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.978 seconds
+- Completed reload, in  1.053 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
@@ -70,37 +70,198 @@ Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader '
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
 Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
-Refreshing native plugins compatible for Editor in 1.02 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 1.01 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3882 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 163.3 MB.
 System memory in use after: 163.5 MB.
 
 Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 4342.
-Total: 2.411800 ms (FindLiveObjects: 0.368000 ms CreateObjectMapping: 0.099600 ms MarkObjects: 1.884500 ms  DeleteObjects: 0.058700 ms)
+Total: 2.490000 ms (FindLiveObjects: 0.421000 ms CreateObjectMapping: 0.103300 ms MarkObjects: 1.906900 ms  DeleteObjects: 0.057800 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Prefabs/Bonus.prefab
-  artifactKey: Guid(da3de9f956a8b6d449f252de8190f9d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Bonus.prefab using Guid(da3de9f956a8b6d449f252de8190f9d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '395f895174a516d6e5b536e6133f0baa') in 0.084792 seconds
-  Import took 0.091294 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 59.990688 seconds.
-  path: Assets/BulletBoss.cs
-  artifactKey: Guid(b199ee74f97d91f4291533a0007aaced) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BulletBoss.cs using Guid(b199ee74f97d91f4291533a0007aaced) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad4a585be3de89337f7edcc1b9c407c4') in 0.006723 seconds
-  Import took 0.012430 seconds .
+  path: Assets/BossFirst.cs
+  artifactKey: Guid(f6b04d8709d2f44449ff6d73ae99e06c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BossFirst.cs using Guid(f6b04d8709d2f44449ff6d73ae99e06c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '838935f1503e652ce51aa61e03a10e23') in 0.020783 seconds
+  Import took 0.026970 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001489 seconds.
+Registered in 0.001591 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.17 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 1.00 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.841 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Refreshing native plugins compatible for Editor in 0.97 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3790 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 153.0 MB.
+System memory in use after: 153.2 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4345.
+Total: 2.712900 ms (FindLiveObjects: 0.333800 ms CreateObjectMapping: 0.096900 ms MarkObjects: 2.263800 ms  DeleteObjects: 0.017500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001529 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.98 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.840 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Refreshing native plugins compatible for Editor in 0.99 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3790 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 153.1 MB.
+System memory in use after: 153.3 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4348.
+Total: 2.581900 ms (FindLiveObjects: 0.360300 ms CreateObjectMapping: 0.102500 ms MarkObjects: 2.100900 ms  DeleteObjects: 0.017200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Import Request.
+  Time since last request: 263.622379 seconds.
+  path: Assets/BossFirst.cs
+  artifactKey: Guid(f6b04d8709d2f44449ff6d73ae99e06c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BossFirst.cs using Guid(f6b04d8709d2f44449ff6d73ae99e06c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '530e68a053abea5022ce1002dde7c3a4') in 0.005290 seconds
+  Import took 0.010884 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.024651 seconds.
+  path: Assets/BossFirst.cs
+  artifactKey: Guid(f6b04d8709d2f44449ff6d73ae99e06c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BossFirst.cs using Guid(f6b04d8709d2f44449ff6d73ae99e06c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '530e68a053abea5022ce1002dde7c3a4') in 0.001622 seconds
+  Import took 0.006524 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001365 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.99 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.840 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Refreshing native plugins compatible for Editor in 1.15 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3790 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 153.1 MB.
+System memory in use after: 153.3 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4351.
+Total: 2.378200 ms (FindLiveObjects: 0.375400 ms CreateObjectMapping: 0.101500 ms MarkObjects: 1.887800 ms  DeleteObjects: 0.012800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Import Request.
+  Time since last request: 23.990839 seconds.
+  path: Assets/Prefabs/FirstBoss.prefab
+  artifactKey: Guid(5d76552dfa9455c4c89221f20c97f6e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/FirstBoss.prefab using Guid(5d76552dfa9455c4c89221f20c97f6e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d52fdc3a5d8baf8c05349a1377282dd') in 0.104136 seconds
+  Import took 0.110633 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001600 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.00 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.846 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Refreshing native plugins compatible for Editor in 1.00 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3790 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 156.1 MB.
+System memory in use after: 156.3 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4361.
+Total: 2.356800 ms (FindLiveObjects: 0.380600 ms CreateObjectMapping: 0.097100 ms MarkObjects: 1.865500 ms  DeleteObjects: 0.012600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001659 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.10 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.849 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Refreshing native plugins compatible for Editor in 1.01 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3790 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 156.1 MB.
+System memory in use after: 156.3 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4364.
+Total: 2.568500 ms (FindLiveObjects: 0.321000 ms CreateObjectMapping: 0.094800 ms MarkObjects: 2.134800 ms  DeleteObjects: 0.017200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001725 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.06 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
@@ -112,136 +273,88 @@ Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(
 Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
 Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
-Refreshing native plugins compatible for Editor in 1.00 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3790 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 156.0 MB.
-System memory in use after: 156.2 MB.
-
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4353.
-Total: 2.936700 ms (FindLiveObjects: 0.420200 ms CreateObjectMapping: 0.098700 ms MarkObjects: 2.364700 ms  DeleteObjects: 0.052000 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
-========================================================================
-Received Import Request.
-  Time since last request: 34.456139 seconds.
-  path: Assets/BulletBoss.cs
-  artifactKey: Guid(b199ee74f97d91f4291533a0007aaced) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BulletBoss.cs using Guid(b199ee74f97d91f4291533a0007aaced) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0edc1d90a6b729bc7d4dcff3e1207329') in 0.005526 seconds
-  Import took 0.011226 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.034883 seconds.
-  path: Assets/BulletBoss.cs
-  artifactKey: Guid(b199ee74f97d91f4291533a0007aaced) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BulletBoss.cs using Guid(b199ee74f97d91f4291533a0007aaced) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0edc1d90a6b729bc7d4dcff3e1207329') in 0.001395 seconds
-  Import took 0.006708 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001891 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.18 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.017 seconds
-Platform modules already initialized, skipping
-Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
-Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
-Refreshing native plugins compatible for Editor in 1.46 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3790 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 156.0 MB.
-System memory in use after: 156.3 MB.
-
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4356.
-Total: 3.062100 ms (FindLiveObjects: 0.592800 ms CreateObjectMapping: 0.149300 ms MarkObjects: 2.295500 ms  DeleteObjects: 0.023100 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001626 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.97 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.843 seconds
-Platform modules already initialized, skipping
-Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
-Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
-Refreshing native plugins compatible for Editor in 1.16 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.99 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3790 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 156.1 MB.
-System memory in use after: 156.3 MB.
+System memory in use after: 156.4 MB.
 
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4359.
-Total: 2.330900 ms (FindLiveObjects: 0.376000 ms CreateObjectMapping: 0.109400 ms MarkObjects: 1.831100 ms  DeleteObjects: 0.013400 ms)
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4367.
+Total: 2.687200 ms (FindLiveObjects: 0.486300 ms CreateObjectMapping: 0.106200 ms MarkObjects: 2.075800 ms  DeleteObjects: 0.017400 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
 ========================================================================
-Received Import Request.
-  Time since last request: 110.010041 seconds.
-  path: Assets/Prefabs/BulletBoss.prefab
-  artifactKey: Guid(9679163176bbc5548b9ad30d7c138dd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/BulletBoss.prefab using Guid(9679163176bbc5548b9ad30d7c138dd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c570e60991c4cc6d11fa8b0b8ba79e0f') in 0.047103 seconds
-  Import took 0.052529 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000158 seconds.
-  path: Assets/Prefabs/FirstBoss.prefab
-  artifactKey: Guid(5d76552dfa9455c4c89221f20c97f6e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/FirstBoss.prefab using Guid(5d76552dfa9455c4c89221f20c97f6e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb9dcf5b86f515c1f36f30965add96b1') in 0.029671 seconds
-  Import took 0.034654 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.194690 seconds.
-  path: Assets/Prefabs/FirstBoss.prefab
-  artifactKey: Guid(5d76552dfa9455c4c89221f20c97f6e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/FirstBoss.prefab using Guid(5d76552dfa9455c4c89221f20c97f6e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1aee64998c52fafeb54957b8b689e463') in 0.011074 seconds
-  Import took 0.016575 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.892427 seconds.
-  path: Assets/Prefabs/FirstBoss.prefab
-  artifactKey: Guid(5d76552dfa9455c4c89221f20c97f6e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/FirstBoss.prefab using Guid(5d76552dfa9455c4c89221f20c97f6e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b7721501ae76e8bb6b7baaf6afdab2d') in 0.010953 seconds
-  Import took 0.016446 seconds .
-
-========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001515 seconds.
+Registered in 0.001414 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.06 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 1.08 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.884 seconds
+- Completed reload, in  0.845 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Refreshing native plugins compatible for Editor in 1.03 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3790 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 156.1 MB.
+System memory in use after: 156.4 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4370.
+Total: 2.341800 ms (FindLiveObjects: 0.351100 ms CreateObjectMapping: 0.109100 ms MarkObjects: 1.868200 ms  DeleteObjects: 0.012600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001652 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.00 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.851 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Refreshing native plugins compatible for Editor in 0.96 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3790 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 156.1 MB.
+System memory in use after: 156.4 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4373.
+Total: 2.395300 ms (FindLiveObjects: 0.374300 ms CreateObjectMapping: 0.117800 ms MarkObjects: 1.888300 ms  DeleteObjects: 0.013600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001613 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.00 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.856 seconds
 Platform modules already initialized, skipping
 Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
 Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
@@ -250,49 +363,1297 @@ Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'AS
 Refreshing native plugins compatible for Editor in 0.99 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3790 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 156.1 MB.
-System memory in use after: 156.3 MB.
+System memory in use before: 156.2 MB.
+System memory in use after: 156.4 MB.
 
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4363.
-Total: 2.629900 ms (FindLiveObjects: 0.361600 ms CreateObjectMapping: 0.096600 ms MarkObjects: 2.150800 ms  DeleteObjects: 0.019700 ms)
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4376.
+Total: 2.588800 ms (FindLiveObjects: 0.352600 ms CreateObjectMapping: 0.109500 ms MarkObjects: 2.107900 ms  DeleteObjects: 0.017700 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001650 seconds.
+Registered in 0.001470 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.16 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 1.00 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.023 seconds
+- Completed reload, in  0.881 seconds
 Platform modules already initialized, skipping
 Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
 Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
 Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
-Refreshing native plugins compatible for Editor in 1.14 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 1.05 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3790 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 156.1 MB.
+System memory in use before: 156.2 MB.
 System memory in use after: 156.4 MB.
 
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4366.
-Total: 2.660200 ms (FindLiveObjects: 0.399200 ms CreateObjectMapping: 0.101100 ms MarkObjects: 2.141800 ms  DeleteObjects: 0.016800 ms)
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4379.
+Total: 2.467100 ms (FindLiveObjects: 0.420100 ms CreateObjectMapping: 0.109300 ms MarkObjects: 1.922800 ms  DeleteObjects: 0.013900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001708 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.01 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.885 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Refreshing native plugins compatible for Editor in 1.01 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3790 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 156.2 MB.
+System memory in use after: 156.4 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4382.
+Total: 2.871700 ms (FindLiveObjects: 0.358100 ms CreateObjectMapping: 0.109600 ms MarkObjects: 2.384200 ms  DeleteObjects: 0.018500 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
 ========================================================================
 Received Import Request.
-  Time since last request: 18.886297 seconds.
-  path: Assets/Prefabs/BulletBoss.prefab
-  artifactKey: Guid(9679163176bbc5548b9ad30d7c138dd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/BulletBoss.prefab using Guid(9679163176bbc5548b9ad30d7c138dd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7e0f6b065cf699edc14bde794c151ee') in 0.049345 seconds
-  Import took 0.055911 seconds .
+  Time since last request: 1276.168963 seconds.
+  path: Assets/Prefabs/FirstBoss.prefab
+  artifactKey: Guid(5d76552dfa9455c4c89221f20c97f6e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/FirstBoss.prefab using Guid(5d76552dfa9455c4c89221f20c97f6e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ab4fc42b247c8c6d90f3816ec7b2ed0') in 0.053134 seconds
+  Import took 0.059025 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.973133 seconds.
+  path: Assets/Prefabs/FirstBoss.prefab
+  artifactKey: Guid(5d76552dfa9455c4c89221f20c97f6e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/FirstBoss.prefab using Guid(5d76552dfa9455c4c89221f20c97f6e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cef6bce7f60c4a9cd69ad1eb28f7ceea') in 0.010240 seconds
+  Import took 0.015984 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001574 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.99 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.881 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Refreshing native plugins compatible for Editor in 0.97 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3790 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 156.2 MB.
+System memory in use after: 156.4 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4386.
+Total: 2.582200 ms (FindLiveObjects: 0.347000 ms CreateObjectMapping: 0.120500 ms MarkObjects: 2.097100 ms  DeleteObjects: 0.016800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001717 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.99 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.909 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Refreshing native plugins compatible for Editor in 1.01 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3790 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 156.2 MB.
+System memory in use after: 156.4 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4389.
+Total: 2.636900 ms (FindLiveObjects: 0.373700 ms CreateObjectMapping: 0.108800 ms MarkObjects: 2.134200 ms  DeleteObjects: 0.019300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001335 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.01 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.900 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Refreshing native plugins compatible for Editor in 1.05 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3790 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 156.2 MB.
+System memory in use after: 156.4 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4392.
+Total: 2.342800 ms (FindLiveObjects: 0.343700 ms CreateObjectMapping: 0.102600 ms MarkObjects: 1.880800 ms  DeleteObjects: 0.014300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001466 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.00 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.886 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Refreshing native plugins compatible for Editor in 1.01 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3790 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 156.2 MB.
+System memory in use after: 156.4 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4395.
+Total: 2.582400 ms (FindLiveObjects: 0.316300 ms CreateObjectMapping: 0.094000 ms MarkObjects: 2.153800 ms  DeleteObjects: 0.017600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001593 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.00 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.898 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Refreshing native plugins compatible for Editor in 0.98 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3790 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 156.2 MB.
+System memory in use after: 156.5 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4398.
+Total: 2.554200 ms (FindLiveObjects: 0.335400 ms CreateObjectMapping: 0.106500 ms MarkObjects: 2.094300 ms  DeleteObjects: 0.017300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001633 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.99 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.898 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Refreshing native plugins compatible for Editor in 0.98 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3790 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 156.2 MB.
+System memory in use after: 156.5 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4401.
+Total: 2.584300 ms (FindLiveObjects: 0.340100 ms CreateObjectMapping: 0.106800 ms MarkObjects: 2.120200 ms  DeleteObjects: 0.016300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001615 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.00 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.898 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Refreshing native plugins compatible for Editor in 0.98 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3790 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 156.2 MB.
+System memory in use after: 156.5 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4404.
+Total: 2.391500 ms (FindLiveObjects: 0.353800 ms CreateObjectMapping: 0.115600 ms MarkObjects: 1.908400 ms  DeleteObjects: 0.012500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Import Request.
+  Time since last request: 401.411907 seconds.
+  path: Assets/Scripts/MainLevel/FPSC.cs
+  artifactKey: Guid(dc9e940de6fdca94b874d47629f3dec9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/MainLevel/FPSC.cs using Guid(dc9e940de6fdca94b874d47629f3dec9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b4a6120670276077ac0b172f4ee76ca') in 0.008577 seconds
+  Import took 0.014269 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001463 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.00 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.903 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Refreshing native plugins compatible for Editor in 1.05 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3790 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 156.3 MB.
+System memory in use after: 156.5 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4407.
+Total: 2.338500 ms (FindLiveObjects: 0.352600 ms CreateObjectMapping: 0.102000 ms MarkObjects: 1.867900 ms  DeleteObjects: 0.014600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001862 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.00 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.931 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Refreshing native plugins compatible for Editor in 1.02 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3790 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 156.3 MB.
+System memory in use after: 156.5 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4410.
+Total: 2.614700 ms (FindLiveObjects: 0.354900 ms CreateObjectMapping: 0.095700 ms MarkObjects: 2.146000 ms  DeleteObjects: 0.017300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001638 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.04 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.955 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Refreshing native plugins compatible for Editor in 0.99 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3790 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 156.3 MB.
+System memory in use after: 156.5 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4413.
+Total: 2.363200 ms (FindLiveObjects: 0.372300 ms CreateObjectMapping: 0.096400 ms MarkObjects: 1.880000 ms  DeleteObjects: 0.013600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001607 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.17 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.921 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Refreshing native plugins compatible for Editor in 1.00 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3790 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 156.3 MB.
+System memory in use after: 156.5 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4416.
+Total: 2.372900 ms (FindLiveObjects: 0.356800 ms CreateObjectMapping: 0.116800 ms MarkObjects: 1.884600 ms  DeleteObjects: 0.013800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001536 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.09 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.940 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Refreshing native plugins compatible for Editor in 1.09 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3790 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 156.3 MB.
+System memory in use after: 156.5 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4419.
+Total: 2.345400 ms (FindLiveObjects: 0.341000 ms CreateObjectMapping: 0.114000 ms MarkObjects: 1.876800 ms  DeleteObjects: 0.012700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001590 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.04 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.940 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Refreshing native plugins compatible for Editor in 0.98 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3790 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 156.3 MB.
+System memory in use after: 156.5 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4422.
+Total: 2.333200 ms (FindLiveObjects: 0.352600 ms CreateObjectMapping: 0.104000 ms MarkObjects: 1.862400 ms  DeleteObjects: 0.013100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001588 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.18 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.950 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Refreshing native plugins compatible for Editor in 0.99 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3790 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 156.3 MB.
+System memory in use after: 156.5 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4425.
+Total: 2.514500 ms (FindLiveObjects: 0.316000 ms CreateObjectMapping: 0.096100 ms MarkObjects: 2.085200 ms  DeleteObjects: 0.016500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001613 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.99 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.940 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Refreshing native plugins compatible for Editor in 1.00 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3790 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 156.3 MB.
+System memory in use after: 156.5 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4428.
+Total: 2.620800 ms (FindLiveObjects: 0.346000 ms CreateObjectMapping: 0.109200 ms MarkObjects: 2.147700 ms  DeleteObjects: 0.016800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001531 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.98 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.954 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Refreshing native plugins compatible for Editor in 1.15 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3790 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 156.3 MB.
+System memory in use after: 156.5 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4431.
+Total: 2.431600 ms (FindLiveObjects: 0.395200 ms CreateObjectMapping: 0.115000 ms MarkObjects: 1.906300 ms  DeleteObjects: 0.013900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001566 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.00 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.962 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Refreshing native plugins compatible for Editor in 0.97 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3790 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 156.3 MB.
+System memory in use after: 156.6 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4434.
+Total: 2.635600 ms (FindLiveObjects: 0.361100 ms CreateObjectMapping: 0.106000 ms MarkObjects: 2.148600 ms  DeleteObjects: 0.018500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001427 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.00 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.957 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Refreshing native plugins compatible for Editor in 0.99 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3790 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 156.3 MB.
+System memory in use after: 156.6 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4437.
+Total: 2.966500 ms (FindLiveObjects: 0.371300 ms CreateObjectMapping: 0.109000 ms MarkObjects: 2.464500 ms  DeleteObjects: 0.020400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001596 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.00 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.964 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Refreshing native plugins compatible for Editor in 0.99 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3790 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 156.3 MB.
+System memory in use after: 156.6 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4440.
+Total: 2.577700 ms (FindLiveObjects: 0.374200 ms CreateObjectMapping: 0.109500 ms MarkObjects: 2.081200 ms  DeleteObjects: 0.011800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001608 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.01 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.963 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Refreshing native plugins compatible for Editor in 0.99 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3790 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 156.3 MB.
+System memory in use after: 156.6 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4443.
+Total: 2.574900 ms (FindLiveObjects: 0.352800 ms CreateObjectMapping: 0.096200 ms MarkObjects: 2.107900 ms  DeleteObjects: 0.017100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001448 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.03 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.986 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Refreshing native plugins compatible for Editor in 1.01 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3790 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 156.3 MB.
+System memory in use after: 156.6 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4446.
+Total: 2.708400 ms (FindLiveObjects: 0.374700 ms CreateObjectMapping: 0.109500 ms MarkObjects: 2.206800 ms  DeleteObjects: 0.016400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001584 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.99 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.974 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Refreshing native plugins compatible for Editor in 1.09 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3790 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 156.4 MB.
+System memory in use after: 156.6 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4449.
+Total: 2.593300 ms (FindLiveObjects: 0.322200 ms CreateObjectMapping: 0.093800 ms MarkObjects: 2.159700 ms  DeleteObjects: 0.016600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001378 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.03 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.998 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Refreshing native plugins compatible for Editor in 1.00 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3790 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 156.4 MB.
+System memory in use after: 156.6 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4452.
+Total: 2.409700 ms (FindLiveObjects: 0.385500 ms CreateObjectMapping: 0.104300 ms MarkObjects: 1.904600 ms  DeleteObjects: 0.014400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001477 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.04 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.985 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Refreshing native plugins compatible for Editor in 0.98 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3790 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 156.4 MB.
+System memory in use after: 156.6 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4455.
+Total: 2.626000 ms (FindLiveObjects: 0.340800 ms CreateObjectMapping: 0.096500 ms MarkObjects: 2.168900 ms  DeleteObjects: 0.018800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001595 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.98 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.997 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Refreshing native plugins compatible for Editor in 0.97 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3790 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 156.4 MB.
+System memory in use after: 156.6 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4458.
+Total: 2.690700 ms (FindLiveObjects: 0.408600 ms CreateObjectMapping: 0.108800 ms MarkObjects: 2.154300 ms  DeleteObjects: 0.017800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001758 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.02 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.000 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Refreshing native plugins compatible for Editor in 0.97 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3790 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 156.4 MB.
+System memory in use after: 156.6 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4461.
+Total: 2.634600 ms (FindLiveObjects: 0.360900 ms CreateObjectMapping: 0.103400 ms MarkObjects: 2.150800 ms  DeleteObjects: 0.018200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001654 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.98 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.020 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Refreshing native plugins compatible for Editor in 0.99 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3790 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 156.4 MB.
+System memory in use after: 156.6 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4464.
+Total: 2.371300 ms (FindLiveObjects: 0.367200 ms CreateObjectMapping: 0.116000 ms MarkObjects: 1.873300 ms  DeleteObjects: 0.013600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001614 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.00 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.014 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Refreshing native plugins compatible for Editor in 0.98 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3790 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 156.4 MB.
+System memory in use after: 156.6 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4467.
+Total: 2.650300 ms (FindLiveObjects: 0.366000 ms CreateObjectMapping: 0.109100 ms MarkObjects: 2.156600 ms  DeleteObjects: 0.017800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001593 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.01 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.008 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Refreshing native plugins compatible for Editor in 0.97 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3790 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 156.4 MB.
+System memory in use after: 156.7 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4470.
+Total: 2.627900 ms (FindLiveObjects: 0.375500 ms CreateObjectMapping: 0.109200 ms MarkObjects: 2.124200 ms  DeleteObjects: 0.018000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001592 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.00 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.036 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Refreshing native plugins compatible for Editor in 0.97 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3790 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 156.4 MB.
+System memory in use after: 156.7 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4473.
+Total: 2.850000 ms (FindLiveObjects: 0.381300 ms CreateObjectMapping: 0.108500 ms MarkObjects: 2.341700 ms  DeleteObjects: 0.017300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001630 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.99 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.052 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Refreshing native plugins compatible for Editor in 0.98 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3790 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 156.4 MB.
+System memory in use after: 156.7 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4476.
+Total: 2.651400 ms (FindLiveObjects: 0.355600 ms CreateObjectMapping: 0.109100 ms MarkObjects: 2.167400 ms  DeleteObjects: 0.018400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001473 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.02 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.038 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Refreshing native plugins compatible for Editor in 0.99 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3790 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 156.4 MB.
+System memory in use after: 156.7 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4479.
+Total: 2.441000 ms (FindLiveObjects: 0.368400 ms CreateObjectMapping: 0.112800 ms MarkObjects: 1.945500 ms  DeleteObjects: 0.013400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001601 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.00 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.040 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Refreshing native plugins compatible for Editor in 0.97 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3790 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 156.4 MB.
+System memory in use after: 156.7 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4482.
+Total: 2.401500 ms (FindLiveObjects: 0.389700 ms CreateObjectMapping: 0.102500 ms MarkObjects: 1.895300 ms  DeleteObjects: 0.012900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001733 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.00 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.035 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Refreshing native plugins compatible for Editor in 0.99 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3790 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 156.5 MB.
+System memory in use after: 156.7 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4485.
+Total: 2.600700 ms (FindLiveObjects: 0.352100 ms CreateObjectMapping: 0.108100 ms MarkObjects: 2.123100 ms  DeleteObjects: 0.016600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001529 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.99 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.049 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Refreshing native plugins compatible for Editor in 0.99 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3790 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 156.5 MB.
+System memory in use after: 156.7 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4488.
+Total: 2.693700 ms (FindLiveObjects: 0.398100 ms CreateObjectMapping: 0.096700 ms MarkObjects: 2.179600 ms  DeleteObjects: 0.018300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001571 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.08 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.047 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Refreshing native plugins compatible for Editor in 1.00 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3790 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 156.5 MB.
+System memory in use after: 156.7 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4491.
+Total: 2.652000 ms (FindLiveObjects: 0.359100 ms CreateObjectMapping: 0.113500 ms MarkObjects: 2.160500 ms  DeleteObjects: 0.017900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001568 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.11 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.112 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Refreshing native plugins compatible for Editor in 1.07 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3790 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 156.5 MB.
+System memory in use after: 156.7 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4494.
+Total: 2.641400 ms (FindLiveObjects: 0.340800 ms CreateObjectMapping: 0.096100 ms MarkObjects: 2.184600 ms  DeleteObjects: 0.018900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001609 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.00 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.059 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Refreshing native plugins compatible for Editor in 0.98 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3790 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 156.5 MB.
+System memory in use after: 156.7 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4497.
+Total: 2.639200 ms (FindLiveObjects: 0.358700 ms CreateObjectMapping: 0.098900 ms MarkObjects: 2.162600 ms  DeleteObjects: 0.018200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001624 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.00 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.060 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Refreshing native plugins compatible for Editor in 0.98 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3790 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 156.5 MB.
+System memory in use after: 156.7 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4500.
+Total: 2.415500 ms (FindLiveObjects: 0.368700 ms CreateObjectMapping: 0.116500 ms MarkObjects: 1.915100 ms  DeleteObjects: 0.014200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001475 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.03 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.076 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Refreshing native plugins compatible for Editor in 1.02 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3790 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 156.5 MB.
+System memory in use after: 156.7 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4503.
+Total: 2.674700 ms (FindLiveObjects: 0.353300 ms CreateObjectMapping: 0.096800 ms MarkObjects: 2.205200 ms  DeleteObjects: 0.018400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001692 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.01 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.069 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Refreshing native plugins compatible for Editor in 1.12 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3790 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 156.5 MB.
+System memory in use after: 156.7 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4506.
+Total: 2.690000 ms (FindLiveObjects: 0.529200 ms CreateObjectMapping: 0.203000 ms MarkObjects: 1.943100 ms  DeleteObjects: 0.013900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Shader 'Mirza Beig/Standard/Terrain Rain 2': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Mirza Beig/Standard/Terrain Rain': dependency 'BaseMapShader' shader 'ASESampleShaders/SimpleTerrainBase' not found
+Refreshing native plugins compatible for Editor in 1.90 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 7 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 83.7 MB.
+System memory in use after: 83.9 MB.
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 4506.
+Total: 2.684700 ms (FindLiveObjects: 0.402100 ms CreateObjectMapping: 0.118500 ms MarkObjects: 2.149700 ms  DeleteObjects: 0.013200 ms)
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file

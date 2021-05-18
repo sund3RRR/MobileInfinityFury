@@ -43,6 +43,8 @@ TagManager:
   - BlueController
   - GreenLVL
   - CyberShield
+  - Drone
+  - EnemyBullet
   layers:
   - Default
   - TransparentFX

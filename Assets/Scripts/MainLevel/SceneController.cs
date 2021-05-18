@@ -50,6 +50,16 @@ public class SceneController : MonoBehaviour
     public static int ShipLifeGreen = 3;
     public static GameObject[] EnemyArray;
 
+    public int TargetFrameRate;
+    public bool NeedSpawnZond;
+    public bool NeedSpawnAsteroid;
+    public bool NeedSpawnEnemyStarships;
+    public bool NeedSpawnBoss;
+
+    private void Awake()
+    {
+        Application.targetFrameRate = TargetFrameRate;
+    }
     private void Start()
     {
         cam = Camera.main;
@@ -57,35 +67,31 @@ public class SceneController : MonoBehaviour
         Spawner = GetComponent<SpawnController>();
 
         Time.timeScale = 1f;
-        //StartCoroutine(SpawnEnemyStarShipCore());
-        //StartCoroutine(SpawnZond());
-        //StartCoroutine(SpawnAsteroids());
-        StartCoroutine(SpawnBoss(Boss1));
+
+        if (NeedSpawnEnemyStarships)
+            StartCoroutine(SpawnEnemyStarShipCore());
+        if (NeedSpawnZond)
+            StartCoroutine(SpawnZond());
+        if (NeedSpawnAsteroid)
+            StartCoroutine(SpawnAsteroids());
+        if (NeedSpawnBoss)
+            StartCoroutine(SpawnBoss(Boss1));
     }
     private void Update()
     {       
         mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         SightPosition = mousePosition - transform.position;
         SightPosition = SightPosition.normalized;
-        // CHEAT CODES
-        if (Input.GetKeyDown("space"))
-            ShipLifeBlue += 100;
-        if (Input.GetKeyDown("e"))
-            HeroController.CountOfUltimate += 3;
-        if (Input.GetKeyDown("r"))
-            StartCoroutine(SpawnStarShipEnemy(FatEnemy));
-        if (Input.GetKeyDown("t"))
-            StartCoroutine(SpawnStarShipEnemy(SlimEnemy));
-        if (Input.GetKeyDown("y"))
-            StartCoroutine(SpawnStarShipEnemy(DestroyerEnemy));
     }
 
     void FixedUpdate()
     {
-        if (ActivateAimBot)
-            EnemyArray = GameObject.FindGameObjectsWithTag("Enemy");
+        EnemyArray = GameObject.FindGameObjectsWithTag("Enemy");
     }
-
+    public void SpawnBossFromDC()
+    {
+        StartCoroutine(SpawnBoss(Boss1));
+    }
     IEnumerator SpawnStarShipEnemy(GameObject StarShipEnemy)
     {    
         Vector2 SpawnPos = new Vector2(Random.Range(-3.3f, 3.3f), Random.Range(2.5f, 6f));
@@ -112,7 +118,7 @@ public class SceneController : MonoBehaviour
         }
         yield break;
     }
-    IEnumerator SpawnBoss(GameObject Boss)
+    public IEnumerator SpawnBoss(GameObject Boss)
     {
         Vector2 SpawnPos = new Vector2(Random.Range(-1.5f, 1.5f), 5.5f);
         Instantiate(Boss, SpawnPos, Boss.transform.rotation);

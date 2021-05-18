@@ -53,9 +53,8 @@ public class HeroController : MonoBehaviour
     public static int BulletSpeed = 16;
     public static int BulletSpriteIndex = 2;
 
-
     private GameObject NewCyberShield;
-
+    
     // Shoot function
     public Transform bulletPoint;
     public GameObject bullet;
@@ -64,9 +63,24 @@ public class HeroController : MonoBehaviour
     //MoveObj function
     public float speed;
 
+    public bool IsDroneWeapon;
+    public GameObject Drone;
+    public int DroneCount;
+    public float MinRadius;
+    public float RadiusStep;
+    private float[] DroneRadiusArray;
+    private GameObject[] Drones;
+    public float TimeBtwDroneSpawn;
+    private float TimerDrones = 0;
+
     void Start()
     {
-        AS = GetComponent<AudioSource>();      
+        DroneRadiusArray = new float[DroneCount];
+        Drones = new GameObject[DroneCount];
+        for (int i = 0; i < DroneCount; i++)
+        {
+            DroneRadiusArray[i] = MinRadius + RadiusStep * i;
+        }
     }
     void Update()
     {
@@ -109,6 +123,7 @@ public class HeroController : MonoBehaviour
             Destroy(NewUltimate, 1.1f);
             CountOfUltimate--;
         }
+        
         // MOUSE CONTROLS   
 
         transform.position = Vector3.Lerp(transform.position, mousePosition, 0.1f);     
@@ -116,13 +131,15 @@ public class HeroController : MonoBehaviour
     void FixedUpdate()
     {
         LifeTime += Time.deltaTime;
+        TimerDrones += Time.deltaTime;
         // MOUSE CONTROL  
         
         if (FireFlag)
         {
             Shoot();
         }
-        
+        if (IsDroneWeapon)
+            SpawnDrone();
   
         TimeBtwBulletShots += Time.deltaTime;
         TimeBtwRocketShots += Time.deltaTime;
@@ -188,11 +205,6 @@ public class HeroController : MonoBehaviour
             NewBullet.GetComponent<Bullet>().speed = BulletSpeed;
             NewBullet.GetComponent<Bullet>().SpriteIndex = BulletSpriteIndex;
             NewBullet.GetComponent<Bullet>().Ship = gameObject;
-            if (BulletSpriteIndex > 0)
-                AS.clip = Clip1;
-            else
-                AS.clip = Clip0;
-            AS.Play();
         }
         if (RocketShot)
         {
@@ -210,6 +222,24 @@ public class HeroController : MonoBehaviour
             }
         }
     }
+    public void SpawnDrone()
+    {
+        if (TimerDrones > TimeBtwDroneSpawn)
+        {         
+            for (int i = 0; i < DroneCount; i++)
+            {
+                if (!Drones[i])
+                {
+                    TimerDrones = 0;
+                    int myRand = Random.Range(0, 2);
+                    Drone.GetComponent<Drone>().IsClockwise = myRand == 1 ? true : false;
+                    Drone.GetComponent<Drone>().Radius = DroneRadiusArray[i];
+                    Drones[i] = Instantiate(Drone, new Vector2(transform.position.x, transform.position.y + 0.01f), Quaternion.identity);
+                    break;
+                }
+            }
+        }
+    }
     public void AnimationUpgrade()
     {
         GameObject NewUpgradeVFX = Instantiate(UpgradeVFX, transform.position, Quaternion.identity, transform);
@@ -217,7 +247,7 @@ public class HeroController : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Enemy" && LifeTime > 1f)
+        if ((collision.gameObject.tag == "Enemy" || collision.tag == "EnemyBullet") && LifeTime > 1f)
         {
             if (!NewCyberShield)
             {
