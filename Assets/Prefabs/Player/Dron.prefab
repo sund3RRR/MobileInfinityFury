@@ -127,9 +127,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b1a264b25d2565469cda8450819becb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Radius: 0.8
-  IsClockwise: 0
-  RotateSpeed: 2
+  Radius: 1.3
+  IsClockwise: 1
+  RotateSpeed: 2.5
   InsideForceMultiplier: 2
   HealthPoints: 2
   damage: 20
