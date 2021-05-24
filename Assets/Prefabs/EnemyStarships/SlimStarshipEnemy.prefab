@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2650948774727276942}
   - component: {fileID: 2650948774727276937}
+  - component: {fileID: 2650948774727276938}
+  - component: {fileID: 7537402719008983851}
   - component: {fileID: 2650948774727276936}
   - component: {fileID: 2650948774727276939}
-  - component: {fileID: 2650948774727276938}
   - component: {fileID: -8537089806173698876}
   m_Layer: 0
   m_Name: SlimStarshipEnemy
@@ -74,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 12
+  m_SortingOrder: 9
   m_Sprite: {fileID: 21300000, guid: 9ced993c3a8549d44b0c45ef103b44f6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -86,6 +87,46 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2650948774727276938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2650948774727276981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e6c13aa09de8b34db60215e0b31ecfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 8473873918582188092, guid: 25c48a57d4604cf49899b27cc449ca35, type: 3}
+  Bar: {fileID: 9101432529821193934, guid: 4eb532ccf8217624fa56f65eb13d963e, type: 3}
+  HealthPoints: 8
+  BaseHealthPoints: 8
+  TimeBetweenBullets: 0.5
+  CountOfBullets: 3
+  RamAngle: 45
+  SpeedMultiplierRam: 80
+  SpeedMultiplierBrake: 30
+  PatruleSpeed: 50
+  hitTime: 2.5
+--- !u!114 &7537402719008983851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2650948774727276981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91498a812546e594397b302d7a035877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Bar: {fileID: 9101432529821193934, guid: 4eb532ccf8217624fa56f65eb13d963e, type: 3}
+  hitTime: 2.5
+  HealthPoints: 8
+  BaseHealthPoints: 8
+  GameObjectName: SlimStarshipEnemy
 --- !u!70 &2650948774727276936
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -123,29 +164,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &2650948774727276938
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2650948774727276981}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e6c13aa09de8b34db60215e0b31ecfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bullet: {fileID: 8473873918582188092, guid: 25c48a57d4604cf49899b27cc449ca35, type: 3}
-  Bar: {fileID: 9101432529821193934, guid: 4eb532ccf8217624fa56f65eb13d963e, type: 3}
-  HealthPoints: 8
-  BaseHealthPoints: 8
-  TimeBetweenBullets: 0.5
-  CountOfBullets: 3
-  RamAngle: 45
-  SpeedMultiplierRam: 80
-  SpeedMultiplierBrake: 30
-  PatruleSpeed: 50
-  hitTime: 2.5
 --- !u!82 &-8537089806173698876
 AudioSource:
   m_ObjectHideFlags: 0

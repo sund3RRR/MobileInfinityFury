@@ -40,7 +40,6 @@ public class SceneController : MonoBehaviour
     private float XPose, YPose;
     private int TimingAsteroids = 3;
     private int TimingZonds = 5;
-    private bool ActivateAimBot = false;
     private Vector2 viewPortPos;
 
     // Public static variables
@@ -48,7 +47,7 @@ public class SceneController : MonoBehaviour
     public static int ShipLifeBlue = 3;
     public static bool isLifeGreen = false;
     public static int ShipLifeGreen = 3;
-    public static GameObject[] EnemyArray;
+    public GameObject[] EnemyArray;
 
     public int TargetFrameRate;
     public bool NeedSpawnZond;
@@ -67,6 +66,8 @@ public class SceneController : MonoBehaviour
         Spawner = GetComponent<SpawnController>();
 
         Time.timeScale = 1f;
+        
+        StartCoroutine(RefreshEnemyArray());
 
         if (NeedSpawnEnemyStarships)
             StartCoroutine(SpawnEnemyStarShipCore());
@@ -76,6 +77,8 @@ public class SceneController : MonoBehaviour
             StartCoroutine(SpawnAsteroids());
         if (NeedSpawnBoss)
             StartCoroutine(SpawnBoss(Boss1));
+        
+        //StartCoroutine(Spawnerrr());
     }
     private void Update()
     {       
@@ -83,14 +86,36 @@ public class SceneController : MonoBehaviour
         SightPosition = mousePosition - transform.position;
         SightPosition = SightPosition.normalized;
     }
-
-    void FixedUpdate()
+    IEnumerator RefreshEnemyArray()
+    {
+        while (true)
+        {
+            EnemyArray = GameObject.FindGameObjectsWithTag("Enemy");
+            yield return new WaitForSeconds(0.5f);
+        }
+    }
+    public void ForceRefreshEnemyArray()
     {
         EnemyArray = GameObject.FindGameObjectsWithTag("Enemy");
     }
     public void SpawnBossFromDC()
     {
+        //StartCoroutine(Spawnerrr());
         StartCoroutine(SpawnBoss(Boss1));
+    }
+    IEnumerator Spawnerrr()
+    {
+        Coroutine myC1 = StartCoroutine(SpawnAsteroids());
+        Coroutine myC2 = StartCoroutine(SpawnZond());
+        Coroutine myC3 = StartCoroutine(SpawnEnemyStarShipCore());
+
+        yield return new WaitForSeconds(60f);
+        StopCoroutine(myC1);
+        StopCoroutine(myC2);
+        StopCoroutine(myC3);
+
+        StartCoroutine(SpawnBoss(Boss1));
+        yield break;
     }
     IEnumerator SpawnStarShipEnemy(GameObject StarShipEnemy)
     {    
@@ -219,7 +244,6 @@ public class SceneController : MonoBehaviour
                 TimingAsteroids = 6;
                 break;
             case 8:
-                ActivateAimBot = true;
                 TimingAsteroids = 4;
                 TimingZonds = 15;
                 break;

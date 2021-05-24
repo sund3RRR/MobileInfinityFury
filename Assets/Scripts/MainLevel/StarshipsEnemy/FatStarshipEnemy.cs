@@ -6,7 +6,7 @@ public class FatStarshipEnemy : MonoBehaviour
 {   
     // Editor Variables
     public GameObject Lightning;
-    public GameObject Bar;
+    
     public GameObject bullet;
     public Transform BulletP1;
     public Transform BulletP2;
@@ -19,17 +19,12 @@ public class FatStarshipEnemy : MonoBehaviour
     public float TorqueSpeed;
     public float TimeBtwBulletShots;
 
-    public int HealthPoints;
-    public int BaseHealthPoints;
-
     // Public variables
-    public float hitTime = 2.5f;
+    
 
     // Private variables
-    private AudioSource AS;
-    private GameObject HealthBar;
+    
     private GameObject Target;
-    private GameObject Target1;
     private Rigidbody2D rb2D;
     private Camera cam;  
     private Vector2 force;
@@ -45,48 +40,18 @@ public class FatStarshipEnemy : MonoBehaviour
     void Start()
     {
         cam = Camera.main;
-        BaseHealthPoints = HealthPoints;
+        
         rb2D = GetComponent<Rigidbody2D>();
-        AS = GetComponent<AudioSource>();
-        //
-        // HealthBar INIT
-        //
-        GameObject Canvas = GameObject.FindGameObjectWithTag("Canvas");
-        Bar.GetComponent<HealthBarController>().Target = gameObject;
-        Bar.GetComponent<HealthBarController>().BaseHealthPoints = BaseHealthPoints;
-        HealthBar = Instantiate(Bar, new Vector3(transform.position.x, transform.position.y), Quaternion.identity);
-        HealthBar.transform.SetParent(Canvas.transform, false);
-        //
-        // HealthBar INIT
-        //
+
         ChangingPositionCoroutine = StartCoroutine(ChangeForcePosition());
     }
 
     void FixedUpdate()
     {
-        hitTime += Time.deltaTime;
-
         Vector2 viewportPosition = cam.WorldToViewportPoint(transform.position);
-
-        if (HealthBar && hitTime > 2.5f)
-        {
-            HealthBar.GetComponent<HealthBarController>().DisableHealthBar();
-        }
-        else if (HealthBar)
-        {
-            HealthBar.GetComponent<HealthBarController>().HealthPoints = HealthPoints;
-            HealthBar.GetComponent<HealthBarController>().EnableHealthBar();
-        }
-
-        if (HealthPoints <= 0)
-            DestroyController.DestroyFatEnemy(gameObject);
-
-
 
         rb2D.AddTorque(RotateObj() * TorqueSpeed);
         rb2D.AddForce(force * speed);
-
-
 
         if (Target)
         {

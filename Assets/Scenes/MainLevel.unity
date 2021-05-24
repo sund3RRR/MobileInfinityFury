@@ -888,7 +888,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2047f9616264bbd45a62681a16f925e8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cbfcd424389c8694dbac394ffe715c4f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5596,7 +5596,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2047f9616264bbd45a62681a16f925e8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cbfcd424389c8694dbac394ffe715c4f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5720,7 +5720,7 @@ PrefabInstance:
     - target: {fileID: 6975293082513199666, guid: 87e805d2c9fde874f88dc039bd3ba3c7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.5
+      value: -4.45
       objectReference: {fileID: 0}
     - target: {fileID: 6975293082513199666, guid: 87e805d2c9fde874f88dc039bd3ba3c7,
         type: 3}
@@ -5764,9 +5764,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6975293082513199668, guid: 87e805d2c9fde874f88dc039bd3ba3c7,
         type: 3}
+      propertyPath: MinRadius
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975293082513199668, guid: 87e805d2c9fde874f88dc039bd3ba3c7,
+        type: 3}
+      propertyPath: DroneCount
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975293082513199668, guid: 87e805d2c9fde874f88dc039bd3ba3c7,
+        type: 3}
       propertyPath: IsDroneWeapon
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6975293082513199668, guid: 87e805d2c9fde874f88dc039bd3ba3c7,
+        type: 3}
+      propertyPath: TimeBtwDroneSpawn
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6975293082513199669, guid: 87e805d2c9fde874f88dc039bd3ba3c7,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 263c0687034a12a48aa8d8ef02ad1fb9,
+        type: 3}
     - target: {fileID: 6975293082513199670, guid: 87e805d2c9fde874f88dc039bd3ba3c7,
         type: 3}
       propertyPath: m_Name
@@ -10533,12 +10554,12 @@ PrefabInstance:
     - target: {fileID: 5525868936204461488, guid: d6089acc8e883504db5e1d4c516003c5,
         type: 3}
       propertyPath: NeedSpawnBoss
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5525868936204461488, guid: d6089acc8e883504db5e1d4c516003c5,
         type: 3}
       propertyPath: NeedSpawnZond
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5525868936204461488, guid: d6089acc8e883504db5e1d4c516003c5,
         type: 3}
@@ -10581,7 +10602,7 @@ PrefabInstance:
     - target: {fileID: 5525868936204461488, guid: d6089acc8e883504db5e1d4c516003c5,
         type: 3}
       propertyPath: TargetFrameRate
-      value: 120
+      value: 2000
       objectReference: {fileID: 0}
     - target: {fileID: 5525868936204461488, guid: d6089acc8e883504db5e1d4c516003c5,
         type: 3}
@@ -10592,7 +10613,7 @@ PrefabInstance:
     - target: {fileID: 5525868936204461488, guid: d6089acc8e883504db5e1d4c516003c5,
         type: 3}
       propertyPath: NeedSpawnAsteroid
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5525868936204461488, guid: d6089acc8e883504db5e1d4c516003c5,
         type: 3}
@@ -10607,7 +10628,7 @@ PrefabInstance:
     - target: {fileID: 5525868936204461488, guid: d6089acc8e883504db5e1d4c516003c5,
         type: 3}
       propertyPath: NeedSpawnEnemyStarships
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5525868936204461489, guid: d6089acc8e883504db5e1d4c516003c5,
         type: 3}

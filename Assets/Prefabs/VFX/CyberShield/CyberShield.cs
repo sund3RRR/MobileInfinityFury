@@ -39,6 +39,10 @@ public class CyberShield : MonoBehaviour
                 if (collision.gameObject.GetComponent<PanelController>().Active)
                     DestroyController.DestroyDefault(collision.gameObject);
                 break;
+            case "BossPiece":
+                if (collision.gameObject.GetComponent<BossPieceAfterDead>().Active)
+                    DestroyController.DestroyDefault(collision.gameObject);
+                break;
             case "BigPiece(Clone)":
                 DestroyController.DestroyBigPiece(collision.gameObject);
                 break;

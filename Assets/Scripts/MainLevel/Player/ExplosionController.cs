@@ -27,6 +27,9 @@ public class ExplosionController : MonoBehaviour
             case "Sputnik(Clone)":
                 DestroyController.DestroySputnik(collision.gameObject);
                 break;
+            case "BossPiece":
+                DestroyController.DestroyDefault(collision.gameObject);
+                break;
             case "BulletEnemy(Clone)":
                 Destroy(collision.gameObject);
                 break;

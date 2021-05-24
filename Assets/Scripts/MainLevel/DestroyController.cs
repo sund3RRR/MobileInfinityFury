@@ -5,6 +5,7 @@ using UnityEngine;
 public class DestroyController : MonoBehaviour
 {
     public static SceneController CurrentScene;
+    public static SpawnController CurrentSpawnController;
     public static GameObject Exp;
     public static GameObject SmallPiece;
     public static GameObject BigPiece;
@@ -19,6 +20,7 @@ public class DestroyController : MonoBehaviour
     void Start()
     {
         CurrentScene = GameObject.FindWithTag("SceneController").GetComponent<SceneController>();
+        CurrentSpawnController = GameObject.FindWithTag("SceneController").GetComponent<SpawnController>();
         Exp = CurrentScene.Exp;
         SmallPiece = CurrentScene.SmallPiece;
         BigPiece = CurrentScene.BigPiece;
@@ -26,6 +28,42 @@ public class DestroyController : MonoBehaviour
         DeadVFX = CurrentScene.DeadVFX;
         ZondDeadVFX = CurrentScene.ZondDeadVFX;
         ZondExplosionVFX = CurrentScene.ZondExplosionVFX;
+    }
+    public static void DestroyObject(string GameObjectName, GameObject Object)
+    {
+        switch (GameObjectName)
+        {
+            case "Zond":
+                DestroyZond(Object);
+                break;
+            case "Sphere":
+                DestroySphere(Object);
+                break;
+            case "FatStarshipEnemy":
+                DestroyFatEnemy(Object);
+                break;
+            case "DestroyerEnemyStarship":
+                DestroyFatEnemy(Object);
+                break;
+            case "SlimStarshipEnemy":
+                DestroySlimEnemy(Object);
+                break;
+            case "BigPiece":
+                DestroyBigPiece(Object);
+                break;
+            case "Sputnik":
+                DestroySputnik(Object);
+                break;
+            case "GoldAsteroid":
+                DestroyGoldAsteroid(Object);
+                break;
+            case "FirstBoss":
+                DestroyBoss(Object);
+                break;
+            default:
+                DestroyDefault(Object);
+                break;
+        }
     }
     public static void DestroyDefault(GameObject Target)
     {
@@ -90,10 +128,10 @@ public class DestroyController : MonoBehaviour
             Instantiate(SmallPiece, Target.transform.position, Quaternion.AngleAxis(SmallPieceAngle, Vector3.forward));
         }
         Instantiate(Exp, Target.transform.position, Quaternion.identity);
-
+        /*
         GameObject NewZondDeadVFX = Instantiate(ZondDeadVFX, Target.transform.position, Quaternion.identity);
         Destroy(NewZondDeadVFX, 2);
-
+        */
         GameObject NewZondExplosionVFX = Instantiate(ZondExplosionVFX, Target.transform.position, Quaternion.identity);
         Destroy(NewZondExplosionVFX, 2);
         Destroy(Target.gameObject);
@@ -109,16 +147,19 @@ public class DestroyController : MonoBehaviour
             Instantiate(SmallPiece, Target.transform.position, Quaternion.AngleAxis(SmallPieceAngle, Vector3.forward));
         }
         Instantiate(Exp, Target.transform.position, Quaternion.identity);
-
+        /*
         GameObject NewZondDeadVFX = Instantiate(ZondDeadVFX, Target.transform.position, Quaternion.identity);
         Destroy(NewZondDeadVFX, 2);
-
+        */
         GameObject NewZondExplosionVFX = Instantiate(ZondExplosionVFX, Target.transform.position, Quaternion.identity);
         Destroy(NewZondExplosionVFX, 2);
         Destroy(Target.gameObject);
     }
     public static IEnumerator DestroyBoss(GameObject Boss)
     {
+        //
+        // VFX Generator
+        //
         Transform[] ArrayTransform = new Transform[4] {Boss.GetComponent<BossFirst>().BulletPoint1, Boss.GetComponent<BossFirst>().BulletPoint2,
             Boss.GetComponent<BossFirst>().BulletPoint3, Boss.GetComponent<BossFirst>().BulletPoint4 };
         foreach(Transform EffectPos in ArrayTransform)
@@ -132,7 +173,49 @@ public class DestroyController : MonoBehaviour
         ZondExplosionVFX.transform.localScale = Vector3.one;
         GameObject NewZondExplosionVFX = Instantiate(ZondExplosionVFX, Boss.transform.position, Quaternion.identity);
         Destroy(NewZondExplosionVFX, 2);
-
+        //
+        // VFX Generator
+        //
+        //
+        // Pieces INIT
+        //
+        GameObject FirstPiece = Boss.GetComponent<BossFirst>().FirstPiece;
+        GameObject SecondPiece = Boss.GetComponent<BossFirst>().SecondPiece;
+        GameObject ThirdPiece = Boss.GetComponent<BossFirst>().ThirdPiece;
+        GameObject FourthPiece = Boss.GetComponent<BossFirst>().FourthPiece;
+        if (FirstPiece)
+        {
+            FirstPiece.GetComponent<BossPieceAfterDead>().ActivateObject();
+            FirstPiece.transform.SetParent(null);
+        }
+        if (SecondPiece)
+        {
+            SecondPiece.GetComponent<BossPieceAfterDead>().ActivateObject();
+            SecondPiece.transform.SetParent(null);
+        }
+        if (ThirdPiece)
+        {
+            ThirdPiece.GetComponent<BossPieceAfterDead>().ActivateObject();
+            ThirdPiece.transform.SetParent(null);
+        }
+        if (FourthPiece)
+        {
+            FourthPiece.GetComponent<BossPieceAfterDead>().ActivateObject();
+            FourthPiece.transform.SetParent(null);
+        }
+        /*
+        for (int i = 0; i < 2; i++)
+        {
+            SmallPiece.GetComponent<SmallPieceController>().ParentForce = Boss.GetComponent<Rigidbody2D>().velocity;
+            SmallPiece.GetComponent<SmallPieceController>().force = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
+            SmallPiece.GetComponent<SmallPieceController>().Torque = Random.Range(-1f, 1f);
+            float SmallPieceAngle = Random.Range(0, 360);
+            Instantiate(SmallPiece, Boss.transform.position, Quaternion.AngleAxis(SmallPieceAngle, Vector3.forward));
+        }*/
+        Instantiate(Exp, Boss.transform.position, Quaternion.identity);
+        //
+        // Pieces INIT
+        //
         Destroy(Boss.gameObject);
         CurrentScene.SpawnBossFromDC();
     }
@@ -218,10 +301,9 @@ public class DestroyController : MonoBehaviour
     public static void DestroyAsteroid(GameObject Asteroid)
     {
         if (Asteroid.GetComponent<AsteroidController>().indexScale > 0)
-        {
-            SpawnController Target = GameObject.FindWithTag("SceneController").GetComponent<SpawnController>();
+        {           
             Vector2 pos = new Vector2(Asteroid.transform.position.x, Asteroid.transform.position.y);
-            Target.RespawnAsteroids(pos, Asteroid.GetComponent<AsteroidController>().indexScale, Asteroid.GetComponent<AsteroidController>().force);
+            CurrentSpawnController.RespawnAsteroids(pos, Asteroid.GetComponent<AsteroidController>().indexScale, Asteroid.GetComponent<AsteroidController>().force);
         }
         Instantiate(Exp, Asteroid.transform.position, Quaternion.identity);
 

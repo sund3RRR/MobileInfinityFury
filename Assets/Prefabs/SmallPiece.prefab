@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5238882406798685509}
   - component: {fileID: -6130836802254629695}
   - component: {fileID: 4154319252383514397}
+  - component: {fileID: -2685014488002178515}
   m_Layer: 0
   m_Name: SmallPiece
   m_TagString: Enemy
@@ -97,9 +98,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43cc28d5da351194caf23e397825ca51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ParentForce: {x: 1.3122053, y: 1.5091783}
-  force: {x: 0.34750843, y: 0.9505172}
-  Torque: -0.8910335
+  ParentForce: {x: 1.5982697, y: -1.1690673}
+  force: {x: -0.85746145, y: 0.35632846}
+  Torque: 0.8632543
 --- !u!50 &-6130836802254629695
 Rigidbody2D:
   serializedVersion: 4
@@ -147,3 +148,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.302, y: 0.452}
   m_EdgeRadius: 0
+--- !u!114 &-2685014488002178515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4643625952460041582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91498a812546e594397b302d7a035877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Bar: {fileID: 0}
+  hitTime: 2.5
+  HealthPoints: 1
+  BaseHealthPoints: 1
+  GameObjectName: SmallPiece

@@ -6,15 +6,12 @@ public class DestroyerEnemyController : MonoBehaviour
 {
     // Editor Variables
     public GameObject SuperBullet;
-    public GameObject Bar;
+
     public Transform SuperBulletPoint;
 
     public float speed;
     public float TorqueSpeed;
     public float TimeBtwBulletShots;
-
-    public int HealthPoints;
-    public int BaseHealthPoints;
 
     // Public variables
     public float hitTime = 2.5f;
@@ -39,20 +36,9 @@ public class DestroyerEnemyController : MonoBehaviour
     void Start()
     {
         cam = Camera.main;
-        BaseHealthPoints = HealthPoints;
         rb2D = GetComponent<Rigidbody2D>();
         AS = GetComponent<AudioSource>();
-        //
-        // HealthBar INIT
-        //
-        GameObject Canvas = GameObject.FindGameObjectWithTag("Canvas");
-        Bar.GetComponent<HealthBarController>().Target = gameObject;
-        Bar.GetComponent<HealthBarController>().BaseHealthPoints = BaseHealthPoints;
-        HealthBar = Instantiate(Bar, new Vector3(transform.position.x, transform.position.y), Quaternion.identity);
-        HealthBar.transform.SetParent(Canvas.transform, false);
-        //
-        // HealthBar INIT
-        //
+
         ChangingPositionCoroutine = StartCoroutine(ChangeForcePosition());
     }
 
@@ -61,21 +47,6 @@ public class DestroyerEnemyController : MonoBehaviour
         hitTime += Time.deltaTime;
 
         Vector2 viewportPosition = cam.WorldToViewportPoint(transform.position);
-
-        if (HealthBar && hitTime > 2.5f)
-        {
-            HealthBar.GetComponent<HealthBarController>().DisableHealthBar();
-        }
-        else if (HealthBar)
-        {
-            HealthBar.GetComponent<HealthBarController>().HealthPoints = HealthPoints;
-            HealthBar.GetComponent<HealthBarController>().EnableHealthBar();
-        }
-
-        if (HealthPoints <= 0)
-            DestroyController.DestroyFatEnemy(gameObject);
-
-
 
         rb2D.AddTorque(RotateObj() * TorqueSpeed);
         rb2D.AddForce(force * speed);

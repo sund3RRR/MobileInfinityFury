@@ -44,6 +44,10 @@ public class HealthBarController : MonoBehaviour
                     gameObject.transform.localScale = new Vector3(transform.localScale.x * 1.5f, transform.localScale.y, transform.localScale.z);
                     offset = 90;
                     break;
+                case "BossPiece":
+                    gameObject.transform.localScale = new Vector3(transform.localScale.x * 1.5f, transform.localScale.y, transform.localScale.z);
+                    offset = 90;
+                    break;
                 case "BigPiece(Clone)":
                     gameObject.transform.localScale = new Vector3(transform.localScale.x * 1.5f, transform.localScale.y, transform.localScale.z);
                     offset = 90;

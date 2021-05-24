@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3137432663005224850}
   - component: {fileID: 2755135377908204576}
   - component: {fileID: -7258722665830142445}
+  - component: {fileID: -8627980379048387978}
   - component: {fileID: 1183834777455041405}
   - component: {fileID: 3956868911822455030}
   - component: {fileID: 2949648887017188736}
@@ -104,10 +105,27 @@ MonoBehaviour:
   BaseHealthPoints: 5
   HealthPoints: 5
   speed: 1
-  ParentForce: {x: -0.9009709, y: 0.42677715}
-  force: {x: 0.45910665, y: 0.17191422}
-  Torque: -0.4176637
+  ParentForce: {x: -0.1376759, y: -0.6861644}
+  force: {x: 0.5913062, y: -0.4628755}
+  Torque: 0.019899487
   hitTime: 2.5
+--- !u!114 &-8627980379048387978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9196359447399987183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91498a812546e594397b302d7a035877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Bar: {fileID: 9101432529821193934, guid: 4eb532ccf8217624fa56f65eb13d963e, type: 3}
+  hitTime: 2.5
+  HealthPoints: 5
+  BaseHealthPoints: 5
+  GameObjectName: BigPiece
 --- !u!50 &1183834777455041405
 Rigidbody2D:
   serializedVersion: 4
@@ -146,7 +164,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 6.09, y: 4.42}
+    oldSize: {x: 1.015, y: 0.7366667}
     newSize: {x: 4.45, y: 2.39}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -172,7 +190,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 6.09, y: 4.42}
+    oldSize: {x: 1.015, y: 0.7366667}
     newSize: {x: 4.45, y: 2.39}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

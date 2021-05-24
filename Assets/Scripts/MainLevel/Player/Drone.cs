@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Drone : MonoBehaviour
 {
+    public GameObject Trails;
     private Vector2 RotateVector;
     private Vector2 DistanceVector;
     private GameObject Player;
@@ -26,9 +27,12 @@ public class Drone : MonoBehaviour
 
     public float TimeBtwBulletShots;
 
+    private SceneController CurrentSceneController;
+
     void Start()
     {
         Player = GameObject.FindGameObjectWithTag("PlayerBlue");
+        CurrentSceneController = GameObject.FindGameObjectWithTag("SceneController").GetComponent<SceneController>();
         if (IsClockwise)
         {
             LeftCoordinateMulti = -1;
@@ -40,6 +44,7 @@ public class Drone : MonoBehaviour
             RightCoordinateMulti = -1;
         }
         StartCoroutine(Shoot());
+        StartCoroutine(FindTarget());
     }
 
     void FixedUpdate()
@@ -59,18 +64,23 @@ public class Drone : MonoBehaviour
 
         if (HealthPoints <= 0)
         {
+            var myMain = Trails.GetComponent<ParticleSystem>().main;
+            myMain.prewarm = false;
+            myMain.loop = false;          
+            Trails.transform.SetParent(null);
             Destroy(gameObject);
             Instantiate(DeadVFX, transform.position, Quaternion.identity);
         }
-        FindTarget();
 
         if (Target)
-            RotateObj(Target.transform.position - transform.position);     
+            RotateObj(Target.transform.position - transform.position);
+        else if (CurrentSceneController.EnemyArray.Length != 0)
+            CurrentSceneController.ForceRefreshEnemyArray();
     }
     void RotateObj(Vector2 rotation)
     {
         rotate = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.AngleAxis(rotate, Vector3.forward);
+        transform.rotation = Quaternion.Lerp(transform.rotation, (Quaternion.AngleAxis(rotate, Vector3.forward)), 0.1f);
     }
     
     IEnumerator Shoot()
@@ -82,88 +92,38 @@ public class Drone : MonoBehaviour
                 Instantiate(BulletDrone, BulletPosition.position, transform.rotation);
         }
     }
-    void FindTarget()
+    IEnumerator FindTarget()
     {
-        GameObject[] MyEnemyArray = SceneController.EnemyArray;
-        float distance = Mathf.Infinity;
-        GameObject closest = MyEnemyArray[0];
-        foreach (GameObject Enemy in MyEnemyArray)
+        while (true)
         {
-            Vector2 difference = Enemy.transform.position - transform.position;
-            float CurrentDistance = difference.sqrMagnitude;
+            GameObject[] MyEnemyArray = CurrentSceneController.EnemyArray;
 
-            if (CurrentDistance < distance)
+            if (MyEnemyArray.Length != 0)
             {
-                closest = Enemy;
-                distance = CurrentDistance;
+                float distance = Mathf.Infinity;
+                GameObject closest = MyEnemyArray[0];
+                foreach (GameObject Enemy in MyEnemyArray)
+                {
+                    if (!Enemy)
+                        CurrentSceneController.ForceRefreshEnemyArray();
+                    Vector2 difference = Enemy.transform.position - transform.position;
+                    float CurrentDistance = difference.sqrMagnitude;
+
+                    if (CurrentDistance < distance)
+                    {
+                        closest = Enemy;
+                        distance = CurrentDistance;
+                    }
+                }
+                Target = closest;
             }
+            yield return new WaitForSeconds(0.5f);
         }
-        Target = closest;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Enemy")
-        {
-            switch (collision.name)
-            {
-                case "Zond(Clone)":
-                    collision.gameObject.GetComponent<ZondController>().HealthPoints -= damage;
-                    collision.gameObject.GetComponent<ZondController>().hitTime = 0;
-                    break;
-                case "Sphere":
-                    if (collision.gameObject.GetComponent<SphereController>().Active)
-                    {
-                        collision.GetComponent<SphereController>().HealthPoints -= damage;
-                        collision.GetComponent<SphereController>().hitTime = 0;
-                    }
-                    break;
-                case "Panel":
-                    if (collision.gameObject.GetComponent<PanelController>().Active)
-                    {
-                        collision.gameObject.GetComponent<PanelController>().HealthPoints -= damage;
-                        collision.gameObject.GetComponent<PanelController>().hitTime = 0;
-                    }
-                    break;
-                case "BigPiece(Clone)":
-                    collision.gameObject.GetComponent<BigPieceController>().HealthPoints -= damage;
-                    collision.gameObject.GetComponent<BigPieceController>().hitTime = 0;
-                    break;
-                case "Sputnik(Clone)":
-                    collision.gameObject.GetComponent<SputnikController>().HealthPoints -= damage;
-                    collision.gameObject.GetComponent<SputnikController>().hitTime = 0;
-                    break;
-                case "SmallPiece(Clone)":
-                    DestroyController.DestroyDefault(collision.gameObject);
-                    break;
-                case "GoldAsteroid(Clone)":
-                    collision.gameObject.GetComponent<GoldAsteroidController>().HealthPoints -= damage;
-                    collision.gameObject.GetComponent<GoldAsteroidController>().hitTime = 0;
-                    break;
-                case "FatStarshipEnemy(Clone)":
-                    collision.GetComponent<FatStarshipEnemy>().HealthPoints -= damage;
-                    collision.GetComponent<FatStarshipEnemy>().hitTime = 0;
-                    break;
-                case "DestroyerEnemyStarship(Clone)":
-                    collision.GetComponent<DestroyerEnemyController>().HealthPoints -= damage;
-                    collision.GetComponent<DestroyerEnemyController>().hitTime = 0;
-                    break;
-                case "SlimStarshipEnemy(Clone)":
-                    collision.GetComponent<SlimEnemyController>().HealthPoints -= damage;
-                    collision.GetComponent<SlimEnemyController>().hitTime = 0;
-                    break;
-                case "FirstBoss(Clone)":
-                    collision.GetComponent<BossFirst>().HealthPoints -= damage;
-                    collision.GetComponent<BossFirst>().hitTime = 0;
-                    break;
-                default:
-                    if (collision.gameObject.GetComponent<AsteroidController>())
-                    {
-                        collision.gameObject.GetComponent<AsteroidController>().HealthPoints -= damage;
-                        collision.gameObject.GetComponent<AsteroidController>().hitTime = 0;
-                    }
-                    break;
-
-            }
+        { 
             Destroy(gameObject);
             Instantiate(DeadVFX, transform.position, Quaternion.identity);
         }

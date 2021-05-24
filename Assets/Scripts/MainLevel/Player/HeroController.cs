@@ -126,7 +126,7 @@ public class HeroController : MonoBehaviour
         
         // MOUSE CONTROLS   
 
-        transform.position = Vector3.Lerp(transform.position, mousePosition, 0.1f);     
+        transform.position = Vector3.Lerp(transform.position, mousePosition, 0.05f);     
     }
     void FixedUpdate()
     {
@@ -138,6 +138,7 @@ public class HeroController : MonoBehaviour
         {
             Shoot();
         }
+        
         if (IsDroneWeapon)
             SpawnDrone();
   
@@ -231,8 +232,7 @@ public class HeroController : MonoBehaviour
                 if (!Drones[i])
                 {
                     TimerDrones = 0;
-                    int myRand = Random.Range(0, 2);
-                    Drone.GetComponent<Drone>().IsClockwise = myRand == 1 ? true : false;
+                    Drone.GetComponent<Drone>().IsClockwise = i % 2 == 0 ? true : false;
                     Drone.GetComponent<Drone>().Radius = DroneRadiusArray[i];
                     Drones[i] = Instantiate(Drone, new Vector2(transform.position.x, transform.position.y + 0.01f), Quaternion.identity);
                     break;
@@ -275,6 +275,19 @@ public class HeroController : MonoBehaviour
                     WasSpawnedSputnik = false;
             }
             Destroy(collision.gameObject);
+        }
+    }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if ((collision.gameObject.tag == "Enemy" || collision.tag == "EnemyBullet") && LifeTime > 1f)
+        {
+            if (!NewCyberShield)
+            {
+                SceneController.ShipLifeBlue--;
+                NewCyberShield = Instantiate(CyberShieldVFX, transform.position, Quaternion.identity, transform);
+                NewCyberShield.GetComponent<CyberShield>().Parent = gameObject;
+                Destroy(NewCyberShield, 9);
+            }
         }
     }
 }

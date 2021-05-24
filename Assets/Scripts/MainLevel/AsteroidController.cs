@@ -6,13 +6,11 @@ public class AsteroidController : MonoBehaviour
 {
     // Editor variables
     public GameObject Asteroid;
-    public GameObject Bar;
     public Sprite Asteroid_01;
     public Sprite Asteroid_02;
     public Sprite Asteroid_03;
     public GameObject DeadVFX;
     // Private variables
-    private GameObject HealthBar;
     private Rigidbody2D rb2D;
     private float LifeTime = 0;
     private bool ChangedSprite1 = false;
@@ -22,52 +20,22 @@ public class AsteroidController : MonoBehaviour
     public float Torque;
     public Vector2 force;
     public int indexScale;
-    public int HealthPoints;
-    public int BaseHealthPoints;
+    private int HealthPoints;
+    private int BaseHealthPoints;
     public float hitTime = 2.5f;
 
     void Start()
     {
+        HealthPoints = GetComponent<HealthPointsController>().HealthPoints;
         BaseHealthPoints = HealthPoints;
         GetComponent<SpriteRenderer>().sprite = Asteroid_01;      
         rb2D = GetComponent<Rigidbody2D>();
-
-        //
-        // HealthBar INIT
-        //
-        if (indexScale > 0)
-        {
-            GameObject Canvas = GameObject.FindGameObjectWithTag("Canvas");           
-            Bar.GetComponent<HealthBarController>().Target = gameObject;
-            Bar.GetComponent<HealthBarController>().BaseHealthPoints = BaseHealthPoints;         
-            HealthBar = Instantiate(Bar, new Vector3(transform.position.x, transform.position.y), Quaternion.identity);
-            HealthBar.transform.SetParent(Canvas.transform, false);
-        }
-        //
-        // HealthBar INIT
-        //
     }
 
     void FixedUpdate()
     {
         LifeTime += Time.deltaTime;
         hitTime += Time.deltaTime;
-
-        //
-        // HealthBar changes
-        //
-        if (HealthBar && hitTime > 2.5f)
-        {
-            HealthBar.GetComponent<HealthBarController>().DisableHealthBar();
-        }
-        else if (HealthBar)
-        {
-            HealthBar.GetComponent<HealthBarController>().HealthPoints = HealthPoints;
-            HealthBar.GetComponent<HealthBarController>().EnableHealthBar();
-        }
-        //
-        // HealthBar changes
-        //
 
         //
         // object forcing
@@ -102,15 +70,6 @@ public class AsteroidController : MonoBehaviour
         }
         //
         // sprite changing
-        //
-
-        //
-        // Destroying
-        //
-        if (HealthPoints <= 0)
-            DestroyController.DestroyAsteroid(gameObject);
-        //
-        // Destroying
         //
 
         //

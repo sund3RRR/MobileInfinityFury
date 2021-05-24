@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 5028192553551960101}
   - component: {fileID: 7928966031377357852}
   - component: {fileID: -4210773972926266227}
+  - component: {fileID: -693788686267497378}
   - component: {fileID: 3780468380582946021}
   - component: {fileID: 8502202082830658306}
   m_Layer: 0
@@ -134,8 +135,25 @@ MonoBehaviour:
   HealthPoints: 10
   speed: 1
   hitTime: 2.5
-  Torque: -0.17575032
-  MovePosition: {x: 0.9930127, y: -0.11800778}
+  Torque: -0.3248875
+  MovePosition: {x: 0.88111997, y: 0.47289285}
+--- !u!114 &-693788686267497378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5580365154156776641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91498a812546e594397b302d7a035877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Bar: {fileID: 9101432529821193934, guid: 4eb532ccf8217624fa56f65eb13d963e, type: 3}
+  hitTime: 2.5
+  HealthPoints: 10
+  BaseHealthPoints: 10
+  GameObjectName: Sputnik
 --- !u!50 &3780468380582946021
 Rigidbody2D:
   serializedVersion: 4

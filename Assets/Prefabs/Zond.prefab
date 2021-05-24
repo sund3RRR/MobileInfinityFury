@@ -256,6 +256,7 @@ GameObject:
   - component: {fileID: 4594964159316064825}
   - component: {fileID: 5166145470373217979}
   - component: {fileID: -1844441706386948401}
+  - component: {fileID: 4576737243467632117}
   - component: {fileID: 7698072245041156064}
   - component: {fileID: 7186038994217268209}
   - component: {fileID: 4207396239774392801}
@@ -366,13 +367,30 @@ MonoBehaviour:
   Bar: {fileID: 9101432529821193934, guid: 4eb532ccf8217624fa56f65eb13d963e, type: 3}
   HealthPoints: 30
   BaseHealthPoints: 30
-  force: {x: 0.14373577, y: -0.9896161}
-  Torque: -0.22807348
+  force: {x: 0.024805997, y: -0.9996923}
+  Torque: 0.84897494
   speed: 1
   hitTime: 2.5
   Sphere: {fileID: 1313127403504266717}
   leftPanel: {fileID: 2583468990962524064}
   rightPanel: {fileID: 2503547479589321284}
+--- !u!114 &4576737243467632117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1716708780654274650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91498a812546e594397b302d7a035877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Bar: {fileID: 9101432529821193934, guid: 4eb532ccf8217624fa56f65eb13d963e, type: 3}
+  hitTime: 2.5
+  HealthPoints: 30
+  BaseHealthPoints: 30
+  GameObjectName: Zond
 --- !u!50 &7698072245041156064
 Rigidbody2D:
   serializedVersion: 4

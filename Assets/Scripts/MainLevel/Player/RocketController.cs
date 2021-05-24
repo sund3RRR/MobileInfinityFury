@@ -13,6 +13,7 @@ public class RocketController : MonoBehaviour
     public float DestroyTime;
 
     // Private variables
+    private SceneController CurrentSceneController;
     private System.Random rand = new System.Random();
     private GameObject[] EnemyArray;
     private GameObject NearestEnemy;
@@ -36,7 +37,7 @@ public class RocketController : MonoBehaviour
     void Start()
     {      
         rb2D = GetComponent<Rigidbody2D>();
-
+        CurrentSceneController = GameObject.FindGameObjectWithTag("SceneController").GetComponent<SceneController>();
         if (SightPosition.sqrMagnitude == 0)
             SightPosition = new Vector2(1.0f, 0);
         UnSightPosition = -SightPosition;
@@ -58,6 +59,7 @@ public class RocketController : MonoBehaviour
             rb2D.velocity = (SightPosition.normalized);
         else if (LifeTime < 0.4f) // придание силы к ракете
             rb2D.AddForce(SightPosition.normalized * speed);
+        /*
         else if (AimBot)
         {
             EnemyArray = SceneController.EnemyArray;
@@ -76,7 +78,9 @@ public class RocketController : MonoBehaviour
                 force = rb2D.velocity;
                 rb2D.AddForce(force);
             }
+
         }
+        */
         else
         {
             rb2D.AddForce(SightPosition.normalized * speed);
@@ -104,66 +108,9 @@ public class RocketController : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             GameObject NewHit = DefaultHit;
-
-            switch (collision.gameObject.name)
+            if (collision.GetComponent<HealthPointsController>().GameObjectName == "Asteroid")
             {
-                case "Zond(Clone)":
-                    collision.gameObject.GetComponent<ZondController>().HealthPoints -= damage;
-                    collision.gameObject.GetComponent<ZondController>().hitTime = 0;
-                    break;
-                case "Sphere":
-                    if (collision.gameObject.GetComponent<SphereController>().Active)
-                    {
-                        collision.GetComponent<SphereController>().HealthPoints -= damage;
-                        collision.GetComponent<SphereController>().hitTime = 0;
-                    }
-                    break;
-                case "Panel":
-                    if (collision.gameObject.GetComponent<PanelController>().Active)
-                    {
-                        collision.gameObject.GetComponent<PanelController>().HealthPoints -= damage;
-                        collision.gameObject.GetComponent<PanelController>().hitTime = 0;
-                    }
-                    break;
-                case "BigPiece(Clone)":
-                    collision.gameObject.GetComponent<BigPieceController>().HealthPoints -= damage;
-                    collision.gameObject.GetComponent<BigPieceController>().hitTime = 0;
-                    break;
-                case "Sputnik(Clone)":
-                    collision.gameObject.GetComponent<SputnikController>().HealthPoints -= damage;
-                    collision.gameObject.GetComponent<SputnikController>().hitTime = 0;
-                    break;
-                case "SmallPiece(Clone)":
-                    DestroyController.DestroyDefault(collision.gameObject);
-                    break;
-                case "GoldAsteroid(Clone)":
-                    collision.gameObject.GetComponent<GoldAsteroidController>().HealthPoints -= damage;
-                    collision.gameObject.GetComponent<GoldAsteroidController>().hitTime = 0;
-                    break;
-                case "FatStarshipEnemy(Clone)":
-                    collision.GetComponent<FatStarshipEnemy>().HealthPoints -= damage;
-                    collision.GetComponent<FatStarshipEnemy>().hitTime = 0;
-                    break;
-                case "DestroyerEnemyStarship(Clone)":
-                    collision.GetComponent<DestroyerEnemyController>().HealthPoints -= damage;
-                    collision.GetComponent<DestroyerEnemyController>().hitTime = 0;
-                    break;
-                case "SlimStarshipEnemy(Clone)":
-                    collision.GetComponent<SlimEnemyController>().HealthPoints -= damage;
-                    collision.GetComponent<SlimEnemyController>().hitTime = 0;
-                    break;
-                case "FirstBoss(Clone)":
-                    collision.GetComponent<BossFirst>().HealthPoints -= damage;
-                    collision.GetComponent<BossFirst>().hitTime = 0;
-                    break;
-                default:
-                    if (collision.gameObject.GetComponent<AsteroidController>())
-                    {
-                        collision.gameObject.GetComponent<AsteroidController>().HealthPoints -= damage;
-                        collision.gameObject.GetComponent<AsteroidController>().hitTime = 0;
-                        NewHit = AsteroidHit;
-                    }
-                    break;
+                NewHit = AsteroidHit;
             }
             GameObject InstanceHit = Instantiate(NewHit, transform.position, Quaternion.identity);
             Destroy(InstanceHit, 1);
