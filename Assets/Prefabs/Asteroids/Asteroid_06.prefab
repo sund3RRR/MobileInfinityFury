@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4950231469624434885}
   - component: {fileID: 1851744986034729729}
   - component: {fileID: 6081703305208278759}
+  - component: {fileID: 8870571589500041873}
   - component: {fileID: 6081703305208278758}
   - component: {fileID: 7986032255023078420}
   m_Layer: 0
@@ -98,7 +99,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Asteroid: {fileID: 4674441794852506985}
-  Bar: {fileID: 9101432529821193934, guid: 4eb532ccf8217624fa56f65eb13d963e, type: 3}
   Asteroid_01: {fileID: 21300000, guid: 7f20039f9d60a15448890f830add5be1, type: 3}
   Asteroid_02: {fileID: 21300000, guid: 5c553dfa7bcaffc4fa6374d128965515, type: 3}
   Asteroid_03: {fileID: 21300000, guid: 36d2e7a463f333948bea2b7999e9e0ac, type: 3}
@@ -106,9 +106,24 @@ MonoBehaviour:
   Torque: 0.52921593
   force: {x: -1.8593166, y: 0.7368458}
   indexScale: 2
+  hitTime: 2.5
+--- !u!114 &8870571589500041873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4674441794852506985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91498a812546e594397b302d7a035877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Bar: {fileID: 9101432529821193934, guid: 4eb532ccf8217624fa56f65eb13d963e, type: 3}
+  hitTime: 2.5
   HealthPoints: 3
   BaseHealthPoints: 3
-  hitTime: 2.5
+  GameObjectName: Asteroid
 --- !u!50 &6081703305208278758
 Rigidbody2D:
   serializedVersion: 4

@@ -22,7 +22,6 @@ public class AsteroidController : MonoBehaviour
     public int indexScale;
     private int HealthPoints;
     private int BaseHealthPoints;
-    public float hitTime = 2.5f;
 
     void Start()
     {
@@ -35,7 +34,6 @@ public class AsteroidController : MonoBehaviour
     void FixedUpdate()
     {
         LifeTime += Time.deltaTime;
-        hitTime += Time.deltaTime;
 
         //
         // object forcing

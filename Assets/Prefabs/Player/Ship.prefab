@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 6975293082513199666}
   - component: {fileID: 6975293082513199669}
   - component: {fileID: 6975293082513199668}
-  - component: {fileID: 6975293082513199671}
   - component: {fileID: 2173257688325879170}
   - component: {fileID: 2219549370066066284}
   m_Layer: 0
@@ -115,37 +114,16 @@ MonoBehaviour:
   range: 4
   UpgradeVFX: {fileID: 675814567206901401, guid: ccfef72174293d944b759a49ace74b03,
     type: 3}
+  bulletPoint: {fileID: 6975293084317684701}
+  bullet: {fileID: 3970292410016663219, guid: a9ca5b65738ac3549a3785bdecbc6112, type: 3}
+  rocket: {fileID: 4362986002164723471, guid: 6fc684607a4e7674da9358380d909252, type: 3}
+  speed: 60
   IsDroneWeapon: 1
   Drone: {fileID: 6726011702954700034, guid: 88f3b737dded98c44ab6899623b77dde, type: 3}
   DroneCount: 7
   MinRadius: 0.8
   RadiusStep: 0.5
   TimeBtwDroneSpawn: 3
-  bulletPoint: {fileID: 6975293084317684701}
-  bullet: {fileID: 3970292410016663219, guid: a9ca5b65738ac3549a3785bdecbc6112, type: 3}
-  rocket: {fileID: 4362986002164723471, guid: 6fc684607a4e7674da9358380d909252, type: 3}
-  speed: 60
---- !u!50 &6975293082513199671
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6975293082513199670}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 6
-  m_LinearDrag: 1
-  m_AngularDrag: 1
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 2
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!58 &2173257688325879170
 CircleCollider2D:
   m_ObjectHideFlags: 0

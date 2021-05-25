@@ -6,17 +6,13 @@ public class SphereController : MonoBehaviour
 {
     public GameObject Zond;
     public GameObject Exp;
-    public GameObject Bar;
     public int PreviousHP;
-    public int HealthPoints;
-    public int BaseHealthPoints;
     public float speed;
 
     public GameObject FirstPiece;
     public GameObject SecondPiece;
     public GameObject ThirdPiece;
     // Private variables
-    private GameObject HealthBar;
     private Rigidbody2D rb2D;
     private float LifeTime = 0;
     private Vector2 force;
@@ -24,30 +20,12 @@ public class SphereController : MonoBehaviour
     // Public variables
     public float Torque;
     public bool Active = false;
-    public float hitTime = 2.5f;
 
     void FixedUpdate()
     {
         if (Active)
         {
             LifeTime += Time.deltaTime;
-            hitTime += Time.deltaTime;
-
-            //
-            // HealthBar changes
-            //
-            if (HealthBar && hitTime > 2.5f)
-            {
-                HealthBar.GetComponent<HealthBarController>().DisableHealthBar();
-            }
-            else if (HealthBar)
-            {
-                HealthBar.GetComponent<HealthBarController>().HealthPoints = HealthPoints;
-                HealthBar.GetComponent<HealthBarController>().EnableHealthBar();
-            }
-            //
-            // HealthBar changes
-            //
 
             //
             // object forcing
@@ -64,18 +42,6 @@ public class SphereController : MonoBehaviour
             }
             //
             // object forcing
-            //
-
-            //
-            // Destroying
-            //
-            if (HealthPoints <= 0)
-            {
-                DestroyController.DestroySphere(gameObject);
-            }
-            //
-            // Destroying
-            //
             //
             // Teleporting
             //
@@ -106,17 +72,9 @@ public class SphereController : MonoBehaviour
         speed = Newspeed;
         Active = true;
         Torque = Random.Range(-0.5f, 0.5f);
-        //
-        // HealthBar INIT
-        //
-        GameObject Canvas = GameObject.FindGameObjectWithTag("Canvas");
-        Bar.GetComponent<HealthBarController>().Target = gameObject;
-        Bar.GetComponent<HealthBarController>().BaseHealthPoints = BaseHealthPoints;
-        HealthBar = Instantiate(Bar, new Vector3(transform.position.x, transform.position.y), Quaternion.identity);
-        HealthBar.transform.SetParent(Canvas.transform, false);
-        //
-        // HealthBar INIT
-        //
+
+        GetComponent<HealthPointsController>().enabled = enabled;
+
         transform.SetParent(null);      
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -126,14 +84,14 @@ public class SphereController : MonoBehaviour
             if (collision.gameObject.tag == "Bullet")
             {
                 PreviousHP -= collision.gameObject.GetComponent<Bullet>().damage;
-                Zond.GetComponent<ZondController>().HealthPoints -= collision.gameObject.GetComponent<Bullet>().damage;
-                Zond.GetComponent<ZondController>().hitTime = 0;
+                Zond.GetComponent<HealthPointsController>().HealthPoints -= collision.gameObject.GetComponent<Bullet>().damage;
+                Zond.GetComponent<HealthPointsController>().hitTime = 0;
             }
             else if (collision.gameObject.tag == "Rocket")
             {
                 PreviousHP -= collision.gameObject.GetComponent<RocketController>().damage;
-                Zond.GetComponent<ZondController>().HealthPoints -= collision.gameObject.GetComponent<RocketController>().damage;
-                Zond.GetComponent<ZondController>().hitTime = 0;
+                Zond.GetComponent<HealthPointsController>().HealthPoints -= collision.gameObject.GetComponent<RocketController>().damage;
+                Zond.GetComponent<HealthPointsController>().hitTime = 0;
             }
         }
     }

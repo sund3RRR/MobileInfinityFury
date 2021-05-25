@@ -5793,8 +5793,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ship
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 6975293082513199671, guid: 87e805d2c9fde874f88dc039bd3ba3c7, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87e805d2c9fde874f88dc039bd3ba3c7, type: 3}
 --- !u!1 &997344716
 GameObject:

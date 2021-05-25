@@ -5,20 +5,15 @@ using UnityEngine;
 public class BossPieceAfterDead : MonoBehaviour
 {
     // Editor variables
-    public int HealthPoints;
-    public int BaseHealthPoints;
-    public GameObject Bar;
     public GameObject Boss;
     public float speed;
 
     // Private variables
-    private GameObject HealthBar;
     private Rigidbody2D rb2D;
     private float LifeTime = 0;
     private Vector2 force;
 
     // Public variables
-    public float hitTime = 2.5f;
     public float Torque;
     public bool Active = false;
 
@@ -27,24 +22,6 @@ public class BossPieceAfterDead : MonoBehaviour
         if (Active)
         {
             LifeTime += Time.deltaTime;
-            hitTime += Time.deltaTime;
-
-            //
-            // HealthBar changes
-            //
-            if (HealthBar && hitTime > 2.5f)
-            {
-                HealthBar.GetComponent<HealthBarController>().DisableHealthBar();
-            }
-            else if (HealthBar)
-            {
-                HealthBar.GetComponent<HealthBarController>().HealthPoints = HealthPoints;
-                HealthBar.GetComponent<HealthBarController>().EnableHealthBar();
-            }
-            //
-            // HealthBar changes
-            //
-            //
             // object forcing
             //
 
@@ -62,18 +39,7 @@ public class BossPieceAfterDead : MonoBehaviour
             }
             //
             // object forcing
-            //           
-            //
-            // Destroying
-            //
-            if (HealthPoints <= 0)
-            {
-                DestroyController.DestroyDefault(gameObject);
-            }
-            //
-            // Destroying
-            //
-            //
+
             // Teleporting
             //
             if (!gameObject.GetComponent<Renderer>().isVisible)
@@ -102,17 +68,7 @@ public class BossPieceAfterDead : MonoBehaviour
         Active = true;
         Torque = Mathf.Pow(-1, Random.Range(1, 3)) * Random.Range(0.4f, 0.8f);
 
-        //
-        // HealthBar INIT
-        //
-        GameObject Canvas = GameObject.FindGameObjectWithTag("Canvas");
-        Bar.GetComponent<HealthBarController>().Target = gameObject;
-        Bar.GetComponent<HealthBarController>().BaseHealthPoints = BaseHealthPoints;
-        HealthBar = Instantiate(Bar, new Vector3(transform.position.x, transform.position.y), Quaternion.identity);
-        HealthBar.transform.SetParent(Canvas.transform, false);
-        //
-        // HealthBar INIT
-        //
+        GetComponent<HealthPointsController>().enabled = enabled;
 
         transform.SetParent(null);
     }

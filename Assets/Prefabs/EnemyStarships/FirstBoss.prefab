@@ -108,10 +108,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitTime: 2.5
   HealthPoints: 500
-  BaseHealthPoints: 500
   LeftBorderTimeBtwShots: 0.6
   RightBorderTimeBtwShots: 1
-  Bar: {fileID: 9101432529821193934, guid: 4eb532ccf8217624fa56f65eb13d963e, type: 3}
   speed: 3
   BulletBoss: {fileID: 3669956873490001447, guid: 9679163176bbc5548b9ad30d7c138dd8,
     type: 3}
@@ -273,6 +271,7 @@ GameObject:
   - component: {fileID: 4780082644865119577}
   - component: {fileID: 1439898946563303626}
   - component: {fileID: 482782025720578548}
+  - component: {fileID: 3002303591363927423}
   - component: {fileID: 3094741907111579866}
   - component: {fileID: 2101097181242707558}
   m_Layer: 0
@@ -359,14 +358,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cce0c8150047db145a4e16a519355412, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HealthPoints: 5
-  BaseHealthPoints: 5
-  Bar: {fileID: 9101432529821193934, guid: 4eb532ccf8217624fa56f65eb13d963e, type: 3}
   Boss: {fileID: 781789360057692748}
   speed: 1.5
-  hitTime: 2.5
   Torque: 0
   Active: 0
+--- !u!114 &3002303591363927423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1098334570213766534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91498a812546e594397b302d7a035877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Bar: {fileID: 9101432529821193934, guid: 4eb532ccf8217624fa56f65eb13d963e, type: 3}
+  hitTime: 2.5
+  HealthPoints: 5
+  BaseHealthPoints: 5
+  GameObjectName: BossPiece
 --- !u!70 &3094741907111579866
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -424,6 +436,7 @@ GameObject:
   - component: {fileID: 7799968469549930015}
   - component: {fileID: 701570118696817878}
   - component: {fileID: 538203285544811218}
+  - component: {fileID: 1568247189079811229}
   - component: {fileID: 2827828395251110095}
   - component: {fileID: 8418403907002802662}
   m_Layer: 0
@@ -510,14 +523,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cce0c8150047db145a4e16a519355412, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HealthPoints: 5
-  BaseHealthPoints: 5
-  Bar: {fileID: 9101432529821193934, guid: 4eb532ccf8217624fa56f65eb13d963e, type: 3}
   Boss: {fileID: 781789360057692748}
   speed: 1.5
-  hitTime: 2.5
   Torque: 0
   Active: 0
+--- !u!114 &1568247189079811229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2010159510746819739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91498a812546e594397b302d7a035877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Bar: {fileID: 9101432529821193934, guid: 4eb532ccf8217624fa56f65eb13d963e, type: 3}
+  hitTime: 2.5
+  HealthPoints: 5
+  BaseHealthPoints: 5
+  GameObjectName: BossPiece
 --- !u!70 &2827828395251110095
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -577,6 +603,7 @@ GameObject:
   - component: {fileID: 3223410783343288256}
   - component: {fileID: 1039242985163691336}
   - component: {fileID: 6243041921661830135}
+  - component: {fileID: 5115187497603723130}
   - component: {fileID: 8543534135459803282}
   - component: {fileID: 907380985694130470}
   m_Layer: 0
@@ -663,14 +690,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cce0c8150047db145a4e16a519355412, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HealthPoints: 5
-  BaseHealthPoints: 5
-  Bar: {fileID: 9101432529821193934, guid: 4eb532ccf8217624fa56f65eb13d963e, type: 3}
   Boss: {fileID: 781789360057692748}
   speed: 1.5
-  hitTime: 2.5
   Torque: 0
   Active: 0
+--- !u!114 &5115187497603723130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2556909342969804261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91498a812546e594397b302d7a035877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Bar: {fileID: 9101432529821193934, guid: 4eb532ccf8217624fa56f65eb13d963e, type: 3}
+  hitTime: 2.5
+  HealthPoints: 5
+  BaseHealthPoints: 5
+  GameObjectName: BossPiece
 --- !u!70 &8543534135459803282
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -789,6 +829,7 @@ GameObject:
   - component: {fileID: 2389417122609160795}
   - component: {fileID: 732151895511012875}
   - component: {fileID: 5422822639906487601}
+  - component: {fileID: 8217200251001109051}
   - component: {fileID: 5805202957842993639}
   - component: {fileID: 6330172435688972650}
   m_Layer: 0
@@ -875,14 +916,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cce0c8150047db145a4e16a519355412, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HealthPoints: 5
-  BaseHealthPoints: 5
-  Bar: {fileID: 9101432529821193934, guid: 4eb532ccf8217624fa56f65eb13d963e, type: 3}
   Boss: {fileID: 781789360057692748}
   speed: 1.5
-  hitTime: 2.5
   Torque: 0
   Active: 0
+--- !u!114 &8217200251001109051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6217278110760059290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91498a812546e594397b302d7a035877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Bar: {fileID: 9101432529821193934, guid: 4eb532ccf8217624fa56f65eb13d963e, type: 3}
+  hitTime: 2.5
+  HealthPoints: 5
+  BaseHealthPoints: 5
+  GameObjectName: BossPiece
 --- !u!70 &5805202957842993639
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
