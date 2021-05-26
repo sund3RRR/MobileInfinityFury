@@ -88,7 +88,7 @@ public class HeroController : MonoBehaviour
         //
         // MOBILE CONTROLS
         //
-        /*
+        /*        
         Touch myTouch = Input.GetTouch(0);
         mousePosition = Camera.main.ScreenToWorldPoint(myTouch.position);
 
@@ -126,7 +126,7 @@ public class HeroController : MonoBehaviour
         
         // MOUSE CONTROLS   
 
-        transform.position = Vector3.Lerp(transform.position, mousePosition, 0.05f);     
+        transform.position = Vector3.Lerp(transform.position, mousePosition, 0.1f);     
     }
     void FixedUpdate()
     {

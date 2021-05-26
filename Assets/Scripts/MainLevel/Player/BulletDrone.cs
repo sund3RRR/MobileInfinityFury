@@ -20,20 +20,4 @@ public class BulletDrone : MonoBehaviour
         if (!GetComponent<Renderer>().isVisible)
             Destroy(gameObject);
     }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag == "Enemy" && collision.name != "ZondVFX(Clone)")
-        {
-            GameObject NewHit = DefaultHit;
-
-            if (collision.GetComponent<HealthPointsController>().GameObjectName == "Asteroid")
-            {
-                NewHit = AsteroidHit;
-            }
-            GameObject InstanceHit = Instantiate(NewHit, transform.position, Quaternion.identity);
-
-            Destroy(InstanceHit, 1);
-            Destroy(gameObject);
-        }
-    }
 }

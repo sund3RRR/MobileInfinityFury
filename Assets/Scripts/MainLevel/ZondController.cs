@@ -4,15 +4,6 @@ using UnityEngine;
 
 public class ZondController : MonoBehaviour
 {
-    // Editor variables
-    public Sprite NoLeftPanelSphere;
-    public Sprite NoRightPanelSphere;
-    public Sprite NoPanelsSphere;
-    public Sprite NoSpherePanels;
-    public Sprite NoLeftPanelNoSphere;
-    public Sprite NoRightPanelNoSphere;
-    public Sprite Bolvanka;
-
     // Private variables
     private Rigidbody2D rb2D;
     private float LifeTime = 0;
@@ -25,10 +16,6 @@ public class ZondController : MonoBehaviour
     public GameObject Sphere;
     public GameObject leftPanel;
     public GameObject rightPanel;
-
-    private bool isLeftPanel = true;
-    private bool isRightPanel = true;
-    private bool isSphere = true;
 
     void Start()
     {
@@ -55,24 +42,6 @@ public class ZondController : MonoBehaviour
         //
         // object forcing
         //
-        if (isLeftPanel && leftPanel.GetComponent<PanelController>().PreviousHP <= 0)
-        {
-            leftPanel.GetComponent<PanelController>().ActivateObject(0.5f);
-            isLeftPanel = false;
-            ChangeSprite();
-        }
-        if (isRightPanel && rightPanel.GetComponent<PanelController>().PreviousHP <= 0)
-        {
-            rightPanel.GetComponent<PanelController>().ActivateObject(0.5f);
-            isRightPanel = false;
-            ChangeSprite();
-        }
-        if (isSphere && Sphere && Sphere.GetComponent<SphereController>().PreviousHP <= 0)
-        {
-            Sphere.GetComponent<SphereController>().ActivateObject(0.5f);
-            isSphere = false;
-            ChangeSprite();
-        }
 
         //
         // Teleporting
@@ -80,26 +49,9 @@ public class ZondController : MonoBehaviour
         if (gameObject.GetComponent<Renderer>().isVisible)
             IsVisibled = true;
         if (!gameObject.GetComponent<Renderer>().isVisible && IsVisibled)
-            GameObject.FindGameObjectWithTag("SceneController").GetComponent<SceneController>().TeleportObject(gameObject);
+            Destroy(gameObject);
         //
         // Teleporting
         //
-    }
-    private void ChangeSprite()
-    {
-        if (!isLeftPanel && isRightPanel && isSphere)
-            GetComponent<SpriteRenderer>().sprite = NoLeftPanelSphere;
-        else if (isLeftPanel && !isRightPanel && isSphere)
-            GetComponent<SpriteRenderer>().sprite = NoRightPanelSphere;           
-        else if (!isLeftPanel && !isRightPanel && isSphere)
-            GetComponent<SpriteRenderer>().sprite = NoPanelsSphere;
-        else if (isLeftPanel && isRightPanel && !isSphere)
-            GetComponent<SpriteRenderer>().sprite = NoSpherePanels;
-        else if (!isLeftPanel && isRightPanel && !isSphere)
-            GetComponent<SpriteRenderer>().sprite = NoLeftPanelNoSphere;
-        else if (isLeftPanel && !isRightPanel && !isSphere)
-            GetComponent<SpriteRenderer>().sprite = NoRightPanelNoSphere;
-        else if (!isLeftPanel && !isRightPanel && !isSphere)
-            GetComponent<SpriteRenderer>().sprite = Bolvanka;
     }
 }

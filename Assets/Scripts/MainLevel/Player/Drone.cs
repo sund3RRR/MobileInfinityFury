@@ -106,13 +106,16 @@ public class Drone : MonoBehaviour
                 {
                     if (!Enemy)
                         CurrentSceneController.ForceRefreshEnemyArray();
-                    Vector2 difference = Enemy.transform.position - transform.position;
-                    float CurrentDistance = difference.sqrMagnitude;
-
-                    if (CurrentDistance < distance)
+                    else
                     {
-                        closest = Enemy;
-                        distance = CurrentDistance;
+                        Vector2 difference = Enemy.transform.position - transform.position;
+                        float CurrentDistance = difference.sqrMagnitude;
+
+                        if (CurrentDistance < distance)
+                        {
+                            closest = Enemy;
+                            distance = CurrentDistance;
+                        }
                     }
                 }
                 Target = closest;
@@ -122,12 +125,7 @@ public class Drone : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Enemy")
-        { 
-            Destroy(gameObject);
-            Instantiate(DeadVFX, transform.position, Quaternion.identity);
-        }
-        else if (collision.tag == "EnemyBullet")
+        if (collision.tag == "EnemyBullet")
         {
             HealthPoints -= 1;
             Destroy(collision.gameObject);

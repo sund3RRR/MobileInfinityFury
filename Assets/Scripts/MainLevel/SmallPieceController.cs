@@ -45,7 +45,7 @@ public class SmallPieceController : MonoBehaviour
         // Teleporting
         //
         if (!gameObject.GetComponent<Renderer>().isVisible)
-            GameObject.FindGameObjectWithTag("SceneController").GetComponent<SceneController>().TeleportObject(gameObject);
+            Destroy(gameObject);
         //
         // Teleporting
         //

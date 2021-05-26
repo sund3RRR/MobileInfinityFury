@@ -62,7 +62,7 @@ public class BonusController : MonoBehaviour
         rb2D.velocity = force;
 
         if (!gameObject.GetComponent<Renderer>().isVisible)
-            GameObject.FindGameObjectWithTag("SceneController").GetComponent<SceneController>().TeleportObject(gameObject);
+            Destroy(gameObject);
     }
     
     private void OnTriggerEnter2D(Collider2D collision)

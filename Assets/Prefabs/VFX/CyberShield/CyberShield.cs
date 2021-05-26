@@ -34,10 +34,14 @@ public class CyberShield : MonoBehaviour
             case "Sphere":
                 if (collision.gameObject.GetComponent<SphereController>().Active)
                     DestroyController.DestroySphere(collision.gameObject);
+                else
+                    collision.gameObject.GetComponent<SphereController>().ActivateObject(0.5f);
                 break;
             case "Panel":
                 if (collision.gameObject.GetComponent<PanelController>().Active)
                     DestroyController.DestroyDefault(collision.gameObject);
+                else
+                    collision.gameObject.GetComponent<PanelController>().ActivateObject(0.5f);
                 break;
             case "BossPiece":
                 if (collision.gameObject.GetComponent<BossPieceAfterDead>().Active)

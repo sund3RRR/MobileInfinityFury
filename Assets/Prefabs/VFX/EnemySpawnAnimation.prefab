@@ -587,7 +587,7 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 6
     enabled: 1
-    type: 0
+    type: 10
     angle: 3.125
     length: 0.625
     boxThickness: {x: 0, y: 0, z: 0}
@@ -5312,7 +5312,7 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 6
     enabled: 1
-    type: 0
+    type: 10
     angle: 3.125
     length: 0.625
     boxThickness: {x: 0, y: 0, z: 0}
@@ -10037,7 +10037,7 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 6
     enabled: 1
-    type: 0
+    type: 10
     angle: 3.125
     length: 0.625
     boxThickness: {x: 0, y: 0, z: 0}
@@ -14762,7 +14762,7 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 6
     enabled: 1
-    type: 0
+    type: 10
     angle: 3.125
     length: 0.625
     boxThickness: {x: 0, y: 0, z: 0}
@@ -24256,7 +24256,7 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 6
     enabled: 1
-    type: 0
+    type: 10
     angle: 3.125
     length: 0.625
     boxThickness: {x: 0, y: 0, z: 0}
@@ -29030,7 +29030,7 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 6
     enabled: 1
-    type: 0
+    type: 10
     angle: 3.125
     length: 0.625
     boxThickness: {x: 0, y: 0, z: 0}
@@ -33755,7 +33755,7 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 6
     enabled: 1
-    type: 0
+    type: 10
     angle: 3.125
     length: 0.625
     boxThickness: {x: 0, y: 0, z: 0}
@@ -38480,7 +38480,7 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 6
     enabled: 1
-    type: 0
+    type: 10
     angle: 3.125
     length: 0.625
     boxThickness: {x: 0, y: 0, z: 0}
@@ -43147,7 +43147,7 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 6
     enabled: 1
-    type: 0
+    type: 10
     angle: 3.125
     length: 0.625
     boxThickness: {x: 0, y: 0, z: 0}
@@ -47814,7 +47814,7 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 6
     enabled: 1
-    type: 0
+    type: 10
     angle: 3.125
     length: 0.625
     boxThickness: {x: 0, y: 0, z: 0}
@@ -52454,7 +52454,7 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 6
     enabled: 1
-    type: 0
+    type: 10
     angle: 3.125
     length: 0.625
     boxThickness: {x: 0, y: 0, z: 0}

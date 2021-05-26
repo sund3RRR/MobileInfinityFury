@@ -587,7 +587,7 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 6
     enabled: 1
-    type: 0
+    type: 10
     angle: 6.25
     length: 1.25
     boxThickness: {x: 0, y: 0, z: 0}
@@ -5281,7 +5281,7 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 6
     enabled: 1
-    type: 0
+    type: 10
     angle: 6.25
     length: 1.25
     boxThickness: {x: 0, y: 0, z: 0}
@@ -9975,7 +9975,7 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 6
     enabled: 1
-    type: 0
+    type: 10
     angle: 6.25
     length: 1.25
     boxThickness: {x: 0, y: 0, z: 0}
@@ -19525,7 +19525,7 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 6
     enabled: 1
-    type: 0
+    type: 10
     angle: 6.25
     length: 1.25
     boxThickness: {x: 0, y: 0, z: 0}
@@ -28841,7 +28841,7 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 6
     enabled: 1
-    type: 0
+    type: 10
     angle: 6.25
     length: 1.25
     boxThickness: {x: 0, y: 0, z: 0}
@@ -32987,7 +32987,7 @@ GameObject:
   - component: {fileID: 4486117920415346676}
   - component: {fileID: 4487459141869102334}
   m_Layer: 0
-  m_Name: SphereVFX
+  m_Name: SphereDead
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

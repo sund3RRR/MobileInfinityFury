@@ -69,7 +69,7 @@ public class ExperienceController : MonoBehaviour
         }
 
         if (!gameObject.GetComponent<Renderer>().isVisible)
-            GameObject.FindGameObjectWithTag("SceneController").GetComponent<SceneController>().TeleportObject(gameObject);
+            Destroy(gameObject);
     }
     void ExperienceGravityToShip()
     {

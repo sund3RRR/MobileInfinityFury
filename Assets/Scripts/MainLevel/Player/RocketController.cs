@@ -103,18 +103,4 @@ public class RocketController : MonoBehaviour
         }
         return closest;
     }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Enemy")
-        {
-            GameObject NewHit = DefaultHit;
-            if (collision.GetComponent<HealthPointsController>().GameObjectName == "Asteroid")
-            {
-                NewHit = AsteroidHit;
-            }
-            GameObject InstanceHit = Instantiate(NewHit, transform.position, Quaternion.identity);
-            Destroy(InstanceHit, 1);
-            Destroy(gameObject);
-        }
-    }
 }

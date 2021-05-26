@@ -24,7 +24,7 @@ public class Bullet : MonoBehaviour
     public int SpriteIndex = 0;
     public float DestroyTime;
     public Vector2 SightPosition;
-     
+
     void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
@@ -32,7 +32,7 @@ public class Bullet : MonoBehaviour
         //
         // Sprite changes
         //
-        switch(SpriteIndex)
+        switch (SpriteIndex)
         {
             case 0:
                 {
@@ -85,21 +85,5 @@ public class Bullet : MonoBehaviour
     void FixedUpdate()
     {
         rb2D.velocity = (SightPosition * speed);
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag == "Enemy" && collision.gameObject.name != "ZondVFX(Clone)")
-        {
-            GameObject NewHit = DefaultHit;
-
-            if (collision.GetComponent<HealthPointsController>().GameObjectName == "Asteroid")
-            {
-                NewHit = AsteroidHit;
-            }
-            GameObject InstanceHit = Instantiate(NewHit, transform.position, Quaternion.identity);
-
-            Destroy(InstanceHit, 1);
-            Destroy(gameObject);
-        }
     }
 }

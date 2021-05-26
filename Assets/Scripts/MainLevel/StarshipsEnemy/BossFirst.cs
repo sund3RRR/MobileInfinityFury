@@ -8,7 +8,6 @@ public class BossFirst : MonoBehaviour
     private Vector2 ForcePosition;
     private Rigidbody2D rb2D;
     private float Timer;
-    public float hitTime = 2.5f;
     public int HealthPoints;
     public float LeftBorderTimeBtwShots;
     public float RightBorderTimeBtwShots;
@@ -30,21 +29,23 @@ public class BossFirst : MonoBehaviour
     {
         rb2D = GetComponent<Rigidbody2D>();
         StartCoroutine(Movement());
-        HealthPoints = GetComponent<HealthPointsController>().HealthPoints;
     }
 
     void FixedUpdate()
     {
-        hitTime += Time.deltaTime;
         Timer += Time.deltaTime;
-        rb2D.AddForce(ForcePosition * speed);
-
-        if (MyCoroutine == null && HealthPoints <= 0) 
-            MyCoroutine = StartCoroutine(DestroyController.DestroyBoss(gameObject));
-        if (HealthPoints <= 0)
-            speed -= 0.1f;
+        rb2D.AddForce(ForcePosition * speed);       
     }
+    public IEnumerator DestroyMe()
+    {
+        StartCoroutine(DestroyController.DestroyBoss(gameObject));
 
+        while (true)
+        {
+            speed /= 1.5f;
+            yield return null;
+        }
+    }
     IEnumerator Movement()
     {
         speed -= 1;

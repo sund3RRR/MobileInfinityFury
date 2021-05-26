@@ -74,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 7
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: b721d03194e2af444aa0c0d8895bde3c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -99,17 +99,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Asteroid: {fileID: 4881670352401834273}
-  Bar: {fileID: 9101432529821193934, guid: 4eb532ccf8217624fa56f65eb13d963e, type: 3}
   Asteroid_01: {fileID: 21300000, guid: b721d03194e2af444aa0c0d8895bde3c, type: 3}
   Asteroid_02: {fileID: 21300000, guid: 5fa9556658f2da947b8a4fcd262ce0be, type: 3}
   Asteroid_03: {fileID: 21300000, guid: 6f87239f75387c243bc479c018a69440, type: 3}
   DeadVFX: {fileID: 699253805189358765, guid: a846c899ce0107e41bae666ba7e57613, type: 3}
-  Torque: 0.16875756
-  force: {x: 0.003517873, y: -0.9999938}
+  Torque: 0.037949443
+  force: {x: -0.057247315, y: -0.99836004}
   indexScale: 3
-  HealthPoints: 5
-  BaseHealthPoints: 5
-  hitTime: 2.5
 --- !u!114 &5904931514949550823
 MonoBehaviour:
   m_ObjectHideFlags: 0

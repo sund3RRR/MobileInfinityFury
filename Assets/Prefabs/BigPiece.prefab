@@ -75,13 +75,13 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 9
-  m_Sprite: {fileID: 21300000, guid: 6ea2a4a094db27944824990462dc1842, type: 3}
+  m_SortingOrder: 6
+  m_Sprite: {fileID: 21300000, guid: 1d93ac2281c1cdd4eb0b3c28c683536f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 4.45, y: 2.39}
+  m_Size: {x: 1.0133333, y: 0.73333335}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -101,14 +101,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SmallPiece: {fileID: 4643625952460041582, guid: 4ce369efe75831f4e91e3ab58f3e61a9,
     type: 3}
-  Bar: {fileID: 9101432529821193934, guid: 4eb532ccf8217624fa56f65eb13d963e, type: 3}
-  BaseHealthPoints: 5
-  HealthPoints: 5
   speed: 1
-  ParentForce: {x: -0.1376759, y: -0.6861644}
-  force: {x: 0.5913062, y: -0.4628755}
-  Torque: 0.019899487
-  hitTime: 2.5
+  ParentForce: {x: 0.2673568, y: -0.95068705}
+  force: {x: 0.61448526, y: -0.8822968}
+  Torque: -0.47936332
 --- !u!114 &-8627980379048387978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -164,8 +160,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.015, y: 0.7366667}
-    newSize: {x: 4.45, y: 2.39}
+    oldSize: {x: 1.0133333, y: 0.73333335}
+    newSize: {x: 1.0133333, y: 0.73333335}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -190,8 +186,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.015, y: 0.7366667}
-    newSize: {x: 4.45, y: 2.39}
+    oldSize: {x: 1.0133333, y: 0.73333335}
+    newSize: {x: 1.0133333, y: 0.73333335}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0

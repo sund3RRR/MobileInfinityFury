@@ -46,11 +46,13 @@ public class SphereController : MonoBehaviour
             // Teleporting
             //
             if (!GetComponent<Renderer>().isVisible)
-                GameObject.FindGameObjectWithTag("SceneController").GetComponent<SceneController>().TeleportObject(gameObject);
+                Destroy(gameObject);
             //
             // Teleporting
             //
         }
+        if (PreviousHP <= 0 && !Active)
+            ActivateObject(0.5f);
     }
     public void ActivateObject(float Newspeed)
     {
@@ -64,7 +66,6 @@ public class SphereController : MonoBehaviour
         }
 
         GetComponent<CircleCollider2D>().enabled = enabled;
-        GetComponent<SpriteRenderer>().enabled = enabled;
 
         Vector2 ZondForce = Zond.GetComponent<Rigidbody2D>().velocity;
         Vector2 ForcePosition = transform.position - Zond.transform.position;

@@ -31,6 +31,9 @@ public class SceneController : MonoBehaviour
     public GameObject FatEnemy;
     public GameObject SlimEnemy;
     public GameObject DestroyerEnemy;
+
+    public GameObject BulletHit;
+    public GameObject BulletAsteroidHit;
     // Private variables
 
     private Camera cam;
@@ -68,7 +71,7 @@ public class SceneController : MonoBehaviour
         Time.timeScale = 1f;
         
         StartCoroutine(RefreshEnemyArray());
-
+        /*
         if (NeedSpawnEnemyStarships)
             StartCoroutine(SpawnEnemyStarShipCore());
         if (NeedSpawnZond)
@@ -77,8 +80,8 @@ public class SceneController : MonoBehaviour
             StartCoroutine(SpawnAsteroids());
         if (NeedSpawnBoss)
             StartCoroutine(SpawnBoss(Boss1));
-        
-        //StartCoroutine(Spawnerrr());
+        */
+        StartCoroutine(Spawnerrr());
     }
     private void Update()
     {       
@@ -100,8 +103,8 @@ public class SceneController : MonoBehaviour
     }
     public void SpawnBossFromDC()
     {
-        //StartCoroutine(Spawnerrr());
-        StartCoroutine(SpawnBoss(Boss1));
+        StartCoroutine(Spawnerrr());
+        //StartCoroutine(SpawnBoss(Boss1));
     }
     IEnumerator Spawnerrr()
     {
@@ -259,9 +262,5 @@ public class SceneController : MonoBehaviour
 
         Vector2 SputnikPoint = new Vector2(XPose, YPose);
         Spawner.SpawnSputnik(SputnikPoint);
-    }
-    public void TeleportObject(GameObject obj)
-    {
-        Destroy(obj);
     }
 }

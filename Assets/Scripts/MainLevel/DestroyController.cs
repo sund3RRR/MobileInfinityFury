@@ -33,6 +33,9 @@ public class DestroyController : MonoBehaviour
     {
         switch (GameObjectName)
         {
+            case "Asteroid":
+                DestroyAsteroid(Object);
+                break;
             case "Zond":
                 DestroyZond(Object);
                 break;
@@ -307,9 +310,9 @@ public class DestroyController : MonoBehaviour
         }
         Instantiate(Exp, Asteroid.transform.position, Quaternion.identity);
 
-        AsteroidDeadVFX = Asteroid.GetComponent<AsteroidController>().GetDeadVFX();
-        GameObject NewAsteroidDeadVFX = Instantiate(AsteroidDeadVFX, Asteroid.transform.position, Quaternion.identity);
-        Destroy(NewAsteroidDeadVFX, 2);
+        //AsteroidDeadVFX = Asteroid.GetComponent<AsteroidController>().GetDeadVFX();
+        //GameObject NewAsteroidDeadVFX = Instantiate(AsteroidDeadVFX, Asteroid.transform.position, Quaternion.identity);
+        //Destroy(NewAsteroidDeadVFX, 2);
 
         Destroy(Asteroid.gameObject);
     }

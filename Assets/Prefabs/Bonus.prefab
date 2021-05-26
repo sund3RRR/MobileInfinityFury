@@ -106,7 +106,7 @@ MonoBehaviour:
   DestroyTime: 15
   UpgradeBonusVFX: {fileID: 3442065874129272672, guid: e4da701a07db5134780fa8532bc8317a,
     type: 3}
-  force: {x: -0.11577112, y: -0.9898873}
+  force: {x: 0.07918383, y: -0.99599785}
 --- !u!50 &1741047421937281929
 Rigidbody2D:
   serializedVersion: 4

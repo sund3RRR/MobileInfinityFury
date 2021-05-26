@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7484897771153148142}
   - component: {fileID: 7483286074186995794}
   m_Layer: 0
-  m_Name: panelvfx
+  m_Name: PanelDead
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24583,7 +24583,7 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 6
     enabled: 1
-    type: 0
+    type: 10
     angle: 2.34375
     length: 0.46875
     boxThickness: {x: 0, y: 0, z: 0}

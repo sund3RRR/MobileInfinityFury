@@ -76,7 +76,7 @@ public class AsteroidController : MonoBehaviour
         if (gameObject.GetComponent<Renderer>().isVisible)
             IsVisibled = true;
         if (!gameObject.GetComponent<Renderer>().isVisible && IsVisibled)
-            GameObject.FindGameObjectWithTag("SceneController").GetComponent<SceneController>().TeleportObject(gameObject);
+            Destroy(gameObject);
         //
         // Teleporting
         //

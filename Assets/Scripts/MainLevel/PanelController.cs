@@ -5,6 +5,7 @@ using UnityEngine;
 public class PanelController : MonoBehaviour
 {
     // Editor variables
+    public Sprite ActivateSprite;
     public GameObject Zond;
     public GameObject Exp;
     public int PreviousHP;
@@ -49,12 +50,14 @@ public class PanelController : MonoBehaviour
             // Teleporting
             //
             if (!GetComponent<Renderer>().isVisible)
-                GameObject.FindGameObjectWithTag("SceneController").GetComponent<SceneController>().TeleportObject(gameObject);
+                Destroy(gameObject);
             //
             // Teleporting
             //
             
         }
+        if (PreviousHP <= 0 && !Active)
+            ActivateObject(0.5f);
     }
     public void ActivateObject(float Newspeed)
     {
@@ -71,7 +74,7 @@ public class PanelController : MonoBehaviour
         }
 
         GetComponent<BoxCollider2D>().enabled = enabled;
-        GetComponent<SpriteRenderer>().enabled = enabled;
+        GetComponent<SpriteRenderer>().sprite = ActivateSprite;
 
         Vector2 ZondForce = Zond.GetComponent<Rigidbody2D>().velocity;   
         Vector2 ForcePosition = transform.position - Zond.transform.position;

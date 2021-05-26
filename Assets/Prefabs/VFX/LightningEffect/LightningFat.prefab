@@ -620,7 +620,7 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 6
     enabled: 1
-    type: 5
+    type: 18
     angle: 2.5369697
     length: 0.50739384
     boxThickness: {x: 0, y: 0, z: 0}
@@ -19620,7 +19620,7 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 6
     enabled: 1
-    type: 0
+    type: 10
     angle: 2.5369697
     length: 0.50739384
     boxThickness: {x: 0, y: 0, z: 0}
@@ -29130,7 +29130,7 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 6
     enabled: 1
-    type: 5
+    type: 18
     angle: 2.5369697
     length: 0.50739384
     boxThickness: {x: 0, y: 0, z: 0}
@@ -38190,6 +38190,8 @@ MonoBehaviour:
   Parent: {fileID: 0}
   CrashEffect: {fileID: 7374351135800220643, guid: 825c07abf3423da45a9928d7dd590c4b,
     type: 3}
+  Bullet1: {fileID: 0}
+  Bullet2: {fileID: 0}
   speed: 4
 --- !u!50 &264465607932955730
 Rigidbody2D:
@@ -43541,7 +43543,7 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 6
     enabled: 1
-    type: 0
+    type: 10
     angle: 2.5369697
     length: 0.50739384
     boxThickness: {x: 0, y: 0, z: 0}
@@ -57796,7 +57798,7 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 6
     enabled: 1
-    type: 5
+    type: 18
     angle: 2.5369697
     length: 0.50739384
     boxThickness: {x: 0, y: 0, z: 0}

@@ -74,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 7
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 7170ddb50ac6eda4a8ff556a3d104240, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -103,10 +103,9 @@ MonoBehaviour:
   Asteroid_02: {fileID: 21300000, guid: 5a50a18941e86c948a8b01503a094ab6, type: 3}
   Asteroid_03: {fileID: 21300000, guid: b938a0561d014214c82a5fa54b3ca955, type: 3}
   DeadVFX: {fileID: 5767382578517433749, guid: 031aed8dd3d1b604f9339db336533a45, type: 3}
-  Torque: 0.5657275
-  force: {x: -0.50009716, y: -0.09375}
+  Torque: -0.28692734
+  force: {x: 0.2088856, y: -1.7858703}
   indexScale: 1
-  hitTime: 2.5
 --- !u!114 &-7474565574084167560
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -104,8 +104,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7779721975734177992, guid: 17a7afede829ec846b63e7fce5f1faab,
         type: 3}
+      propertyPath: m_BoundingSphereOverride.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7779721975734177992, guid: 17a7afede829ec846b63e7fce5f1faab,
+        type: 3}
       propertyPath: m_BoundingSphereOverride.y
-      value: Infinity
+      value: 2.3510647e-38
       objectReference: {fileID: 0}
     - target: {fileID: 7779721975734177992, guid: 17a7afede829ec846b63e7fce5f1faab,
         type: 3}
@@ -126,6 +131,11 @@ PrefabInstance:
         type: 3}
       propertyPath: scalingMode
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7779721976135077297, guid: 17a7afede829ec846b63e7fce5f1faab,
+        type: 3}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.scalar
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7779721976423829433, guid: 17a7afede829ec846b63e7fce5f1faab,
         type: 3}

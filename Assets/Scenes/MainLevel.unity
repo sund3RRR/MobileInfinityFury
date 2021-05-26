@@ -10507,6 +10507,12 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 5525868936204461488, guid: d6089acc8e883504db5e1d4c516003c5,
         type: 3}
+      propertyPath: BulletHit
+      value: 
+      objectReference: {fileID: 5362751063008322092, guid: 7048f4a7925dbcf439f02686f7a65865,
+        type: 3}
+    - target: {fileID: 5525868936204461488, guid: d6089acc8e883504db5e1d4c516003c5,
+        type: 3}
       propertyPath: CrossHair
       value: 
       objectReference: {fileID: 0}
@@ -10553,12 +10559,12 @@ PrefabInstance:
     - target: {fileID: 5525868936204461488, guid: d6089acc8e883504db5e1d4c516003c5,
         type: 3}
       propertyPath: NeedSpawnBoss
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5525868936204461488, guid: d6089acc8e883504db5e1d4c516003c5,
         type: 3}
       propertyPath: NeedSpawnZond
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5525868936204461488, guid: d6089acc8e883504db5e1d4c516003c5,
         type: 3}
@@ -10611,8 +10617,14 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 5525868936204461488, guid: d6089acc8e883504db5e1d4c516003c5,
         type: 3}
+      propertyPath: BulletAsteroidHit
+      value: 
+      objectReference: {fileID: 7865954722538125363, guid: 17a7afede829ec846b63e7fce5f1faab,
+        type: 3}
+    - target: {fileID: 5525868936204461488, guid: d6089acc8e883504db5e1d4c516003c5,
+        type: 3}
       propertyPath: NeedSpawnAsteroid
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5525868936204461488, guid: d6089acc8e883504db5e1d4c516003c5,
         type: 3}
@@ -10627,7 +10639,7 @@ PrefabInstance:
     - target: {fileID: 5525868936204461488, guid: d6089acc8e883504db5e1d4c516003c5,
         type: 3}
       propertyPath: NeedSpawnEnemyStarships
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5525868936204461489, guid: d6089acc8e883504db5e1d4c516003c5,
         type: 3}
