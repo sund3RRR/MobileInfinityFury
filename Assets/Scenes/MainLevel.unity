@@ -10541,6 +10541,18 @@ PrefabInstance:
       objectReference: {fileID: 731580410}
     - target: {fileID: 5525868936204461488, guid: d6089acc8e883504db5e1d4c516003c5,
         type: 3}
+      propertyPath: SecondBoss1
+      value: 
+      objectReference: {fileID: 2461250431247256787, guid: 7c067b15c573d9646b031a118f1ea5ef,
+        type: 3}
+    - target: {fileID: 5525868936204461488, guid: d6089acc8e883504db5e1d4c516003c5,
+        type: 3}
+      propertyPath: SecondBoss2
+      value: 
+      objectReference: {fileID: 5157289952004424421, guid: 3734a17d9a8d9c04bb906c3e257053be,
+        type: 3}
+    - target: {fileID: 5525868936204461488, guid: d6089acc8e883504db5e1d4c516003c5,
+        type: 3}
       propertyPath: ZondDeadVFX
       value: 
       objectReference: {fileID: 6123451228338836751, guid: 9aeccb8b7373d084486a748d8c2aff8e,
@@ -10559,7 +10571,7 @@ PrefabInstance:
     - target: {fileID: 5525868936204461488, guid: d6089acc8e883504db5e1d4c516003c5,
         type: 3}
       propertyPath: NeedSpawnBoss
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5525868936204461488, guid: d6089acc8e883504db5e1d4c516003c5,
         type: 3}
@@ -10607,7 +10619,7 @@ PrefabInstance:
     - target: {fileID: 5525868936204461488, guid: d6089acc8e883504db5e1d4c516003c5,
         type: 3}
       propertyPath: TargetFrameRate
-      value: 2000
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 5525868936204461488, guid: d6089acc8e883504db5e1d4c516003c5,
         type: 3}
@@ -10625,6 +10637,11 @@ PrefabInstance:
         type: 3}
       propertyPath: NeedSpawnAsteroid
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5525868936204461488, guid: d6089acc8e883504db5e1d4c516003c5,
+        type: 3}
+      propertyPath: NeedSpawnSecondBoss
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5525868936204461488, guid: d6089acc8e883504db5e1d4c516003c5,
         type: 3}

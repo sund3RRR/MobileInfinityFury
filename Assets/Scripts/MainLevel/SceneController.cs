@@ -7,6 +7,7 @@ public class SceneController : MonoBehaviour
 {
     // Editor variables
     public GameObject Boss1;
+    public GameObject SecondBoss1, SecondBoss2;
     public GameObject Ship;
     public GameObject Exp;
     public GameObject SmallPiece;
@@ -57,6 +58,7 @@ public class SceneController : MonoBehaviour
     public bool NeedSpawnAsteroid;
     public bool NeedSpawnEnemyStarships;
     public bool NeedSpawnBoss;
+    public bool NeedSpawnSecondBoss;
 
     private void Awake()
     {
@@ -71,7 +73,7 @@ public class SceneController : MonoBehaviour
         Time.timeScale = 1f;
         
         StartCoroutine(RefreshEnemyArray());
-        /*
+        
         if (NeedSpawnEnemyStarships)
             StartCoroutine(SpawnEnemyStarShipCore());
         if (NeedSpawnZond)
@@ -80,8 +82,9 @@ public class SceneController : MonoBehaviour
             StartCoroutine(SpawnAsteroids());
         if (NeedSpawnBoss)
             StartCoroutine(SpawnBoss(Boss1));
-        */
-        StartCoroutine(Spawnerrr());
+        if (NeedSpawnSecondBoss)
+            SpawnSecondBoss(SecondBoss1, SecondBoss2);
+        //StartCoroutine(Spawnerrr());
     }
     private void Update()
     {       
@@ -103,8 +106,8 @@ public class SceneController : MonoBehaviour
     }
     public void SpawnBossFromDC()
     {
-        StartCoroutine(Spawnerrr());
-        //StartCoroutine(SpawnBoss(Boss1));
+        //StartCoroutine(Spawnerrr());
+        StartCoroutine(SpawnBoss(Boss1));
     }
     IEnumerator Spawnerrr()
     {
@@ -152,7 +155,13 @@ public class SceneController : MonoBehaviour
         Instantiate(Boss, SpawnPos, Boss.transform.rotation);
         yield break;
     }
-
+    public void SpawnSecondBoss(GameObject SecondBoss1, GameObject SecondBoss2)
+    {
+        Vector2 SpawnPos = new Vector2(Random.Range(-1.5f, 1.5f), 5.5f);
+        Instantiate(SecondBoss1, SpawnPos, SecondBoss1.transform.rotation);
+        SpawnPos = new Vector2(Random.Range(-1.5f, 1.5f), -5.5f);
+        Instantiate(SecondBoss2, SpawnPos, SecondBoss2.transform.rotation);
+    }
     IEnumerator SpawnEnemyStarShipCore()
     {
         while(true)
