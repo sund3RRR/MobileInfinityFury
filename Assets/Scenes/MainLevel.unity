@@ -5775,7 +5775,7 @@ PrefabInstance:
     - target: {fileID: 6975293082513199668, guid: 87e805d2c9fde874f88dc039bd3ba3c7,
         type: 3}
       propertyPath: IsDroneWeapon
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6975293082513199668, guid: 87e805d2c9fde874f88dc039bd3ba3c7,
         type: 3}
@@ -10643,6 +10643,12 @@ PrefabInstance:
       propertyPath: NeedSpawnSecondBoss
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5525868936204461488, guid: d6089acc8e883504db5e1d4c516003c5,
+        type: 3}
+      propertyPath: ParentForSecondBoss
+      value: 
+      objectReference: {fileID: 1765789008938773235, guid: e99b9e9dad61d1b469629d1d2b5c37f2,
+        type: 3}
     - target: {fileID: 5525868936204461488, guid: d6089acc8e883504db5e1d4c516003c5,
         type: 3}
       propertyPath: UltimateRocketSpeed

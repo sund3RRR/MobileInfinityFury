@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SecondBoss1 : MonoBehaviour
 {
-    [SerializeField] private GameObject Parent;
     private Vector2 MovePosition;
     private Vector2 ForcePosition;
     private Rigidbody2D rb2D;
@@ -39,11 +38,13 @@ public class SecondBoss1 : MonoBehaviour
         Timer += Time.deltaTime;
         if (rb2D)
             rb2D.AddForce(ForcePosition * speed);
+        /*
         if (myCoroutine == null && GetComponent<HealthPointsController>().HealthPoints <= 15)
         {
             StopAllCoroutines();
             myCoroutine = StartCoroutine(StartTurbo());
         }
+        */
     }
     IEnumerator Movement()
     {
@@ -70,12 +71,12 @@ public class SecondBoss1 : MonoBehaviour
             Instantiate(BulletBoss, BulletPoint.position, Quaternion.AngleAxis(90, Vector3.forward));
         }
     }
-    IEnumerator StartTurbo()
+    public IEnumerator Turbo(GameObject Target)
     {
         Destroy(GetComponent<Rigidbody2D>());
-        Vector2 StartPos = GameObject.FindGameObjectWithTag("PlayerBlue").transform.position;
-        GameObject NewParent = Instantiate(Parent, StartPos, Quaternion.identity);
-        transform.SetParent(NewParent.transform);
+        GetComponent<HealthPointsController>().enabled = !enabled;
+        Vector2 StartPos = Target.transform.position;
+        transform.SetParent(Target.transform);
         Vector2 Baseforce = new Vector2(StartPos.x + Radius, StartPos.y) - (Vector2)transform.position, force = Baseforce;
         float speed = 0.2f;
         while (force.sqrMagnitude > 0.1f)
@@ -95,7 +96,7 @@ public class SecondBoss1 : MonoBehaviour
         }
         while (true)
         {
-            DistanceVector = NewParent.transform.position - transform.position;
+            DistanceVector = Target.transform.position - transform.position;
             RotateVector = new Vector2(LeftCoordinateMulti * DistanceVector.y, RightCoordinateMulti * DistanceVector.x).normalized;
             if (DistanceVector.magnitude - Radius > 0)
             {
@@ -110,7 +111,7 @@ public class SecondBoss1 : MonoBehaviour
                 DistanceVectorMulti = (Radius - DistanceVector.magnitude) * InsideForceMultiplier;
             }
             force = RotateVector * RotateSpeed + DistanceVector.normalized * DistanceVectorMulti;
-            transform.Translate(force * Time.deltaTime, NewParent.transform);
+            transform.Translate(force * Time.deltaTime);
 
             float rotate = Mathf.Atan2(force.y, force.x) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.AngleAxis(rotate, Vector3.forward), 0.1f);

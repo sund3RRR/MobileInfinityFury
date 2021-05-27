@@ -8,6 +8,7 @@ public class SceneController : MonoBehaviour
     // Editor variables
     public GameObject Boss1;
     public GameObject SecondBoss1, SecondBoss2;
+    public GameObject ParentForSecondBoss;
     public GameObject Ship;
     public GameObject Exp;
     public GameObject SmallPiece;
@@ -158,9 +159,11 @@ public class SceneController : MonoBehaviour
     public void SpawnSecondBoss(GameObject SecondBoss1, GameObject SecondBoss2)
     {
         Vector2 SpawnPos = new Vector2(Random.Range(-1.5f, 1.5f), 5.5f);
-        Instantiate(SecondBoss1, SpawnPos, SecondBoss1.transform.rotation);
+        ParentForSecondBoss.GetComponent<SecondBossManager>().SecondBoss1 = Instantiate(SecondBoss1, SpawnPos, SecondBoss1.transform.rotation);
         SpawnPos = new Vector2(Random.Range(-1.5f, 1.5f), -5.5f);
-        Instantiate(SecondBoss2, SpawnPos, SecondBoss2.transform.rotation);
+        ParentForSecondBoss.GetComponent<SecondBossManager>().SecondBoss2 = Instantiate(SecondBoss2, SpawnPos, SecondBoss2.transform.rotation);
+
+        Instantiate(ParentForSecondBoss);
     }
     IEnumerator SpawnEnemyStarShipCore()
     {

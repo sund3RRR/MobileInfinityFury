@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5157289952004424419}
   - component: {fileID: 5157289952004424417}
   - component: {fileID: 5895750958515273492}
+  - component: {fileID: 7162163393993937847}
   m_Layer: 0
   m_Name: SecondBoss2
   m_TagString: Untagged
@@ -124,6 +125,27 @@ MonoBehaviour:
   BulletBoss: {fileID: 3669956873490001447, guid: 9679163176bbc5548b9ad30d7c138dd8,
     type: 3}
   BulletPoint1: {fileID: 5157289952830068835}
+  Radius: 0
+  IsClockwise: 0
+  RotateSpeed: 0
+  InsideForceMultiplier: 0
+--- !u!114 &7162163393993937847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5157289952004424421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91498a812546e594397b302d7a035877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Bar: {fileID: 9101432529821193934, guid: 4eb532ccf8217624fa56f65eb13d963e, type: 3}
+  hitTime: 2.5
+  HealthPoints: 30
+  BaseHealthPoints: 30
+  GameObjectName: 
 --- !u!1 &5157289952830068834
 GameObject:
   m_ObjectHideFlags: 0

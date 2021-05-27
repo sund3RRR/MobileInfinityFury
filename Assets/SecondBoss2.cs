@@ -14,6 +14,17 @@ public class SecondBoss2 : MonoBehaviour
     public GameObject BulletBoss;
     public Transform BulletPoint1;
 
+    private Vector2 RotateVector;
+    private Vector2 DistanceVector;
+    private GameObject Player;
+    private float DistanceVectorMulti;
+    public float Radius;
+    public bool IsClockwise;
+    public float RotateSpeed;
+    public float InsideForceMultiplier;
+    private int LeftCoordinateMulti = -1;
+    private int RightCoordinateMulti = 1;
+
     void Awake()
     {
         rb2D = GetComponent<Rigidbody2D>();
@@ -23,7 +34,8 @@ public class SecondBoss2 : MonoBehaviour
     void FixedUpdate()
     {
         Timer += Time.deltaTime;
-        rb2D.AddForce(ForcePosition * speed);
+        if (rb2D)
+            rb2D.AddForce(ForcePosition * speed);
     }
     IEnumerator Movement()
     {
@@ -48,6 +60,54 @@ public class SecondBoss2 : MonoBehaviour
         {
             yield return new WaitForSeconds(TimeBtwShots);
             Instantiate(BulletBoss, BulletPoint.position, Quaternion.AngleAxis(-90, Vector3.forward));
+        }
+    }
+    public IEnumerator Turbo(GameObject Target)
+    {
+        Destroy(GetComponent<Rigidbody2D>());
+        GetComponent<HealthPointsController>().enabled = !enabled;
+        Vector2 StartPos = Target.transform.position;
+        transform.SetParent(Target.transform);
+        Vector2 Baseforce = new Vector2(StartPos.x - Radius, StartPos.y) - (Vector2)transform.position, force = Baseforce;
+        float speed = 0.2f;
+        while (force.sqrMagnitude > 0.1f)
+        {
+            if (Baseforce.magnitude / 2f - (Baseforce.magnitude - force.magnitude) > 0)
+                speed += 0.05f;
+            else if (speed > 5)
+                speed -= 0.05f;
+            transform.Translate(force.normalized * Time.deltaTime * speed, Space.World);
+
+            float rotate = Mathf.Atan2(force.y, force.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.AngleAxis(rotate, Vector3.forward), 0.05f);
+
+            force = new Vector2(StartPos.x - Radius, StartPos.y) - (Vector2)transform.position;
+
+            yield return null;
+        }
+        while (true)
+        {
+            DistanceVector = Target.transform.position - transform.position;
+            RotateVector = new Vector2(LeftCoordinateMulti * DistanceVector.y, RightCoordinateMulti * DistanceVector.x).normalized;
+            if (DistanceVector.magnitude - Radius > 0)
+            {
+                if (DistanceVector.magnitude - Radius < 2)
+                    DistanceVectorMulti = DistanceVector.magnitude - Radius;
+                else
+                    DistanceVectorMulti = 2;
+            }
+            else if (DistanceVector.magnitude - Radius < 0)
+            {
+                DistanceVector = -DistanceVector;
+                DistanceVectorMulti = (Radius - DistanceVector.magnitude) * InsideForceMultiplier;
+            }
+            force = RotateVector * RotateSpeed + DistanceVector.normalized * DistanceVectorMulti;
+            transform.Translate(force * Time.deltaTime);
+
+            float rotate = Mathf.Atan2(force.y, force.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.AngleAxis(rotate, Vector3.forward), 0.1f);
+
+            yield return null;
         }
     }
 }
