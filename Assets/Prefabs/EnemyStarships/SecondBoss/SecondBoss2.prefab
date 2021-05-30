@@ -99,17 +99,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a6ab87704a905e4dba39db0f40d8810, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DefaultSpeed: 10
-  DefaultRotateSpeed: 4
-  AccelerationStepBeforeTurbo: 0.1
-  SwapToUpSpeed: 1.5
-  TurboSpeed: 8
-  Radius: 1.5
-  TimeBtwShots: 0.5
   BulletBoss: {fileID: 3669956873490001447, guid: 9679163176bbc5548b9ad30d7c138dd8,
     type: 3}
   BulletPoint1: {fileID: 5157289952830068835}
-  IsClockwise: 0
+  DefaultSpeed: 10
+  DefaultRotateSpeed: 4
+  AccelerationStepBeforeTurbo: 0.2
+  SwapToUpSpeed: 1.5
+  TurboSpeed: 12
+  Radius: 1.5
+  TimeBtwShots: 0.5
   InsideForceMultiplier: 2
 --- !u!114 &7162163393993937847
 MonoBehaviour:
@@ -125,8 +124,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Bar: {fileID: 9101432529821193934, guid: 4eb532ccf8217624fa56f65eb13d963e, type: 3}
   hitTime: 2.5
-  HealthPoints: 300
-  BaseHealthPoints: 300
+  HealthPoints: 250
+  BaseHealthPoints: 250
   GameObjectName: SecondBoss2
 --- !u!58 &9208611416179804605
 CircleCollider2D:

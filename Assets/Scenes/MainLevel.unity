@@ -5809,6 +5809,11 @@ PrefabInstance:
       propertyPath: TimeBtwDroneSpawn
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 6975293082513199668, guid: 87e805d2c9fde874f88dc039bd3ba3c7,
+        type: 3}
+      propertyPath: RadiusForSecondBoss
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6975293082513199669, guid: 87e805d2c9fde874f88dc039bd3ba3c7,
         type: 3}
       propertyPath: m_Sprite

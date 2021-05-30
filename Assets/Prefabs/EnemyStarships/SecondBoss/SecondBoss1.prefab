@@ -104,9 +104,9 @@ MonoBehaviour:
   BulletPoint1: {fileID: 2461250431537370709}
   DefaultSpeed: 10
   DefaultRotateSpeed: 4
-  AccelerationStepBeforeTurbo: 0.1
+  AccelerationStepBeforeTurbo: 0.2
   SwapToUpSpeed: 2
-  TurboSpeed: 8
+  TurboSpeed: 12
   Radius: 1.5
   TimeBtwShots: 0.5
   InsideForceMultiplier: 2
@@ -124,8 +124,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Bar: {fileID: 9101432529821193934, guid: 4eb532ccf8217624fa56f65eb13d963e, type: 3}
   hitTime: 2.5
-  HealthPoints: 300
-  BaseHealthPoints: 300
+  HealthPoints: 25
+  BaseHealthPoints: 25
   GameObjectName: SecondBoss1
 --- !u!58 &4690374144374023746
 CircleCollider2D:

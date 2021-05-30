@@ -43,9 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a85f012dda4d47e4980d6f6de0d97c0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TurboTime: 5
-  CircleSpeed: 1
-  metka: {fileID: 3651174294025824649, guid: 1c90a9dd9540c054fae1a3e231e6e97b, type: 3}
+  TurboTime: 8
+  CircleSpeed: 0.7
   SecondBoss1: {fileID: 0}
   SecondBoss2: {fileID: 0}
   IsTurbo: 0
