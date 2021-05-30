@@ -13,6 +13,8 @@ public class HeroController : MonoBehaviour
     private Joystick FireJoystick;
     */
     // JOYSTICK CONTROL
+    public float RadiusForSecondBoss;
+    public GameObject ParentForSecondBoss;
     private GameObject NewUltimate;
     public GameObject CyberShieldVFX;
     public GameObject EngineThrustVFX;
@@ -73,6 +75,8 @@ public class HeroController : MonoBehaviour
     public float TimeBtwDroneSpawn;
     private float TimerDrones = 0;
 
+    private bool IsStunned;
+
     void Start()
     {
         DroneRadiusArray = new float[DroneCount];
@@ -123,10 +127,15 @@ public class HeroController : MonoBehaviour
             Destroy(NewUltimate, 1.1f);
             CountOfUltimate--;
         }
-        
-        // MOUSE CONTROLS   
 
-        transform.position = Vector3.Lerp(transform.position, mousePosition, 0.1f);     
+        // MOUSE CONTROLS   
+        if (IsStunned)
+            return;
+        else if (ParentForSecondBoss && ParentForSecondBoss.GetComponent<SecondBossManager>().IsTurbo &&
+            (Mathf.Abs(((Vector2)ParentForSecondBoss.transform.position - mousePosition).sqrMagnitude) < RadiusForSecondBoss * RadiusForSecondBoss))
+            transform.position = Vector3.Lerp(transform.position, mousePosition, 0.1f);
+        else if (!ParentForSecondBoss || !ParentForSecondBoss.GetComponent<SecondBossManager>().IsTurbo)
+            transform.position = Vector3.Lerp(transform.position, mousePosition, 0.1f);
     }
     void FixedUpdate()
     {
@@ -144,6 +153,12 @@ public class HeroController : MonoBehaviour
   
         TimeBtwBulletShots += Time.deltaTime;
         TimeBtwRocketShots += Time.deltaTime;
+    }
+    public IEnumerator Stun()
+    {
+        IsStunned = true;
+        yield return new WaitForSeconds(1.5f);
+        IsStunned = false;
     }
     public void UpgradeWeapon()
     {
@@ -286,7 +301,7 @@ public class HeroController : MonoBehaviour
                 SceneController.ShipLifeBlue--;
                 NewCyberShield = Instantiate(CyberShieldVFX, transform.position, Quaternion.identity, transform);
                 NewCyberShield.GetComponent<CyberShield>().Parent = gameObject;
-                Destroy(NewCyberShield, 9);
+                Destroy(NewCyberShield, 5);
             }
         }
     }

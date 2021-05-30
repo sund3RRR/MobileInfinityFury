@@ -99,6 +99,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abb8663dba1405342aae390299d3a8aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RadiusForSecondBoss: 1.5
+  ParentForSecondBoss: {fileID: 0}
   CyberShieldVFX: {fileID: 7486198954648731787, guid: 0cf5a5c0e59842849a47bea84b525f3a,
     type: 3}
   EngineThrustVFX: {fileID: 8300230982517169249, guid: 3ee4a13ac52db2f45ba62b49981cfce6,

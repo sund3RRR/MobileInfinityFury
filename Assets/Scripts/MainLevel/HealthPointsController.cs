@@ -52,7 +52,7 @@ public class HealthPointsController : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Bullet" || collision.tag == "Rocket" || collision.tag == "BulletDrone" || collision.tag == "Drone")
+        if ((collision.tag == "Bullet" || collision.tag == "Rocket" || collision.tag == "BulletDrone" || collision.tag == "Drone") && enabled)
         {
             if ((GameObjectName != "Sphere" && GameObjectName != "Panel") ||
                 (GameObjectName == "Sphere" && GetComponent<SphereController>().Active) ||
