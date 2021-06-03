@@ -124,8 +124,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Bar: {fileID: 9101432529821193934, guid: 4eb532ccf8217624fa56f65eb13d963e, type: 3}
   hitTime: 2.5
-  HealthPoints: 25
-  BaseHealthPoints: 25
+  HealthPoints: 250
+  BaseHealthPoints: 250
   GameObjectName: SecondBoss1
 --- !u!58 &4690374144374023746
 CircleCollider2D:

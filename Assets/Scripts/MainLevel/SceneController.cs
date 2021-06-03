@@ -6,36 +6,31 @@ using UnityEngine.InputSystem;
 public class SceneController : MonoBehaviour
 {
     // Editor variables
-    public GameObject Boss1;
-    public GameObject SecondBoss1, SecondBoss2;
-    public GameObject ParentForSecondBoss;
-    public GameObject Ship;
+    [SerializeField] private GameObject Boss1;
+    [SerializeField] private GameObject SecondBoss1, SecondBoss2;
+    [SerializeField] private GameObject Boss4;
+    [SerializeField] private GameObject ParentForSecondBoss;
+    [SerializeField] private GameObject Ship;   
+    [SerializeField] private GameObject AsteroidDeadVFX; 
+
+    [SerializeField] private GameObject EnemySpawnVFX;
+    [SerializeField] private GameObject EnemySpawnVFX2;
+    [SerializeField] private GameObject SpawnVFX;
+    [SerializeField] private GameObject FatEnemy;
+    [SerializeField] private GameObject SlimEnemy;
+    [SerializeField] private GameObject DestroyerEnemy;
+
     public GameObject Exp;
     public GameObject SmallPiece;
     public GameObject BigPiece;
     public GameObject Bonus;
-    public GameObject CrossHair;
     public GameObject DeadVFX;
     public GameObject ZondDeadVFX;
-    public GameObject AsteroidDeadVFX;
     public GameObject ZondExplosionVFX;
-    public GameObject TwentyOnNine;
-    public GameObject NineteenAndHalfOnNine;
-    public GameObject EighteenOnNine;
-    public GameObject SixteenOnNine;
-    public GameObject SixteeenOnTen;
-    public GameObject FourOnThree;
-
-    public GameObject EnemySpawnVFX;
-    public GameObject EnemySpawnVFX2;
-    public GameObject SpawnVFX;
-
-    public GameObject FatEnemy;
-    public GameObject SlimEnemy;
-    public GameObject DestroyerEnemy;
-
     public GameObject BulletHit;
     public GameObject BulletAsteroidHit;
+    public GameObject HealthBar;
+    public GameObject CurrentCanvas;
     // Private variables
 
     private Camera cam;
@@ -46,20 +41,25 @@ public class SceneController : MonoBehaviour
     private int TimingAsteroids = 3;
     private int TimingZonds = 5;
     private Vector2 viewPortPos;
+    private int bufferindex;
 
     // Public static variables
     public static bool isLifeBlue = false;
     public static int ShipLifeBlue = 3;
     public static bool isLifeGreen = false;
     public static int ShipLifeGreen = 3;
-    public GameObject[] EnemyArray;
 
-    public int TargetFrameRate;
-    public bool NeedSpawnZond;
-    public bool NeedSpawnAsteroid;
-    public bool NeedSpawnEnemyStarships;
-    public bool NeedSpawnBoss;
-    public bool NeedSpawnSecondBoss;
+    [HideInInspector] public GameObject[] EnemyArray;
+
+    // Editor Variables
+    [SerializeField] private int TargetFrameRate;
+    [SerializeField] private bool NeedSpawnZond;
+    [SerializeField] private bool NeedSpawnAsteroid;
+    [SerializeField] private bool NeedSpawnEnemyStarships;
+
+    [SerializeField] private bool NeedSpawnFirstBoss;
+    [SerializeField] private bool NeedSpawnSecondBoss;
+    [SerializeField] private bool NeedSpawnFourthBoss;
 
     private void Awake()
     {
@@ -81,11 +81,13 @@ public class SceneController : MonoBehaviour
             StartCoroutine(SpawnZond());
         if (NeedSpawnAsteroid)
             StartCoroutine(SpawnAsteroids());
-        if (NeedSpawnBoss)
-            StartCoroutine(SpawnBoss(Boss1));
+
+        if (NeedSpawnFirstBoss)
+            SpawnBoss(1);
         if (NeedSpawnSecondBoss)
-            SpawnSecondBoss(SecondBoss1, SecondBoss2);
-        //StartCoroutine(Spawnerrr());
+            SpawnBoss(2);
+        if (NeedSpawnFourthBoss)
+            SpawnBoss(4);
     }
     private void Update()
     {       
@@ -108,7 +110,7 @@ public class SceneController : MonoBehaviour
     public void SpawnBossFromDC()
     {
         //StartCoroutine(Spawnerrr());
-        StartCoroutine(SpawnBoss(Boss1));
+        SpawnBoss(bufferindex);
     }
     IEnumerator Spawnerrr()
     {
@@ -121,7 +123,8 @@ public class SceneController : MonoBehaviour
         StopCoroutine(myC2);
         StopCoroutine(myC3);
 
-        StartCoroutine(SpawnBoss(Boss1));
+        SpawnBoss(1);
+
         yield break;
     }
     IEnumerator SpawnStarShipEnemy(GameObject StarShipEnemy)
@@ -150,20 +153,29 @@ public class SceneController : MonoBehaviour
         }
         yield break;
     }
-    public IEnumerator SpawnBoss(GameObject Boss)
+    public void SpawnBoss(int index)
     {
-        Vector2 SpawnPos = new Vector2(Random.Range(-1.5f, 1.5f), 5.5f);
-        Instantiate(Boss, SpawnPos, Boss.transform.rotation);
-        yield break;
-    }
-    public void SpawnSecondBoss(GameObject SecondBoss1, GameObject SecondBoss2)
-    {
-        Vector2 SpawnPos = new Vector2(Random.Range(-1.5f, 1.5f), 5.5f);
-        ParentForSecondBoss.GetComponent<SecondBossManager>().SecondBoss1 = Instantiate(SecondBoss1, SpawnPos, SecondBoss1.transform.rotation);
-        SpawnPos = new Vector2(Random.Range(-1.5f, 1.5f), -5.5f);
-        ParentForSecondBoss.GetComponent<SecondBossManager>().SecondBoss2 = Instantiate(SecondBoss2, SpawnPos, SecondBoss2.transform.rotation);
+        bufferindex = index;
+        Vector2 SpawnPos;
+        if (index == 1)
+        {
+            SpawnPos = new Vector2(Random.Range(-1.5f, 1.5f), 5.5f);
+            Instantiate(Boss1, SpawnPos, Boss1.transform.rotation);
+        }
+        else if (index == 2)
+        {
+            SpawnPos = new Vector2(Random.Range(-1.5f, 1.5f), 5.5f);
+            ParentForSecondBoss.GetComponent<SecondBossManager>().SecondBoss1 = Instantiate(SecondBoss1, SpawnPos, SecondBoss1.transform.rotation);
+            SpawnPos = new Vector2(Random.Range(-1.5f, 1.5f), -5.5f);
+            ParentForSecondBoss.GetComponent<SecondBossManager>().SecondBoss2 = Instantiate(SecondBoss2, SpawnPos, SecondBoss2.transform.rotation);
 
-        Instantiate(ParentForSecondBoss);
+            Instantiate(ParentForSecondBoss);
+        }
+        else if (index == 4)
+        {
+            SpawnPos = new Vector2(Random.Range(-1.5f, 1.5f), 6.3f);
+            Instantiate(Boss4, SpawnPos, Boss4.transform.rotation);
+        }
     }
     IEnumerator SpawnEnemyStarShipCore()
     {

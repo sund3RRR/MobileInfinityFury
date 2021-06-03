@@ -53,9 +53,6 @@ public class HeroControllerGamePad : MonoBehaviour
     void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
-
-        CrossHair = GameObject.FindGameObjectWithTag("SceneController").GetComponent<SceneController>().CrossHair;
-        CrossHair.GetComponent<CrossHairController>().Target = gameObject;
     }
     void Update()
     {

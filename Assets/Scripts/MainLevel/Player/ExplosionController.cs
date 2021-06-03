@@ -58,6 +58,9 @@ public class ExplosionController : MonoBehaviour
             case "DestroyerEnemyStarship(Clone)":
                 DestroyController.DestroyFatEnemy(collision.gameObject);
                 break;
+            case "Summon(Clone)":
+                DestroyController.DestroyDefault(collision.gameObject);
+                break;
             default:
                 if (collision.gameObject.GetComponent<AsteroidController>())
                     DestroyController.DestroyAsteroid(collision.gameObject);

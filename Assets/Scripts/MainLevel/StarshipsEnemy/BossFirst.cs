@@ -4,26 +4,29 @@ using UnityEngine;
 
 public class BossFirst : MonoBehaviour
 {
-    private Vector2 MovePosition;
-    private Vector2 ForcePosition;
-    private Rigidbody2D rb2D;
-    private float Timer;
-    public int HealthPoints;
-    public float LeftBorderTimeBtwShots;
-    public float RightBorderTimeBtwShots;
-    public float speed;
-    public GameObject BulletBoss;
+    //Editor variables
+    [SerializeField] private float LeftBorderTimeBtwShots;
+    [SerializeField] private float RightBorderTimeBtwShots;
+    [SerializeField] private float speed;
+    [SerializeField] private GameObject BulletBoss;
+
+    //Public variables
     public Transform BulletPoint1;
     public Transform BulletPoint2;
     public Transform BulletPoint3;
     public Transform BulletPoint4;
-
-    private Coroutine MyCoroutine;
-
     public GameObject FirstPiece;
     public GameObject SecondPiece;
     public GameObject ThirdPiece;
     public GameObject FourthPiece;
+
+    //private variables
+    private Vector2 MovePosition;
+    private Vector2 ForcePosition;
+    private Rigidbody2D rb2D;
+    private float Timer;
+
+    
 
     void Awake()
     {

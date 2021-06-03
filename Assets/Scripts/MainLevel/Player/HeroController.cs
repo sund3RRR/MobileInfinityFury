@@ -92,7 +92,7 @@ public class HeroController : MonoBehaviour
         //
         // MOBILE CONTROLS
         //
-        /*        
+        /* 
         Touch myTouch = Input.GetTouch(0);
         mousePosition = Camera.main.ScreenToWorldPoint(myTouch.position);
 
@@ -127,7 +127,7 @@ public class HeroController : MonoBehaviour
             Destroy(NewUltimate, 1.1f);
             CountOfUltimate--;
         }
-
+        
         // MOUSE CONTROLS   
         if (IsStunned)
             return;
@@ -264,12 +264,14 @@ public class HeroController : MonoBehaviour
     {
         if ((collision.gameObject.tag == "Enemy" || collision.tag == "EnemyBullet") && LifeTime > 1f)
         {
+            if (collision.GetComponent<HealthPointsController>()?.GameObjectName == "Summon")
+                Destroy(collision.gameObject);
             if (!NewCyberShield)
             {
                 SceneController.ShipLifeBlue--;
                 NewCyberShield = Instantiate(CyberShieldVFX, transform.position, Quaternion.identity, transform);
                 NewCyberShield.GetComponent<CyberShield>().Parent = gameObject;
-                Destroy(NewCyberShield, 9);
+                Destroy(NewCyberShield, 5);
             }
         }
         if (collision.gameObject.tag == "Experience")

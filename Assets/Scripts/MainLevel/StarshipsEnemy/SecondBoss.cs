@@ -43,7 +43,7 @@ public class SecondBoss : MonoBehaviour
     private void Update()
     {
         if (blyat)
-            transform.position = Vector2.Lerp(transform.position, MovePosition, Time.deltaTime * DefaultSpeed);
+            transform.position = Vector2.LerpUnclamped(transform.position, MovePosition, Time.deltaTime * DefaultSpeed);
     }
     public IEnumerator MovementDown(float Mul)
     {

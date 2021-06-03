@@ -4,26 +4,34 @@ using UnityEngine;
 
 public class HealthPointsController : MonoBehaviour
 {
-    public GameObject Bar;
-    private GameObject HealthBar;
-    public float hitTime = 2.5f;
+    //editor and public 
     public int HealthPoints;
     public int BaseHealthPoints;
+    public string GameObjectName;
+
+    //public variables
+    [HideInInspector] public float hitTime = 2.5f;
+
+    //private variables
+    private SceneController CurrentScene;
+    private GameObject Bar;
+    private GameObject HealthBar;
     private Coroutine myCoroutine;
     private GameObject BulletHit;
     private GameObject BulletAsteroidHit;
 
-    public string GameObjectName;
-
     void Awake()
     {
-        BulletHit = GameObject.FindGameObjectWithTag("SceneController").GetComponent<SceneController>().BulletHit;
-        BulletAsteroidHit = GameObject.FindGameObjectWithTag("SceneController").GetComponent<SceneController>().BulletAsteroidHit;
+        CurrentScene = GameObject.FindGameObjectWithTag("SceneController").GetComponent<SceneController>();
+
+        BulletHit = CurrentScene.BulletHit;
+        BulletAsteroidHit = CurrentScene.BulletAsteroidHit;
+        Bar = CurrentScene.HealthBar;
 
         BaseHealthPoints = HealthPoints;
         if (HealthPoints > 1)
         {
-            GameObject Canvas = GameObject.FindGameObjectWithTag("Canvas");
+            GameObject Canvas = CurrentScene.CurrentCanvas;
             Bar.GetComponent<HealthBarController>().Target = gameObject;
             Bar.GetComponent<HealthBarController>().BaseHealthPoints = BaseHealthPoints;
             HealthBar = Instantiate(Bar, new Vector3(transform.position.x, transform.position.y), Quaternion.identity);
@@ -58,6 +66,7 @@ public class HealthPointsController : MonoBehaviour
                 (GameObjectName == "Sphere" && GetComponent<SphereController>().Active) ||
                 (GameObjectName == "Panel" && GetComponent<PanelController>().Active))
             {
+                GameObject NewHit = BulletHit;
                 switch (collision.tag)
                 {
                     case "Bullet":
@@ -71,9 +80,9 @@ public class HealthPointsController : MonoBehaviour
                         break;
                     case "Drone":
                         HealthPoints -= collision.GetComponent<Drone>().damage;
+                        NewHit = collision.GetComponent<Drone>().DeadVFX;
                         break;
-                }
-                GameObject NewHit = BulletHit;
+                }            
 
                 if (GameObjectName == "Asteroid")
                 {
