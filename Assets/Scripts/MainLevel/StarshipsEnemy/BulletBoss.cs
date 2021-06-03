@@ -13,7 +13,7 @@ public class BulletBoss : MonoBehaviour
     }
     void FixedUpdate()
     {
-        rb2D.velocity = -transform.right.normalized * speed;
+        rb2D.velocity = transform.right.normalized * speed;
         if (!GetComponent<Renderer>().isVisible)
             Destroy(gameObject);
     }

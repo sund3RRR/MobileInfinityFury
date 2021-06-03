@@ -8,6 +8,7 @@ public class SceneController : MonoBehaviour
     // Editor variables
     [SerializeField] private GameObject Boss1;
     [SerializeField] private GameObject SecondBoss1, SecondBoss2;
+    [SerializeField] private GameObject Boss3;
     [SerializeField] private GameObject Boss4;
     [SerializeField] private GameObject ParentForSecondBoss;
     [SerializeField] private GameObject Ship;   
@@ -59,6 +60,7 @@ public class SceneController : MonoBehaviour
 
     [SerializeField] private bool NeedSpawnFirstBoss;
     [SerializeField] private bool NeedSpawnSecondBoss;
+    [SerializeField] private bool NeedSpawnThirdBoss;
     [SerializeField] private bool NeedSpawnFourthBoss;
 
     private void Awake()
@@ -86,6 +88,8 @@ public class SceneController : MonoBehaviour
             SpawnBoss(1);
         if (NeedSpawnSecondBoss)
             SpawnBoss(2);
+        if (NeedSpawnThirdBoss)
+            SpawnBoss(3);
         if (NeedSpawnFourthBoss)
             SpawnBoss(4);
     }
@@ -170,6 +174,11 @@ public class SceneController : MonoBehaviour
             ParentForSecondBoss.GetComponent<SecondBossManager>().SecondBoss2 = Instantiate(SecondBoss2, SpawnPos, SecondBoss2.transform.rotation);
 
             Instantiate(ParentForSecondBoss);
+        }
+        else if (index == 3)
+        {
+            SpawnPos = new Vector2(Random.Range(-1.5f, 1.5f), 6.3f);
+            Instantiate(Boss3, SpawnPos, Boss3.transform.rotation);
         }
         else if (index == 4)
         {

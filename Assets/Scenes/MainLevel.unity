@@ -10120,6 +10120,12 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 5525868936204461488, guid: d6089acc8e883504db5e1d4c516003c5,
         type: 3}
+      propertyPath: Boss3
+      value: 
+      objectReference: {fileID: 2310918612335763601, guid: bc00da18f5c528d4b88acda7f6382bf5,
+        type: 3}
+    - target: {fileID: 5525868936204461488, guid: d6089acc8e883504db5e1d4c516003c5,
+        type: 3}
       propertyPath: Boss4
       value: 
       objectReference: {fileID: 4758949753166074731, guid: a48343d1652c8a74da326d7ba5bb6019,
@@ -10295,6 +10301,11 @@ PrefabInstance:
     - target: {fileID: 5525868936204461488, guid: d6089acc8e883504db5e1d4c516003c5,
         type: 3}
       propertyPath: NeedSpawnFirstBoss
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5525868936204461488, guid: d6089acc8e883504db5e1d4c516003c5,
+        type: 3}
+      propertyPath: NeedSpawnThirdBoss
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5525868936204461488, guid: d6089acc8e883504db5e1d4c516003c5,

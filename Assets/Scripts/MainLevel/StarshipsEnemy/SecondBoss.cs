@@ -66,7 +66,7 @@ public class SecondBoss : MonoBehaviour
                 transform.rotation = Quaternion.AngleAxis(Mathf.Atan2(Vector2.up.y, Vector2.up.x) * Mathf.Rad2Deg, Vector3.forward);
             yield return null;
         }
-        StartCoroutine(Shoot(BulletPoint1, -90));
+        StartCoroutine(Shoot(BulletPoint1, 90));
         while (true)
         {
             MovePosition = new Vector2(Random.Range(1.4f, 1.9f) * Mathf.Pow(-1, Random.Range(1, 3)), Random.Range(-4f, -4.6f));
@@ -96,7 +96,7 @@ public class SecondBoss : MonoBehaviour
                 transform.rotation = Quaternion.AngleAxis(Mathf.Atan2(Vector2.down.y, Vector2.down.x) * Mathf.Rad2Deg, Vector3.forward);
             yield return null;
         }
-        StartCoroutine(Shoot(BulletPoint1, 90));
+        StartCoroutine(Shoot(BulletPoint1, -90));
         while (true)
         {
             MovePosition = new Vector2(Random.Range(1.4f, 1.9f)* Mathf.Pow(-1, Random.Range(1, 3)), Random.Range(4f, 4.6f));

@@ -74,7 +74,7 @@ public class BossFirst : MonoBehaviour
         while(true)
         {
             yield return new WaitForSeconds(Random.Range(LeftBorderTimeBtwShots, RightBorderTimeBtwShots));
-            Instantiate(BulletBoss, BulletPoint.position, Quaternion.AngleAxis(90, Vector3.forward));            
+            Instantiate(BulletBoss, BulletPoint.position, BulletBoss.transform.rotation);            
         }
     }
 }
