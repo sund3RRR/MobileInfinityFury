@@ -67,7 +67,7 @@ public class SummonFourthBoss : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(TimeBtwShots);
-            Instantiate(BulletSummon, BulletPoint.position, Quaternion.AngleAxis(90, Vector3.forward));
+            Instantiate(BulletSummon, BulletPoint.position, Quaternion.AngleAxis(-90, Vector3.forward));
         }
     }
 }

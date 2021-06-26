@@ -30,11 +30,4 @@ public class BulletEnemy : MonoBehaviour
     {
         rb2D.velocity = (transform.right * speed);
     }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Bullet" || collision.gameObject.tag == "Rocket" || collision.gameObject.tag == "CyberShield")
-        {
-            Destroy(gameObject);
-        }
-    }
 }

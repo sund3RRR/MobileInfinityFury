@@ -20,8 +20,8 @@ public class AsteroidController : MonoBehaviour
     public float Torque;
     public Vector2 force;
     public int indexScale;
-    private int HealthPoints;
-    private int BaseHealthPoints;
+    private float HealthPoints;
+    private float BaseHealthPoints;
 
     void Start()
     {

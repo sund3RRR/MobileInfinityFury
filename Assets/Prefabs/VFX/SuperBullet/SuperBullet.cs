@@ -32,64 +32,16 @@ public class SuperBullet : MonoBehaviour
 
         while (true)
         {
-            if (Parent)
-            {
-                rb2D.velocity = transform.right * speed;
-            }
-            else
-                Destroy(gameObject);
+            rb2D.velocity = transform.right * speed;
+
             yield return null;
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject != Parent)
+        if (collision.GetComponent<HealthPointsController>())
         {
-            switch (collision.name)
-            {
-                case "Zond(Clone)":
-                    DestroyController.DestroyZond(collision.gameObject);
-                    break;
-                case "Sphere":
-                    if (collision.gameObject.GetComponent<SphereController>().Active)
-                        DestroyController.DestroySphere(collision.gameObject);
-                    break;
-                case "Panel":
-                    if (collision.gameObject.GetComponent<PanelController>().Active)
-                        DestroyController.DestroyDefault(collision.gameObject);
-                    break;
-                case "BigPiece(Clone)":
-                    DestroyController.DestroyBigPiece(collision.gameObject);
-                    break;
-                case "Sputnik(Clone)":
-                    DestroyController.DestroySputnik(collision.gameObject);
-                    break;
-                case "BulletEnemy(Clone)":
-                    Destroy(collision.gameObject);
-                    break;
-                case "SmallPiece(Clone)":
-                    DestroyController.DestroyDefault(collision.gameObject);
-                    break;
-                case "SpherePiece":
-                    DestroyController.DestroyDefault(collision.gameObject);
-                    break;
-                case "GoldAsteroid(Clone)":
-                    DestroyController.DestroyGoldAsteroid(collision.gameObject);
-                    break;
-                case "FatStarshipEnemy(Clone)":
-                    DestroyController.DestroyFatEnemy(collision.gameObject);
-                    break;
-                case "SlimStarshipEnemy(Clone)":
-                    DestroyController.DestroySlimEnemy(collision.gameObject);
-                    break;
-                case "DestroyerEnemyStarship(Clone)":
-                    DestroyController.DestroyFatEnemy(collision.gameObject);
-                    break;
-                default:
-                    if (collision.gameObject.GetComponent<AsteroidController>())
-                        DestroyController.DestroyAsteroid(collision.gameObject);
-                    break;
-            }
+            DestroyController.DestroyObject(collision.GetComponent<HealthPointsController>().GameObjectName, collision.gameObject);
         }
     }
 }

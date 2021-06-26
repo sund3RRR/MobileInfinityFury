@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 6569468659139897696}
   m_Layer: 0
   m_Name: LaserVFX
-  m_TagString: Enemy
+  m_TagString: BulletBoss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

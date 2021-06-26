@@ -9,23 +9,16 @@ public class HealthPointsController : MonoBehaviour
     public int BaseHealthPoints;
     public string GameObjectName;
 
-    //public variables
-    [HideInInspector] public float hitTime = 2.5f;
-
     //private variables
     private SceneController CurrentScene;
     private GameObject Bar;
-    private GameObject HealthBar;
-    private Coroutine myCoroutine;
-    private GameObject BulletHit;
-    private GameObject BulletAsteroidHit;
+    private HealthBarController HBContr;
+    private Coroutine HBCoroutine;
 
     void Awake()
     {
         CurrentScene = GameObject.FindGameObjectWithTag("SceneController").GetComponent<SceneController>();
 
-        BulletHit = CurrentScene.BulletHit;
-        BulletAsteroidHit = CurrentScene.BulletAsteroidHit;
         Bar = CurrentScene.HealthBar;
 
         BaseHealthPoints = HealthPoints;
@@ -34,66 +27,33 @@ public class HealthPointsController : MonoBehaviour
             GameObject Canvas = CurrentScene.CurrentCanvas;
             Bar.GetComponent<HealthBarController>().Target = gameObject;
             Bar.GetComponent<HealthBarController>().BaseHealthPoints = BaseHealthPoints;
-            HealthBar = Instantiate(Bar, new Vector3(transform.position.x, transform.position.y), Quaternion.identity);
+            GameObject HealthBar = Instantiate(Bar, new Vector3(transform.position.x, transform.position.y), Quaternion.identity);
             HealthBar.transform.SetParent(Canvas.transform, false);
+            HBContr = HealthBar.GetComponent<HealthBarController>();
         }
+        StartCoroutine(DestroyThisObj());
     }
 
-    void FixedUpdate()
+    IEnumerator RefreshHealthBar()
     {
-        hitTime += Time.deltaTime;
-
-        if (HealthBar && hitTime > 2.5f)
-        {
-            HealthBar.GetComponent<HealthBarController>().DisableHealthBar();
-        }
-        else if (HealthBar)
-        {
-            HealthBar.GetComponent<HealthBarController>().HealthPoints = HealthPoints;
-            HealthBar.GetComponent<HealthBarController>().EnableHealthBar();
-        }
-
-        if (HealthPoints <= 0 && GameObjectName != "FirstBoss")
+        HBContr.EnableHealthBar();
+        HBContr.HealthPoints = HealthPoints;
+        yield return new WaitForSeconds(2.5f);
+        HBContr.DisableHealthBar();
+    }
+    public void RefreshHBRequest()
+    {
+        if (HBCoroutine != null)
+            StopCoroutine(HBCoroutine);
+        if (HBContr)
+            HBCoroutine = StartCoroutine(RefreshHealthBar());
+    }   
+    IEnumerator DestroyThisObj()
+    {
+        yield return new WaitWhile(() => HealthPoints > 0);
+        if (GameObjectName != "FirstBoss")
             DestroyController.DestroyObject(GameObjectName, gameObject);
-        else if (HealthPoints <= 0 && GameObjectName == "FirstBoss" && myCoroutine == null)
-            myCoroutine = StartCoroutine(GetComponent<BossFirst>().DestroyMe());
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if ((collision.tag == "Bullet" || collision.tag == "Rocket" || collision.tag == "BulletDrone" || collision.tag == "Drone") && enabled)
-        {
-            if ((GameObjectName != "Sphere" && GameObjectName != "Panel") ||
-                (GameObjectName == "Sphere" && GetComponent<SphereController>().Active) ||
-                (GameObjectName == "Panel" && GetComponent<PanelController>().Active))
-            {
-                GameObject NewHit = BulletHit;
-                switch (collision.tag)
-                {
-                    case "Bullet":
-                        HealthPoints -= collision.GetComponent<Bullet>().damage;
-                        break;
-                    case "Rocket":
-                        HealthPoints -= collision.GetComponent<RocketController>().damage;
-                        break;
-                    case "BulletDrone":
-                        HealthPoints -= collision.GetComponent<BulletDrone>().damage;
-                        break;
-                    case "Drone":
-                        HealthPoints -= collision.GetComponent<Drone>().damage;
-                        NewHit = collision.GetComponent<Drone>().DeadVFX;
-                        break;
-                }            
-
-                if (GameObjectName == "Asteroid")
-                {
-                    NewHit = BulletAsteroidHit;
-                }
-                GameObject InstanceHit = Instantiate(NewHit, collision.transform.position, Quaternion.identity);
-
-                Destroy(InstanceHit, 1);
-                Destroy(collision.gameObject);
-                hitTime = 0;
-            }
-        }
+        else
+            StartCoroutine(GetComponent<BossFirst>().DestroyMe());
     }
 }

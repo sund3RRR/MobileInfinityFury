@@ -46,6 +46,7 @@ TagManager:
   - Drone
   - EnemyBullet
   - BulletDrone
+  - BulletBoss
   layers:
   - Default
   - TransparentFX

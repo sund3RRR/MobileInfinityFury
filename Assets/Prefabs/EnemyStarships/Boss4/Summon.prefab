@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 32b72b2d7ce03c24b98cfaf8f319580d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d4ac65a9e3576334eb3235dd56207fc3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -105,7 +105,7 @@ MonoBehaviour:
   TimeBtwShots: 2
   TimeBtwSummonMove: 0.4
   FrontForceMulti: 0.5
-  StartPosition: {x: -1.664432, y: -0.0788157}
+  StartPosition: {x: -1.656043, y: 0.08489919}
   StartSpeed: 1
 --- !u!114 &6855909035366742777
 MonoBehaviour:
@@ -119,10 +119,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91498a812546e594397b302d7a035877, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HealthPoints: 6
-  BaseHealthPoints: 6
+  HealthPoints: 4
+  BaseHealthPoints: 4
   GameObjectName: Summon
-  hitTime: 2.5
 --- !u!70 &-7797594652389788177
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

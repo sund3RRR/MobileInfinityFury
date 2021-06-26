@@ -8,7 +8,7 @@ public class PanelController : MonoBehaviour
     public Sprite ActivateSprite;
     public GameObject Zond;
     public GameObject Exp;
-    public int PreviousHP;
+    public float PreviousHP;
     public float speed;
     public Transform EmberPosition;
     public GameObject EmberVFX;
@@ -93,15 +93,11 @@ public class PanelController : MonoBehaviour
         {
             if (collision.gameObject.tag == "Bullet")
             {
-                PreviousHP -= collision.gameObject.GetComponent<Bullet>().damage;
-                Zond.GetComponent<HealthPointsController>().HealthPoints -= collision.gameObject.GetComponent<Bullet>().damage;
-                Zond.GetComponent<HealthPointsController>().hitTime = 0;
+                PreviousHP -= collision.gameObject.GetComponent<Bullet>().Damage;
             }
             else if (collision.gameObject.tag == "Rocket")
             {
-                PreviousHP -= collision.gameObject.GetComponent<RocketController>().damage;
-                Zond.GetComponent<HealthPointsController>().HealthPoints -= collision.gameObject.GetComponent<RocketController>().damage;
-                Zond.GetComponent<HealthPointsController>().hitTime = 0;
+                PreviousHP -= collision.gameObject.GetComponent<RocketController>().Damage;
             }         
         }
     }

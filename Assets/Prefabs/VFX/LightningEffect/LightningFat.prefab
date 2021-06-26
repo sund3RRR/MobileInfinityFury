@@ -33350,6 +33350,7 @@ GameObject:
   - component: {fileID: 7110604636770869611}
   - component: {fileID: 264465607932955730}
   - component: {fileID: 8435834001452847802}
+  - component: {fileID: 2923487266407280151}
   m_Layer: 0
   m_Name: LightningFat
   m_TagString: Enemy
@@ -38230,6 +38231,22 @@ CapsuleCollider2D:
   m_Offset: {x: 0.0027780533, y: -0.0010024309}
   m_Size: {x: 0.26983643, y: 1.133075}
   m_Direction: 0
+--- !u!114 &2923487266407280151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7110604636770869610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91498a812546e594397b302d7a035877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HealthPoints: 1
+  BaseHealthPoints: 1
+  GameObjectName: Lightning
+  hitTime: 2.5
 --- !u!1 &7110604636770869614
 GameObject:
   m_ObjectHideFlags: 0

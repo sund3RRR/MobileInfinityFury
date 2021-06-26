@@ -10,6 +10,7 @@ public class SceneController : MonoBehaviour
     [SerializeField] private GameObject SecondBoss1, SecondBoss2;
     [SerializeField] private GameObject Boss3;
     [SerializeField] private GameObject Boss4;
+    [SerializeField] private GameObject Boss5;
     [SerializeField] private GameObject ParentForSecondBoss;
     [SerializeField] private GameObject Ship;   
     [SerializeField] private GameObject AsteroidDeadVFX; 
@@ -62,6 +63,7 @@ public class SceneController : MonoBehaviour
     [SerializeField] private bool NeedSpawnSecondBoss;
     [SerializeField] private bool NeedSpawnThirdBoss;
     [SerializeField] private bool NeedSpawnFourthBoss;
+    [SerializeField] private bool NeedSpawnFiveBoss;
 
     private void Awake()
     {
@@ -92,6 +94,8 @@ public class SceneController : MonoBehaviour
             SpawnBoss(3);
         if (NeedSpawnFourthBoss)
             SpawnBoss(4);
+        if (NeedSpawnFiveBoss)
+            SpawnBoss(5);
     }
     private void Update()
     {       
@@ -133,7 +137,7 @@ public class SceneController : MonoBehaviour
     }
     IEnumerator SpawnStarShipEnemy(GameObject StarShipEnemy)
     {    
-        Vector2 SpawnPos = new Vector2(Random.Range(-3.3f, 3.3f), Random.Range(2.5f, 6f));
+        Vector2 SpawnPos = new Vector2(Random.Range(-2.5f, 2.5f), Random.Range(2.5f, 5f));
 
         GameObject NewEnemySpawnVFX = Instantiate(EnemySpawnVFX, SpawnPos, Quaternion.identity);
         Destroy(NewEnemySpawnVFX, 2);
@@ -185,6 +189,11 @@ public class SceneController : MonoBehaviour
             SpawnPos = new Vector2(Random.Range(-1.5f, 1.5f), 6.3f);
             Instantiate(Boss4, SpawnPos, Boss4.transform.rotation);
         }
+        else if (index == 5)
+        {
+            SpawnPos = new Vector2(Random.Range(-1.5f, 1.5f), 6.3f);
+            Instantiate(Boss5, SpawnPos, Boss5.transform.rotation);
+        }
     }
     IEnumerator SpawnEnemyStarShipCore()
     {
@@ -192,11 +201,23 @@ public class SceneController : MonoBehaviour
         {
             int Index = Random.Range(0, 3);
             if (Index == 0)
+            {
+                EnemySpawnVFX2.transform.localScale = new Vector3(1.2f, 1.2f, 1.2f);
+                EnemySpawnVFX.transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
                 StartCoroutine(SpawnStarShipEnemy(FatEnemy));
+            }
             else if (Index == 1)
+            {
+                EnemySpawnVFX2.transform.localScale = Vector3.one;
+                EnemySpawnVFX.transform.localScale = new Vector3(0.6f, 0.6f, 0.6f);
                 StartCoroutine(SpawnStarShipEnemy(SlimEnemy));
+            }
             else if (Index == 2)
+            {
+                EnemySpawnVFX2.transform.localScale = new Vector3(1.2f, 1.2f, 1.2f);
+                EnemySpawnVFX.transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
                 StartCoroutine(SpawnStarShipEnemy(DestroyerEnemy));
+            }
             yield return new WaitForSeconds(5f);
         }
     }
@@ -250,7 +271,8 @@ public class SceneController : MonoBehaviour
     
     public void TimingUpgrade()
     {
-        switch (Mathf.Max(HeroController.WeaponIndex, HeroControllerGamePad.WeaponIndex))
+        /*
+        switch (Mathf.Max(HeroController.WeaponIndex))
         {
             case 0:
                 TimingAsteroids = 1;
@@ -285,7 +307,7 @@ public class SceneController : MonoBehaviour
                 break;
             default:
                 break;
-        }
+        }*/
     }
   
     public void SpawnSputnik()

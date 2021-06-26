@@ -22,16 +22,5 @@ public class VFXQControl : MonoBehaviour
     }
     void TaskOnClick()
     {
-        switch(gameObject.name)
-        {
-            case "Low":
-                Bullet.GetComponent<Bullet>().AsteroidHit = DefaultHit;
-                Rocket.GetComponent<RocketController>().AsteroidHit = DefaultHit;
-                break;
-            case "High":
-                Bullet.GetComponent<Bullet>().AsteroidHit = AsteroidHit;
-                Rocket.GetComponent<RocketController>().AsteroidHit = AsteroidHit;
-                break;
-        }
     }
 }

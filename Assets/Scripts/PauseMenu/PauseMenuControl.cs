@@ -198,8 +198,6 @@ public class PauseMenuControl : MonoBehaviour
             EnableDisableCHText.text = "disabled";
         else
             EnableDisableCHText.text = "enabled";
-
-        HeroControllerGamePad.CrossHairEnabled = !HeroControllerGamePad.CrossHairEnabled;
     }
     public void ChangeColor(GameObject Target)
     {
@@ -209,37 +207,5 @@ public class PauseMenuControl : MonoBehaviour
     }
     private void Reset()
     {
-        HeroController.BonusMultiplier = 1;
-        HeroController.upgradeTimeBulletShots = 0.5f;
-        HeroController.upgradeTimeRocketShots = 0.3f;
-        HeroController.Experience = 0;
-        HeroController.WeaponIndex = 0;
-        HeroController.RocketShot = false;
-        HeroController.AimBot = false;
-        HeroController.BulletSpeed = 10;
-        HeroController.BulletSpriteIndex = 0;
-        HeroController.CountOfUltimate = 3;
-        HeroController.CrossHairEnabled = false;
-        HeroController.NeedSpawnSputnik = true;
-        HeroController.WasSpawnedSputnik = false;
-        HeroController.CurrentIndex = 0;
-        HeroControllerGamePad.BonusMultiplier = 1;
-        HeroControllerGamePad.upgradeTimeBulletShots = 0.5f;
-        HeroControllerGamePad.upgradeTimeRocketShots = 0.3f;
-        HeroControllerGamePad.Experience = 0;
-        HeroControllerGamePad.WeaponIndex = 0;
-        HeroControllerGamePad.RocketShot = false;
-        HeroControllerGamePad.AimBot = false;
-        HeroControllerGamePad.BulletSpeed = 10;
-        HeroControllerGamePad.BulletSpriteIndex = 0;
-        HeroControllerGamePad.CountOfUltimate = 3;
-        HeroControllerGamePad.CrossHairEnabled = false;
-        HeroControllerGamePad.NeedSpawnSputnik = true;
-        HeroControllerGamePad.WasSpawnedSputnik = false;
-        HeroControllerGamePad.CurrentIndex = 0;
-        SceneController.isLifeBlue = false;
-        SceneController.ShipLifeBlue = 3;
-        SceneController.isLifeGreen = false;
-        SceneController.ShipLifeGreen = 3;
     }
 }

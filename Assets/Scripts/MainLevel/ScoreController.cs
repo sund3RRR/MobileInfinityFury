@@ -25,20 +25,20 @@ public class ScoreController : MonoBehaviour
 
     // private variables
     private bool f = false;
+    private GameObject Player;
 
+    private void Start()
+    {
+        Player = GameObject.FindGameObjectWithTag("PlayerBlue");
+    }
     void FixedUpdate()
     {
         switch(tag)
         {
             case "BlueController":
-                myScore.text = HeroController.Experience.ToString();
+                myScore.text = Player.GetComponent<HeroController>().Experience.ToString();
                 myLife.text = SceneController.ShipLifeBlue.ToString();
-                myMultiplier.text = HeroController.BonusMultiplier.ToString();
-                break;
-            case "GreenController":
-                myScore.text = HeroControllerGamePad.Experience.ToString();
-                myLife.text = SceneController.ShipLifeGreen.ToString();
-                myMultiplier.text = HeroControllerGamePad.BonusMultiplier.ToString();
+                myMultiplier.text = Player.GetComponent<HeroController>().BonusMultiplier.ToString();
                 break;
         }     
         if (!f && tag == "GreenController" && Gamepad.current != null)

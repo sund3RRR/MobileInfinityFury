@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1657938289340615279}
   - component: {fileID: 1889859445002517370}
   - component: {fileID: 662382768486361446}
+  - component: {fileID: 6049163983277053701}
   m_Layer: 0
   m_Name: SpherePiece
   m_TagString: Enemy
@@ -116,6 +117,22 @@ MonoBehaviour:
   speed: 1
   Torque: 0
   Active: 0
+--- !u!114 &6049163983277053701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 959227873786235191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91498a812546e594397b302d7a035877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HealthPoints: 3
+  BaseHealthPoints: 3
+  GameObjectName: SpherePiece
+  hitTime: 2.5
 --- !u!1 &1313127403504266717
 GameObject:
   m_ObjectHideFlags: 0
@@ -237,11 +254,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91498a812546e594397b302d7a035877, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Bar: {fileID: 9101432529821193934, guid: 4eb532ccf8217624fa56f65eb13d963e, type: 3}
-  hitTime: 2.5
   HealthPoints: 5
   BaseHealthPoints: 5
   GameObjectName: Sphere
+  hitTime: 2.5
 --- !u!58 &2293873195141629369
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -359,8 +375,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 736739eea10a2ab499c52b4d10bf2213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: {x: 0.2707232, y: -0.9626573}
-  Torque: -0.34031045
+  force: {x: 0.075690195, y: -0.99713135}
+  Torque: 0.015320182
   speed: 1
   Sphere: {fileID: 1313127403504266717}
   leftPanel: {fileID: 2583468990962524064}
@@ -377,11 +393,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91498a812546e594397b302d7a035877, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Bar: {fileID: 9101432529821193934, guid: 4eb532ccf8217624fa56f65eb13d963e, type: 3}
-  hitTime: 2.5
-  HealthPoints: 30
-  BaseHealthPoints: 30
+  HealthPoints: 40
+  BaseHealthPoints: 40
   GameObjectName: Zond
+  hitTime: 2.5
 --- !u!50 &7698072245041156064
 Rigidbody2D:
   serializedVersion: 4
@@ -549,11 +564,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91498a812546e594397b302d7a035877, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Bar: {fileID: 9101432529821193934, guid: 4eb532ccf8217624fa56f65eb13d963e, type: 3}
-  hitTime: 2.5
   HealthPoints: 3
   BaseHealthPoints: 3
   GameObjectName: Panel
+  hitTime: 2.5
 --- !u!61 &5107077331689869946
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -700,11 +714,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91498a812546e594397b302d7a035877, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Bar: {fileID: 9101432529821193934, guid: 4eb532ccf8217624fa56f65eb13d963e, type: 3}
-  hitTime: 2.5
   HealthPoints: 3
   BaseHealthPoints: 3
   GameObjectName: Panel
+  hitTime: 2.5
 --- !u!61 &6673842492074399685
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -743,6 +756,7 @@ GameObject:
   - component: {fileID: 5517499522192630177}
   - component: {fileID: 1277756363374584152}
   - component: {fileID: 7665082902742980488}
+  - component: {fileID: 2856791087444296469}
   m_Layer: 0
   m_Name: SpherePiece
   m_TagString: Enemy
@@ -847,6 +861,22 @@ MonoBehaviour:
   speed: 1
   Torque: 0
   Active: 0
+--- !u!114 &2856791087444296469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5114502215754416589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91498a812546e594397b302d7a035877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HealthPoints: 3
+  BaseHealthPoints: 3
+  GameObjectName: SpherePiece
+  hitTime: 2.5
 --- !u!1 &5462058428538109228
 GameObject:
   m_ObjectHideFlags: 0
@@ -859,6 +889,7 @@ GameObject:
   - component: {fileID: 4991688277717123235}
   - component: {fileID: 7319162301122100964}
   - component: {fileID: 176830578276614375}
+  - component: {fileID: 7838886726152778488}
   m_Layer: 0
   m_Name: SpherePiece
   m_TagString: Enemy
@@ -963,6 +994,22 @@ MonoBehaviour:
   speed: 1
   Torque: 0
   Active: 0
+--- !u!114 &7838886726152778488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5462058428538109228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91498a812546e594397b302d7a035877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HealthPoints: 3
+  BaseHealthPoints: 3
+  GameObjectName: SpherePiece
+  hitTime: 2.5
 --- !u!1 &7047648547666012601
 GameObject:
   m_ObjectHideFlags: 0

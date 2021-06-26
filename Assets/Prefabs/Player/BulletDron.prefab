@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 723108874875133425}
   - component: {fileID: 572857884405702289}
-  - component: {fileID: -6456739285484166465}
   - component: {fileID: 506780439581512537}
   - component: {fileID: 4327285458351097167}
+  - component: {fileID: 7138942167243090184}
   m_Layer: 0
   m_Name: BulletDron
   m_TagString: BulletDrone
@@ -85,24 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-6456739285484166465
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6787975515083352889}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb63e0023e578414ebe894ff601ea7fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 8
-  damage: 1
-  AsteroidHit: {fileID: 7865954722538125363, guid: 17a7afede829ec846b63e7fce5f1faab,
-    type: 3}
-  DefaultHit: {fileID: 5362751063008322092, guid: 7048f4a7925dbcf439f02686f7a65865,
-    type: 3}
 --- !u!50 &506780439581512537
 Rigidbody2D:
   serializedVersion: 4
@@ -140,3 +122,22 @@ CapsuleCollider2D:
   m_Offset: {x: -5.372147e-11, y: -0.00045064843}
   m_Size: {x: 0.40700012, y: 0.11590032}
   m_Direction: 1
+--- !u!114 &7138942167243090184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6787975515083352889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5ed3a0015c56d0469911e655d914674, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 8
+  Damage: 1
+  DestroyTime: 2
+  BulletHit: {fileID: 5362751063008322092, guid: 7048f4a7925dbcf439f02686f7a65865,
+    type: 3}
+  BulletAsteroidHit: {fileID: 7865954722538125363, guid: 17a7afede829ec846b63e7fce5f1faab,
+    type: 3}

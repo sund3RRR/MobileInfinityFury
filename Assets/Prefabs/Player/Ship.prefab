@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 6975293082513199669}
   - component: {fileID: 6975293082513199668}
   - component: {fileID: 2173257688325879170}
-  - component: {fileID: 2219549370066066284}
   - component: {fileID: 5294696941815147333}
   m_Layer: 0
   m_Name: Ship
@@ -33,7 +32,6 @@ Transform:
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children:
   - {fileID: 6975293084317684701}
-  - {fileID: 3480005045309439486}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -100,27 +98,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abb8663dba1405342aae390299d3a8aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RadiusForSecondBoss: 1.5
-  ParentForSecondBoss: {fileID: 0}
+  Explosion: {fileID: 8591131444349742436, guid: 772bd732f82bd824f90b28ffe25b9061,
+    type: 3}
   CyberShieldVFX: {fileID: 7486198954648731787, guid: 0cf5a5c0e59842849a47bea84b525f3a,
     type: 3}
   EngineThrustVFX: {fileID: 8300230982517169249, guid: 3ee4a13ac52db2f45ba62b49981cfce6,
     type: 3}
-  EngineVFXPoint: {fileID: 3480005045309439486}
-  Clip0: {fileID: 8300000, guid: cc74ad4fbfc7e99469f100a90c0e7bb7, type: 3}
-  Clip1: {fileID: 8300000, guid: ce0968f68c3933f48a493f8119914cce, type: 3}
-  CrossHairPrefab: {fileID: 8760582068583673079, guid: 14c671283f0594b47a0a99ab08285ba8,
-    type: 3}
-  Ship: {fileID: 6975293082513199670}
-  Explosion: {fileID: 8591131444349742436, guid: 772bd732f82bd824f90b28ffe25b9061,
-    type: 3}
-  range: 4
   UpgradeVFX: {fileID: 675814567206901401, guid: ccfef72174293d944b759a49ace74b03,
     type: 3}
-  bulletPoint: {fileID: 6975293084317684701}
-  bullet: {fileID: 3970292410016663219, guid: a9ca5b65738ac3549a3785bdecbc6112, type: 3}
-  rocket: {fileID: 4362986002164723471, guid: 6fc684607a4e7674da9358380d909252, type: 3}
   speed: 60
+  BonusMultiplier: 0
+  Experience: 0
+  WeaponIndex: 3
+  RadiusForSecondBoss: 1.5
+  ParentForSecondBoss: {fileID: 0}
+  CountOfUltimate: 100
+  TimeBtwBulletShots: 0.25
+  TimeBtwRocketShots: 0.15
+  BulletSpeed1: 0
+  BulletSpeed2: 0
+  bulletPoint: {fileID: 6975293084317684701}
+  Bullet1: {fileID: 0}
+  Bullet2: {fileID: 0}
+  rocket: {fileID: 4362986002164723471, guid: 6fc684607a4e7674da9358380d909252, type: 3}
+  RocketShot: 1
   IsDroneWeapon: 1
   Drone: {fileID: 6726011702954700034, guid: 88f3b737dded98c44ab6899623b77dde, type: 3}
   DroneCount: 7
@@ -143,102 +144,6 @@ CircleCollider2D:
   m_Offset: {x: -0.018377304, y: -0.0045377016}
   serializedVersion: 2
   m_Radius: 0.4485383
---- !u!82 &2219549370066066284
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6975293082513199670}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!50 &5294696941815147333
 Rigidbody2D:
   serializedVersion: 4
@@ -289,34 +194,4 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6975293082513199666}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &7532761495532891040
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3480005045309439486}
-  m_Layer: 0
-  m_Name: EnginePoint
-  m_TagString: Untagged
-  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3480005045309439486
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7532761495532891040}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.393, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 6975293082513199666}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

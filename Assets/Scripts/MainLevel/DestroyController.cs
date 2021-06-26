@@ -101,7 +101,7 @@ public class DestroyController : MonoBehaviour
         }
         for (int i = 0; i < 2; i++)
         {
-            SmallPiece.GetComponent<SmallPieceController>().ParentForce = Target.GetComponent<Rigidbody2D>().velocity;
+            SmallPiece.GetComponent<SmallPieceController>().ParentForce = new Vector2(Random.Range(-0.5f, 0.5f), -1f);
             SmallPiece.GetComponent<SmallPieceController>().force = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
             SmallPiece.GetComponent<SmallPieceController>().Torque = Random.Range(-1f, 1f);
             float SmallPieceAngle = Random.Range(0, 360);
@@ -115,13 +115,13 @@ public class DestroyController : MonoBehaviour
         Destroy(Target.gameObject);
     }
     public static void DestroyFatEnemy(GameObject Target)
-    {
+    {       
         BigPiece.GetComponent<BigPieceController>().ParentForce = Target.GetComponent<Rigidbody2D>().velocity;
         BigPiece.GetComponent<BigPieceController>().force = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
         BigPiece.GetComponent<BigPieceController>().Torque = Random.Range(-1f, 1f);
         float BigPieceAngle = Random.Range(0, 360);
         Instantiate(BigPiece, Target.transform.position, Quaternion.AngleAxis(BigPieceAngle, Vector3.forward));
-
+        
         for (int i = 0; i < 3; i++)
         {
             SmallPiece.GetComponent<SmallPieceController>().ParentForce = Target.GetComponent<Rigidbody2D>().velocity;
@@ -134,10 +134,10 @@ public class DestroyController : MonoBehaviour
         /*
         GameObject NewZondDeadVFX = Instantiate(ZondDeadVFX, Target.transform.position, Quaternion.identity);
         Destroy(NewZondDeadVFX, 2);
-        */
+        */       
+        Destroy(Target.gameObject);
         GameObject NewZondExplosionVFX = Instantiate(ZondExplosionVFX, Target.transform.position, Quaternion.identity);
         Destroy(NewZondExplosionVFX, 2);
-        Destroy(Target.gameObject);
     }
     public static void DestroySlimEnemy(GameObject Target)
     {

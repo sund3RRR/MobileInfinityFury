@@ -19,7 +19,8 @@ public class Laser : MonoBehaviour
     {      
         if(collision.tag == "BulletDrone" || collision.tag == "Bullet" || collision.tag == "Rocket")
         {
-            Instantiate(BulletVFX, collision.transform.position, Quaternion.identity);
+            GameObject NewBulletVFX = Instantiate(BulletVFX, collision.transform.position, Quaternion.identity);
+            Destroy(NewBulletVFX, 1);
             Destroy(collision.gameObject);
         }
         else if (collision.tag == "Drone")

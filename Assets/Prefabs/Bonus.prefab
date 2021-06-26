@@ -103,10 +103,11 @@ MonoBehaviour:
   UltimateBonusSprite: {fileID: 21300000, guid: 3d902268af76a0b4ca0d95f252924852,
     type: 3}
   UpgradeBonusSprite: {fileID: 21300000, guid: 40b4da2bab2a86949be33034d8d8a6e9, type: 3}
-  DestroyTime: 15
   UpgradeBonusVFX: {fileID: 3442065874129272672, guid: e4da701a07db5134780fa8532bc8317a,
     type: 3}
-  force: {x: 0.25014275, y: -0.96722907}
+  DestroyTime: 15
+  speed: 1
+  force: {x: 0.1280936, y: -0.99084485}
 --- !u!50 &1741047421937281929
 Rigidbody2D:
   serializedVersion: 4
@@ -124,7 +125,7 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
-  m_Interpolate: 2
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0

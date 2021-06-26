@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 5388295419770464348}
   - component: {fileID: 232824366936585363}
   - component: {fileID: 5238882406798685509}
+  - component: {fileID: -2685014488002178515}
   - component: {fileID: -6130836802254629695}
   - component: {fileID: 4154319252383514397}
-  - component: {fileID: -2685014488002178515}
   m_Layer: 0
   m_Name: SmallPiece
   m_TagString: Enemy
@@ -101,6 +101,22 @@ MonoBehaviour:
   ParentForce: {x: 0.117433056, y: -0.97333354}
   force: {x: -0.038682103, y: 0.62278366}
   Torque: -0.23679936
+--- !u!114 &-2685014488002178515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4643625952460041582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91498a812546e594397b302d7a035877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HealthPoints: 1
+  BaseHealthPoints: 1
+  GameObjectName: SmallPiece
+  hitTime: 2.5
 --- !u!50 &-6130836802254629695
 Rigidbody2D:
   serializedVersion: 4
@@ -139,7 +155,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3, y: 4.52}
+    oldSize: {x: 0.3, y: 0.452}
     newSize: {x: 3, y: 4.52}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -148,20 +164,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.302, y: 0.452}
   m_EdgeRadius: 0
---- !u!114 &-2685014488002178515
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4643625952460041582}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91498a812546e594397b302d7a035877, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Bar: {fileID: 0}
-  hitTime: 2.5
-  HealthPoints: 1
-  BaseHealthPoints: 1
-  GameObjectName: SmallPiece

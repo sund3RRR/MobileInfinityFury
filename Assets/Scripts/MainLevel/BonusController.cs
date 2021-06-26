@@ -5,27 +5,26 @@ using UnityEngine;
 public class BonusController : MonoBehaviour
 {
     // Editor variables
-    public Sprite MultiplierBonusSprite;
-    public Sprite LifeBonusSprite;
-    public Sprite UltimateBonusSprite;
-    public Sprite UpgradeBonusSprite;
-    public int DestroyTime;
-    public GameObject UpgradeBonusVFX;
-
+    [SerializeField] private Sprite MultiplierBonusSprite;
+    [SerializeField] private Sprite LifeBonusSprite;
+    [SerializeField] private Sprite UltimateBonusSprite;
+    [SerializeField] private Sprite UpgradeBonusSprite;
+    [SerializeField] private GameObject UpgradeBonusVFX;
+    [SerializeField] private int DestroyTime;   
+    [SerializeField] private float speed;
     // Private variables
-    private Rigidbody2D rb2D;
+    private GameObject Player;
     private float LifeTime = 0;
     private float myAlpha = 0;
     private GameObject IconUpgrade;
-    private GameObject IconGreenUpgrade;
 
     // Public variables
     public Vector2 force;
     
     void Start()
     {
+        Player = GameObject.FindGameObjectWithTag("PlayerBlue");
         IconUpgrade = GameObject.FindGameObjectWithTag("BlueLvl");
-        IconGreenUpgrade = GameObject.FindGameObjectWithTag("GreenLVL");
 
         if (gameObject.tag == "UltimateBonus")
             gameObject.GetComponent<SpriteRenderer>().sprite = UltimateBonusSprite;
@@ -44,8 +43,7 @@ public class BonusController : MonoBehaviour
             transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
             gameObject.GetComponent<SpriteRenderer>().sprite = UpgradeBonusSprite;
             Instantiate(UpgradeBonusVFX, transform.position, Quaternion.identity, transform);
-        }
-        rb2D = GetComponent<Rigidbody2D>();       
+        }     
     }
 
     void FixedUpdate()
@@ -59,7 +57,7 @@ public class BonusController : MonoBehaviour
             if (GetComponent<SpriteRenderer>().color.a <= 0)
                 Destroy(gameObject);
         }
-        rb2D.velocity = force;
+        transform.Translate(force.normalized * Time.deltaTime * speed, Space.World);
 
         if (!gameObject.GetComponent<Renderer>().isVisible)
             Destroy(gameObject);
@@ -70,38 +68,22 @@ public class BonusController : MonoBehaviour
         if (collision.tag == "PlayerBlue")
         {
             if (gameObject.tag == "UltimateBonus")
-                HeroController.CountOfUltimate += 1;
+                Player.GetComponent<HeroController>().CountOfUltimate += 1;
             else if (gameObject.tag == "LifeBonus")
                 SceneController.ShipLifeBlue += 1;
             else if (gameObject.tag == "MultiplierBonus")
-                HeroController.BonusMultiplier += 1;
+                collision.GetComponent<HeroController>().BonusMultiplier += 1;
             else if (gameObject.tag == "UpgradeBonus")
             {
+                /*
                 HeroController.WeaponIndex += 1;
                 IconUpgrade.GetComponent<NexLevel>().ChangeIcon(HeroController.WeaponIndex);
                 collision.gameObject.GetComponent<HeroController>().UpgradeWeapon();
                 GameObject.FindGameObjectWithTag("SceneController").GetComponent<SceneController>().TimingUpgrade();
                 collision.gameObject.GetComponent<HeroController>().AnimationUpgrade();
+                */
             }
             
-            Destroy(gameObject);
-        }
-        else if (collision.tag == "PlayerGreen")
-        {
-            if (gameObject.tag == "UltimateBonus")
-                HeroControllerGamePad.CountOfUltimate += 1;
-            else if (gameObject.tag == "LifeBonus")
-                SceneController.ShipLifeGreen += 1;
-            else if (gameObject.tag == "MultiplierBonus")
-                HeroControllerGamePad.BonusMultiplier += 1;
-            else if (gameObject.tag == "UpgradeBonus")
-            {
-                HeroControllerGamePad.WeaponIndex += 1;               
-                collision.gameObject.GetComponent<HeroControllerGamePad>().UpgradeWeapon();
-                IconGreenUpgrade.GetComponent<NexLevel>().ChangeIcon(HeroControllerGamePad.WeaponIndex);
-                GameObject.FindGameObjectWithTag("SceneController").GetComponent<SceneController>().TimingUpgrade();
-            }
-
             Destroy(gameObject);
         }
     }
