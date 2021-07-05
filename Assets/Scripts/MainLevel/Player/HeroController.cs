@@ -25,8 +25,8 @@ public class HeroController : MonoBehaviour
     [Header("SecondBoss")]  
     [SerializeField] private float RadiusForSecondBoss;
     [HideInInspector] public GameObject ParentForSecondBoss;
-    public int CountOfUltimate = 100;
-    private Vector2 mousePosition = Vector2.zero;
+    public int CountOfUltimate = 3;
+    private Vector2 mousePosition = new Vector2(0, -4.365f);
 
 
     [Header("Shoot")]
@@ -84,21 +84,22 @@ public class HeroController : MonoBehaviour
             //
             // MOBILE CONTROLS
             //
-            
-            Touch myTouch = Input.GetTouch(0);
-            mousePosition = Camera.main.ScreenToWorldPoint(myTouch.position);
+            if (Input.touchCount > 0)
+            {
+                Touch myTouch = Input.GetTouch(0);
+                mousePosition = Camera.main.ScreenToWorldPoint(myTouch.position);
 
-            if (myTouch.phase == TouchPhase.Stationary || myTouch.phase == TouchPhase.Moved)
-            {
-                Shoot();
+                if (myTouch.phase == TouchPhase.Stationary || myTouch.phase == TouchPhase.Moved)
+                {
+                    Shoot();
+                }
+                if (myTouch.tapCount == 2 && IsDoubleTap() && CountOfUltimate > 0 && !NewUltimate) // вызывается здесь, так как не работает в FixedUpdate :(
+                {
+                    NewUltimate = Instantiate(Explosion, transform.position, Quaternion.identity);
+                    Destroy(NewUltimate, 1.1f);
+                    CountOfUltimate--;
+                }
             }
-            if (myTouch.tapCount == 2 && IsDoubleTap() && CountOfUltimate > 0 && !NewUltimate) // вызывается здесь, так как не работает в FixedUpdate :(
-            {
-                NewUltimate = Instantiate(Explosion, transform.position, Quaternion.identity);
-                Destroy(NewUltimate, 1.1f);
-                CountOfUltimate--;
-            }
-            
             //
             // MOUSE CONTROLS
             //
@@ -126,7 +127,7 @@ public class HeroController : MonoBehaviour
             else if (ParentForSecondBoss && ParentForSecondBoss.GetComponent<SecondBossManager>().IsTurbo &&
                 (Mathf.Abs(((Vector2)ParentForSecondBoss.transform.position - mousePosition).sqrMagnitude) < RadiusForSecondBoss * RadiusForSecondBoss))
                 transform.position = Vector3.Lerp(transform.position, mousePosition, 0.1f);
-            else if (!ParentForSecondBoss || !ParentForSecondBoss.GetComponent<SecondBossManager>().IsTurbo)
+            else if ((!ParentForSecondBoss || !ParentForSecondBoss.GetComponent<SecondBossManager>().IsTurbo) && mousePosition.y < 4f)
                 transform.position = Vector3.Lerp(transform.position, mousePosition, 0.1f);
         }
     }
@@ -137,12 +138,12 @@ public class HeroController : MonoBehaviour
             LifeTime += Time.deltaTime;
             TimerDrones += Time.deltaTime;
             // MOUSE CONTROL  
-            /*
+            
             if (FireFlag)
             {
                 Shoot();
             }
-            */
+            
             if (IsDroneWeapon)
                 SpawnDrone();
 
@@ -175,6 +176,7 @@ public class HeroController : MonoBehaviour
                     TimerTimeBtwRocketShots -= 0.06f;
                 break;
             case 8:
+                IsDroneWeapon = true;
                 break;
             default:
                 break;
@@ -206,7 +208,7 @@ public class HeroController : MonoBehaviour
                 Instantiate(CurrentBullet, new Vector2(bulletPoint.position.x - 0.1f, bulletPoint.position.y), transform.rotation);
                 Instantiate(CurrentBullet, new Vector2(bulletPoint.position.x + 0.1f, bulletPoint.position.y), transform.rotation);
             }
-            else if (WeaponIndex == 3 || WeaponIndex == 6)
+            else if (WeaponIndex == 3 || WeaponIndex >= 6)
             {
                 Instantiate(CurrentBullet, new Vector2(bulletPoint.position.x - 0.1f, bulletPoint.position.y), transform.rotation);
                 Instantiate(CurrentBullet, new Vector2(bulletPoint.position.x + 0.1f, bulletPoint.position.y), transform.rotation);
@@ -249,7 +251,7 @@ public class HeroController : MonoBehaviour
             }
         }
     }
-    void AnimationUpgrade()
+    public void AnimationUpgrade()
     {
         GameObject NewUpgradeVFX = Instantiate(UpgradeVFX, transform.position, Quaternion.identity, transform);
         Destroy(NewUpgradeVFX, 2);
@@ -270,6 +272,7 @@ public class HeroController : MonoBehaviour
         }
         if (collision.gameObject.tag == "Experience")
         {
+            PlayerPrefs.SetFloat("Galo", PlayerPrefs.GetFloat("Galo") + BonusMultiplier * 0.001f);
             Experience += BonusMultiplier;
             Destroy(collision.gameObject);
         }

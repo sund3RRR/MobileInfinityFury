@@ -168,7 +168,7 @@ public class SpawnController : MonoBehaviour
     }
     public void SpawnSputnik(Vector2 defaultPos)
     {
-        forcePosition = new Vector2(Random.Range(-7f, 7f), Random.Range(-3f, 3f));
+        forcePosition = new Vector2(Random.Range(-2f, 2f), -4.5f);
         MovePosition = (forcePosition - defaultPos).normalized;
 
         Sputnik.GetComponent<SputnikController>().MovePosition = MovePosition;

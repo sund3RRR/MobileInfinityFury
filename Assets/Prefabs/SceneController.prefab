@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5525868936204461490
+--- !u!1 &7280330723159940850
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,23 +8,24 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5525868936204461489}
-  - component: {fileID: 5525868936204461488}
-  - component: {fileID: 5463958996675648298}
+  - component: {fileID: 7280330723159940849}
+  - component: {fileID: 7280330723159940848}
+  - component: {fileID: 7094536653548314730}
+  - component: {fileID: 7280330723926180110}
   m_Layer: 0
   m_Name: SceneController
-  m_TagString: Untagged
+  m_TagString: SceneController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5525868936204461489
+--- !u!4 &7280330723159940849
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5525868936204461490}
+  m_GameObject: {fileID: 7280330723159940850}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.36388063, y: 0.78309715, z: -193.73242}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -32,32 +33,77 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5525868936204461488
+--- !u!114 &7280330723159940848
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5525868936204461490}
+  m_GameObject: {fileID: 7280330723159940850}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6b6b0e7cefd20784a82498d55420b8c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Boss1: {fileID: 781789360057692748, guid: 5d76552dfa9455c4c89221f20c97f6e4, type: 3}
+  SecondBoss1: {fileID: 2461250431247256787, guid: 7c067b15c573d9646b031a118f1ea5ef,
+    type: 3}
+  SecondBoss2: {fileID: 5157289952004424421, guid: 3734a17d9a8d9c04bb906c3e257053be,
+    type: 3}
+  Boss3: {fileID: 2310918612335763601, guid: bc00da18f5c528d4b88acda7f6382bf5, type: 3}
+  Boss4: {fileID: 4758949753166074731, guid: a48343d1652c8a74da326d7ba5bb6019, type: 3}
+  Boss5: {fileID: 6323645122185358435, guid: 9c60c476a8975714dbc44e6011680854, type: 3}
+  ParentForSecondBoss: {fileID: 1765789008938773235, guid: e99b9e9dad61d1b469629d1d2b5c37f2,
+    type: 3}
   Ship: {fileID: 6975293082513199670, guid: 87e805d2c9fde874f88dc039bd3ba3c7, type: 3}
+  AsteroidDeadVFX: {fileID: 107438, guid: 95e8ed99cb0e362408cec96c19fdd6df, type: 3}
+  EnemySpawnVFX: {fileID: 5455571114477838862, guid: de5b71569f79b3c47ac8747111117136,
+    type: 3}
+  EnemySpawnVFX2: {fileID: 3342787609027919204, guid: 10fe588abdaa5d1488c7b9af4b03a957,
+    type: 3}
+  SpawnVFX: {fileID: 2492043920969157487, guid: 767499e52e76eb7438556dc3f5465030,
+    type: 3}
+  FatEnemy: {fileID: 5267058048020829106, guid: c1a8b98be1ee9d24db899c4307134fc6,
+    type: 3}
+  SlimEnemy: {fileID: 2650948774727276981, guid: 73141431863790e42a0d04e05dc1d148,
+    type: 3}
+  DestroyerEnemy: {fileID: 5380791166548456594, guid: edd2948acb22fbf41984c931e76cd004,
+    type: 3}
   Exp: {fileID: 5641196741899517333, guid: d72e2ea7dd85ca34e89ce6212d134965, type: 3}
   SmallPiece: {fileID: 4643625952460041582, guid: 4ce369efe75831f4e91e3ab58f3e61a9,
     type: 3}
   BigPiece: {fileID: 9196359447399987183, guid: bd32d877939c6f047bfae02bba6d5b77,
     type: 3}
   Bonus: {fileID: 5256613885783963227, guid: da3de9f956a8b6d449f252de8190f9d7, type: 3}
---- !u!114 &5463958996675648298
+  DeadVFX: {fileID: 4361608709206121280, guid: ce55eb99e5eced14aa4bffd8558929a2, type: 3}
+  ZondDeadVFX: {fileID: 6123451228338836751, guid: 9aeccb8b7373d084486a748d8c2aff8e,
+    type: 3}
+  ZondExplosionVFX: {fileID: 6381662415459153313, guid: 6b40c34a0ad0d1842a0f8c26eba3adf8,
+    type: 3}
+  BulletHit: {fileID: 5362751063008322092, guid: 7048f4a7925dbcf439f02686f7a65865,
+    type: 3}
+  BulletAsteroidHit: {fileID: 7865954722538125363, guid: 17a7afede829ec846b63e7fce5f1faab,
+    type: 3}
+  HealthBar: {fileID: 9101432529821193934, guid: 4eb532ccf8217624fa56f65eb13d963e,
+    type: 3}
+  CurrentCanvas: {fileID: 0}
+  EnemyArray: []
+  TargetFrameRate: 120
+  NeedSpawnZond: 1
+  NeedSpawnAsteroid: 1
+  NeedSpawnEnemyStarships: 1
+  NeedSpawnFirstBoss: 0
+  NeedSpawnSecondBoss: 0
+  NeedSpawnThirdBoss: 0
+  NeedSpawnFourthBoss: 0
+  NeedSpawnFiveBoss: 0
+--- !u!114 &7094536653548314730
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5525868936204461490}
+  m_GameObject: {fileID: 7280330723159940850}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7f9428f92e9e12e4da39c73fc200d240, type: 3}
@@ -94,7 +140,21 @@ MonoBehaviour:
   Asteroid_15: {fileID: 1545431052441299108, guid: da2766e50ffeaa94fad3f14a87954700,
     type: 3}
   Ship: {fileID: 6975293082513199670, guid: 87e805d2c9fde874f88dc039bd3ba3c7, type: 3}
+  ShipGamepad: {fileID: 3249931540978790559, guid: a6c687056aa1d5f4f8570dfa01e44e6c,
+    type: 3}
   Zond: {fileID: 1716708780654274650, guid: 08c21b2c64177fa48b514627ced5ab78, type: 3}
   Sputnik: {fileID: 5580365154156776641, guid: a9517ade2b4d06447b8b37cf162764c9, type: 3}
   GoldAsteroid: {fileID: 2272843868538938751, guid: 10bba4a4fa232b24988eb2eede42fd79,
     type: 3}
+--- !u!114 &7280330723926180110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7280330723159940850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d172c331d25ae034f8727c59ad832d58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

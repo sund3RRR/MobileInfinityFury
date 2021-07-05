@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -19,6 +21,11 @@ public class ButtonController : MonoBehaviour
     }
     public void UnPauseGame()
     {
+        StartCoroutine(Coroutine());
+    }
+    IEnumerator Coroutine()
+    {
+        yield return new WaitForSecondsRealtime(0.01f);
         Time.timeScale = 1;
     }
 }

@@ -6,13 +6,14 @@ using UnityEngine.InputSystem;
 public class SceneController : MonoBehaviour
 {
     // Editor variables
+    [SerializeField] private GameObject Background;
     [SerializeField] private GameObject Boss1;
     [SerializeField] private GameObject SecondBoss1, SecondBoss2;
     [SerializeField] private GameObject Boss3;
     [SerializeField] private GameObject Boss4;
     [SerializeField] private GameObject Boss5;
     [SerializeField] private GameObject ParentForSecondBoss;
-    [SerializeField] private GameObject Ship;   
+    public GameObject Ship;   
     [SerializeField] private GameObject AsteroidDeadVFX; 
 
     [SerializeField] private GameObject EnemySpawnVFX;
@@ -58,7 +59,7 @@ public class SceneController : MonoBehaviour
     [SerializeField] private bool NeedSpawnZond;
     [SerializeField] private bool NeedSpawnAsteroid;
     [SerializeField] private bool NeedSpawnEnemyStarships;
-
+    [SerializeField] private bool NeedSpawnSputnik;
     [SerializeField] private bool NeedSpawnFirstBoss;
     [SerializeField] private bool NeedSpawnSecondBoss;
     [SerializeField] private bool NeedSpawnThirdBoss;
@@ -78,14 +79,15 @@ public class SceneController : MonoBehaviour
         Time.timeScale = 1f;
         
         StartCoroutine(RefreshEnemyArray());
-        
+        /*
         if (NeedSpawnEnemyStarships)
             StartCoroutine(SpawnEnemyStarShipCore());
         if (NeedSpawnZond)
             StartCoroutine(SpawnZond());
         if (NeedSpawnAsteroid)
             StartCoroutine(SpawnAsteroids());
-
+        if (NeedSpawnSputnik)
+            StartCoroutine(SpawnSputnik());
         if (NeedSpawnFirstBoss)
             SpawnBoss(1);
         if (NeedSpawnSecondBoss)
@@ -96,6 +98,12 @@ public class SceneController : MonoBehaviour
             SpawnBoss(4);
         if (NeedSpawnFiveBoss)
             SpawnBoss(5);
+        */
+        StartCoroutine(Spawnerrr());
+        Instantiate(Ship, new Vector2(0, -4.365f), Ship.transform.rotation);
+
+        Background.GetComponent<BackgroundMovingController>().scrollingSpeed = new Vector2(0, 10);
+        Instantiate(Background);
     }
     private void Update()
     {       
@@ -122,18 +130,28 @@ public class SceneController : MonoBehaviour
     }
     IEnumerator Spawnerrr()
     {
-        Coroutine myC1 = StartCoroutine(SpawnAsteroids());
-        Coroutine myC2 = StartCoroutine(SpawnZond());
-        Coroutine myC3 = StartCoroutine(SpawnEnemyStarShipCore());
+        int k = 0;
+        while(true)
+        {
+            if (k % 3 == 0)
+                SpawnSputnik();
+            if (k % 2 == 0)
+                SpawnZond();
+            if (k % 2 == 0)
+                SpawnEnemyStarShipCore();
+            SpawnAsteroids();
 
-        yield return new WaitForSeconds(60f);
-        StopCoroutine(myC1);
-        StopCoroutine(myC2);
-        StopCoroutine(myC3);
+            k++;
+            yield return new WaitForSeconds(5f);
+        }
+    }
+    void SpawnSputnik()
+    {
+        XPose = Random.Range(-1.7f, 1.7f);
+        YPose = 6.5f;
 
-        SpawnBoss(1);
-
-        yield break;
+        Vector2 SputnikPoint = new Vector2(XPose, YPose);
+        Spawner.SpawnSputnik(SputnikPoint);
     }
     IEnumerator SpawnStarShipEnemy(GameObject StarShipEnemy)
     {    
@@ -195,63 +213,49 @@ public class SceneController : MonoBehaviour
             Instantiate(Boss5, SpawnPos, Boss5.transform.rotation);
         }
     }
-    IEnumerator SpawnEnemyStarShipCore()
+    void SpawnEnemyStarShipCore()
     {
-        while(true)
+        int Index = Random.Range(0, 3);
+        if (Index == 0)
         {
-            int Index = Random.Range(0, 3);
-            if (Index == 0)
-            {
-                EnemySpawnVFX2.transform.localScale = new Vector3(1.2f, 1.2f, 1.2f);
-                EnemySpawnVFX.transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
-                StartCoroutine(SpawnStarShipEnemy(FatEnemy));
-            }
-            else if (Index == 1)
-            {
-                EnemySpawnVFX2.transform.localScale = Vector3.one;
-                EnemySpawnVFX.transform.localScale = new Vector3(0.6f, 0.6f, 0.6f);
-                StartCoroutine(SpawnStarShipEnemy(SlimEnemy));
-            }
-            else if (Index == 2)
-            {
-                EnemySpawnVFX2.transform.localScale = new Vector3(1.2f, 1.2f, 1.2f);
-                EnemySpawnVFX.transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
-                StartCoroutine(SpawnStarShipEnemy(DestroyerEnemy));
-            }
-            yield return new WaitForSeconds(5f);
+            EnemySpawnVFX2.transform.localScale = new Vector3(1.2f, 1.2f, 1.2f);
+            EnemySpawnVFX.transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
+            StartCoroutine(SpawnStarShipEnemy(FatEnemy));
+        }
+        else if (Index == 1)
+        {
+            EnemySpawnVFX2.transform.localScale = Vector3.one;
+            EnemySpawnVFX.transform.localScale = new Vector3(0.6f, 0.6f, 0.6f);
+            StartCoroutine(SpawnStarShipEnemy(SlimEnemy));
+        }
+        else if (Index == 2)
+        {
+            EnemySpawnVFX2.transform.localScale = new Vector3(1.2f, 1.2f, 1.2f);
+            EnemySpawnVFX.transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
+            StartCoroutine(SpawnStarShipEnemy(DestroyerEnemy));
         }
     }
-    IEnumerator SpawnZond()
+    void SpawnZond()
     {
-        while (true)
-        {
-            XPose = Random.Range(-1.7f, 1.7f);
-            YPose = 6.5f;
+        XPose = Random.Range(-1.7f, 1.7f);
+        YPose = 6.5f;
 
-            Vector2 ZondPoint = new Vector2(XPose, YPose);
-            Spawner.SpawnZond(ZondPoint);
-
-            yield return new WaitForSeconds(TimingZonds);
-        }
+        Vector2 ZondPoint = new Vector2(XPose, YPose);
+        Spawner.SpawnZond(ZondPoint);
     }
-    IEnumerator SpawnAsteroids()
+    void SpawnAsteroids()
     {
-        while (true)
-        {
-            XPose = Random.Range(-2f, 2f);
-            YPose = 6f;
+        XPose = Random.Range(-2f, 2f);
+        YPose = 6f;
 
-            Vector2 AsteroidPoint = new Vector2(XPose, YPose);
-            Spawner.SpawnAsteroid(AsteroidPoint, 3, false, Vector2.zero);
+        Vector2 AsteroidPoint = new Vector2(XPose, YPose);
+        Spawner.SpawnAsteroid(AsteroidPoint, 3, false, Vector2.zero);
 
-            XPose = Random.Range(-2f, 2f);
-            YPose = 6f;
+        XPose = Random.Range(-2f, 2f);
+        YPose = 6f;
 
-            AsteroidPoint = new Vector2(XPose, YPose);
-            Spawner.SpawnAsteroid(AsteroidPoint, 3, false, Vector2.zero);
-
-            yield return new WaitForSeconds(TimingAsteroids);
-        }
+        AsteroidPoint = new Vector2(XPose, YPose);
+        Spawner.SpawnAsteroid(AsteroidPoint, 3, false, Vector2.zero);
     }
     IEnumerator SpawnGoldAsteroid()
     {
@@ -308,14 +312,5 @@ public class SceneController : MonoBehaviour
             default:
                 break;
         }*/
-    }
-  
-    public void SpawnSputnik()
-    {
-        XPose = Mathf.Pow(-1, Random.Range(1, 3)) * (viewPortPos.x + 1.2f);
-        YPose = Random.Range(-5f, 5f);
-
-        Vector2 SputnikPoint = new Vector2(XPose, YPose);
-        Spawner.SpawnSputnik(SputnikPoint);
     }
 }

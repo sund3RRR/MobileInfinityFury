@@ -75,13 +75,13 @@ public class BonusController : MonoBehaviour
                 collision.GetComponent<HeroController>().BonusMultiplier += 1;
             else if (gameObject.tag == "UpgradeBonus")
             {
-                /*
-                HeroController.WeaponIndex += 1;
-                IconUpgrade.GetComponent<NexLevel>().ChangeIcon(HeroController.WeaponIndex);
-                collision.gameObject.GetComponent<HeroController>().UpgradeWeapon();
-                GameObject.FindGameObjectWithTag("SceneController").GetComponent<SceneController>().TimingUpgrade();
-                collision.gameObject.GetComponent<HeroController>().AnimationUpgrade();
-                */
+
+                collision.GetComponent<HeroController>().WeaponIndex += 1;
+                //IconUpgrade.GetComponent<NexLevel>().ChangeIcon(collision.GetComponent<HeroController>().WeaponIndex);
+                collision.GetComponent<HeroController>().UpgradeWeapon();
+                //GameObject.FindGameObjectWithTag("SceneController").GetComponent<SceneController>().TimingUpgrade();
+                collision.GetComponent<HeroController>().AnimationUpgrade();
+                
             }
             
             Destroy(gameObject);
