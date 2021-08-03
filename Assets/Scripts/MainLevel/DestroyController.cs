@@ -120,7 +120,7 @@ public class DestroyController : MonoBehaviour
         BigPiece.GetComponent<BigPieceController>().force = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
         BigPiece.GetComponent<BigPieceController>().Torque = Random.Range(-1f, 1f);
         float BigPieceAngle = Random.Range(0, 360);
-        Instantiate(BigPiece, Target.transform.position, Quaternion.AngleAxis(BigPieceAngle, Vector3.forward));
+        GameObject NewBigPiece = Instantiate(BigPiece, Target.transform.position, Quaternion.AngleAxis(BigPieceAngle, Vector3.forward));
         /*
         for (int i = 0; i < 3; i++)
         {
@@ -137,6 +137,7 @@ public class DestroyController : MonoBehaviour
         */       
         Destroy(Target.gameObject);
         GameObject NewZondExplosionVFX = Instantiate(ZondExplosionVFX, Target.transform.position, Quaternion.identity);
+        NewZondExplosionVFX.GetComponent<CollisionController>().BigPiece = NewBigPiece;
         Destroy(NewZondExplosionVFX, 2);
     }
     public static void DestroySlimEnemy(GameObject Target)
@@ -250,13 +251,13 @@ public class DestroyController : MonoBehaviour
             rightPanel.GetComponent<PanelController>().Torque = Random.Range(-1f, 1f);
             rightPanel.transform.SetParent(null);
         }
-        /*
+        
         BigPiece.GetComponent<BigPieceController>().ParentForce = Zond.GetComponent<Rigidbody2D>().velocity;
         BigPiece.GetComponent<BigPieceController>().force = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
         BigPiece.GetComponent<BigPieceController>().Torque = Random.Range(-1f, 1f);
         float BigPieceAngle = Random.Range(0, 360);
-        Instantiate(BigPiece, Zond.transform.position, Quaternion.AngleAxis(BigPieceAngle, Vector3.forward));
-        
+        GameObject NewBigPiece = Instantiate(BigPiece, Zond.transform.position, Quaternion.AngleAxis(BigPieceAngle, Vector3.forward));
+        /*
         for (int i = 0; i < 3; i++)
         {
             SmallPiece.GetComponent<SmallPieceController>().ParentForce = Zond.GetComponent<Rigidbody2D>().velocity;
@@ -290,6 +291,7 @@ public class DestroyController : MonoBehaviour
         //Destroy(NewZondDeadVFX, 2);
 
         GameObject NewZondExplosionVFX = Instantiate(ZondExplosionVFX, Zond.transform.position, Quaternion.identity);
+        NewZondExplosionVFX.GetComponent<CollisionController>().BigPiece = NewBigPiece;
         Destroy(NewZondExplosionVFX, 2);
         Destroy(Zond.gameObject);
     }

@@ -12,7 +12,7 @@ public class ExampleShip : MonoBehaviour
     private float TimerTimeBtwRocketShots;
     private float TimerDrones;
     private float TimeBtwDroneSpawn = 3f;
-    private float TimeBtwBulletShots = 0.2f;
+
     private float TimeBtwRocketShots = 0.2f;
 
     private float[] DroneRadiusArray;

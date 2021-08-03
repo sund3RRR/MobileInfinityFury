@@ -12,7 +12,7 @@ public class PanelController : MonoBehaviour
     public float speed;
     public Transform EmberPosition;
     public GameObject EmberVFX;
-
+    [SerializeField] GameObject BulletVFX;
     // Private variables
 
     private Rigidbody2D rb2D;
@@ -21,8 +21,12 @@ public class PanelController : MonoBehaviour
 
     // Public variables
     public float Torque;  
-    public bool Active = false; 
+    public bool Active = false;
 
+    private void Start()
+    {
+        //Debug.Log(GetComponent<HealthPointsController>().enabled);
+    }
     void FixedUpdate()
     {
         if (Active)
@@ -94,10 +98,14 @@ public class PanelController : MonoBehaviour
             if (collision.gameObject.tag == "Bullet")
             {
                 PreviousHP -= collision.gameObject.GetComponent<Bullet>().Damage;
+                Destroy(collision.gameObject);
+                Instantiate(BulletVFX, collision.transform.position, BulletVFX.transform.rotation);
             }
             else if (collision.gameObject.tag == "Rocket")
             {
                 PreviousHP -= collision.gameObject.GetComponent<RocketController>().Damage;
+                Destroy(collision.gameObject);
+                Instantiate(BulletVFX, collision.transform.position, BulletVFX.transform.rotation);
             }         
         }
     }

@@ -132,7 +132,6 @@ MonoBehaviour:
   HealthPoints: 3
   BaseHealthPoints: 3
   GameObjectName: SpherePiece
-  hitTime: 2.5
 --- !u!1 &1313127403504266717
 GameObject:
   m_ObjectHideFlags: 0
@@ -237,6 +236,8 @@ MonoBehaviour:
   Exp: {fileID: 5641196741899517333, guid: d72e2ea7dd85ca34e89ce6212d134965, type: 3}
   PreviousHP: 10
   speed: 1
+  BulletVFX: {fileID: 5362751063008322092, guid: 7048f4a7925dbcf439f02686f7a65865,
+    type: 3}
   FirstPiece: {fileID: 959227873786235191}
   SecondPiece: {fileID: 5114502215754416589}
   ThirdPiece: {fileID: 5462058428538109228}
@@ -257,7 +258,6 @@ MonoBehaviour:
   HealthPoints: 5
   BaseHealthPoints: 5
   GameObjectName: Sphere
-  hitTime: 2.5
 --- !u!58 &2293873195141629369
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -396,7 +396,6 @@ MonoBehaviour:
   HealthPoints: 40
   BaseHealthPoints: 40
   GameObjectName: Zond
-  hitTime: 2.5
 --- !u!50 &7698072245041156064
 Rigidbody2D:
   serializedVersion: 4
@@ -550,6 +549,8 @@ MonoBehaviour:
   EmberPosition: {fileID: 8442316743207250482}
   EmberVFX: {fileID: 7285552127954683830, guid: 8d39b9d603a752b4fb1b8606d40941e9,
     type: 3}
+  BulletVFX: {fileID: 5362751063008322092, guid: 7048f4a7925dbcf439f02686f7a65865,
+    type: 3}
   Torque: 0
   Active: 0
 --- !u!114 &7949640305703272534
@@ -567,7 +568,6 @@ MonoBehaviour:
   HealthPoints: 3
   BaseHealthPoints: 3
   GameObjectName: Panel
-  hitTime: 2.5
 --- !u!61 &5107077331689869946
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -700,6 +700,8 @@ MonoBehaviour:
   EmberPosition: {fileID: 8943069780449693333}
   EmberVFX: {fileID: 7285552127954683830, guid: 8d39b9d603a752b4fb1b8606d40941e9,
     type: 3}
+  BulletVFX: {fileID: 5362751063008322092, guid: 7048f4a7925dbcf439f02686f7a65865,
+    type: 3}
   Torque: 0
   Active: 0
 --- !u!114 &4609620531594365545
@@ -717,7 +719,6 @@ MonoBehaviour:
   HealthPoints: 3
   BaseHealthPoints: 3
   GameObjectName: Panel
-  hitTime: 2.5
 --- !u!61 &6673842492074399685
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -876,7 +877,6 @@ MonoBehaviour:
   HealthPoints: 3
   BaseHealthPoints: 3
   GameObjectName: SpherePiece
-  hitTime: 2.5
 --- !u!1 &5462058428538109228
 GameObject:
   m_ObjectHideFlags: 0
@@ -1009,7 +1009,6 @@ MonoBehaviour:
   HealthPoints: 3
   BaseHealthPoints: 3
   GameObjectName: SpherePiece
-  hitTime: 2.5
 --- !u!1 &7047648547666012601
 GameObject:
   m_ObjectHideFlags: 0

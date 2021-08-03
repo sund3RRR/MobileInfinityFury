@@ -8,7 +8,7 @@ public class SphereController : MonoBehaviour
     public GameObject Exp;
     public float PreviousHP;
     public float speed;
-
+    [SerializeField] private GameObject BulletVFX;
     public GameObject FirstPiece;
     public GameObject SecondPiece;
     public GameObject ThirdPiece;
@@ -85,10 +85,14 @@ public class SphereController : MonoBehaviour
             if (collision.gameObject.tag == "Bullet")
             {
                 PreviousHP -= collision.gameObject.GetComponent<Bullet>().Damage;
+                Destroy(collision.gameObject);
+                Instantiate(BulletVFX, collision.transform.position, BulletVFX.transform.rotation);
             }
             else if (collision.gameObject.tag == "Rocket")
             {
                 PreviousHP -= collision.gameObject.GetComponent<RocketController>().Damage;
+                Destroy(collision.gameObject);
+                Instantiate(BulletVFX, collision.transform.position, BulletVFX.transform.rotation);
             }
         }
     }

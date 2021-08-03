@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class CollisionController : MonoBehaviour
 {
+    [HideInInspector] public GameObject BigPiece;
+
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.tag == "Enemy" && collision.GetComponent<HealthPointsController>())
+        if (collision.tag == "Enemy" && collision.GetComponent<HealthPointsController>() 
+            && collision.gameObject != BigPiece)
         {
             if (collision.name == "Sphere")
             {
