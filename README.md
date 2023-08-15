@@ -23,6 +23,4 @@
 
 # Тизер
 
-<div align="center">
-    <video src="./media/Infinity-Fury-Teaser.mp4" width=400/>
-</div>
+https://github.com/sund3RRR/MobileInfinityFury/assets/73298492/b21cc62f-bb8b-4187-8d3c-8eabfde9dd00
